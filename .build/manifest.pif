@@ -1,0 +1,3270 @@
+[
+  {
+    "contents" : {
+      "guid" : "Workspace:/Users/kiet51/Downloads/Voco_App-master/VoCoNative",
+      "name" : "VoCoNative",
+      "path" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative",
+      "projects" : [
+        "42746d5dcd5d16d3a0989e86f5aa267e4828adcc2ce8b0f299148de307ffc144",
+        "9a01eadcbe87d83dd5cf9f63f88b9f9e3c3f85d771ec838dfd1639284aa026aa"
+      ]
+    },
+    "signature" : "99e416e68de29ab051f890f8e0767d084f529dc521308f171b47dbfb6ebfcad8",
+    "type" : "workspace"
+  },
+  {
+    "contents" : {
+      "buildConfigurations" : [
+        {
+          "buildSettings" : {
+            "CLANG_ENABLE_MODULES[__platform_filter=driverkit]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=ios-maccatalyst]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=ios;ios-simulator]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=macos]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=tvos;tvos-simulator]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=watchos;watchos-simulator]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=xros;xros-simulator]" : "YES",
+            "CODE_SIGNING_REQUIRED" : "NO",
+            "CODE_SIGN_IDENTITY" : "",
+            "COMPILER_WORKING_DIRECTORY" : "$(WORKSPACE_DIR)",
+            "COPY_PHASE_STRIP" : "NO",
+            "DEBUG_INFORMATION_FORMAT" : "dwarf",
+            "DRIVERKIT_DEPLOYMENT_TARGET" : "21.0",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=driverkit]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=ios-maccatalyst]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=ios;ios-simulator]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=macos]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=tvos;tvos-simulator]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=watchos;watchos-simulator]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=xros;xros-simulator]" : "@rpath",
+            "ENABLE_NS_ASSERTIONS" : "YES",
+            "ENABLE_TESTABILITY" : "YES",
+            "ENABLE_TESTING_SEARCH_PATHS" : "YES",
+            "ENTITLEMENTS_REQUIRED" : "NO",
+            "GCC_OPTIMIZATION_LEVEL" : "0",
+            "GCC_PREPROCESSOR_DEFINITIONS" : [
+              "$(inherited)",
+              "SWIFT_PACKAGE",
+              "DEBUG=1"
+            ],
+            "INDEX_ENABLE_DATA_STORE" : "YES",
+            "IPHONEOS_DEPLOYMENT_TARGET" : "16.0",
+            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "16.0",
+            "KEEP_PRIVATE_EXTERNS" : "NO",
+            "LIBTOOL_NO_WARNING_FOR_NO_SYMBOLS" : "YES",
+            "LINKER_DRIVER" : "auto",
+            "MACOSX_DEPLOYMENT_TARGET" : "13.0",
+            "ONLY_ACTIVE_ARCH" : "YES",
+            "OTHER_CFLAGS" : [
+              "$(inherited)",
+              "-DXcode"
+            ],
+            "OTHER_LDRFLAGS" : [
+
+            ],
+            "OTHER_SWIFT_FLAGS" : [
+              "$(inherited)",
+              "-DXcode"
+            ],
+            "PRODUCT_NAME" : "$(TARGET_NAME)",
+            "SKIP_INSTALL" : "YES",
+            "SPECIALIZATION_SDK_OPTIONS[__platform_filter=ios;ios-simulator]" : [
+
+            ],
+            "SPECIALIZATION_SDK_OPTIONS[__platform_filter=macos]" : [
+
+            ],
+            "SUPPORTED_PLATFORMS" : [
+              "$(AVAILABLE_PLATFORMS)"
+            ],
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : [
+              "$(inherited)",
+              "SWIFT_PACKAGE",
+              "DEBUG"
+            ],
+            "SWIFT_INSTALL_OBJC_HEADER" : "NO",
+            "SWIFT_OBJC_INTERFACE_HEADER_NAME" : "",
+            "SWIFT_OPTIMIZATION_LEVEL" : "-Onone",
+            "TARGETED_DEVICE_FAMILY" : "",
+            "TVOS_DEPLOYMENT_TARGET" : "15.0",
+            "USE_HEADERMAP" : "NO",
+            "WATCHOS_DEPLOYMENT_TARGET" : "9.0",
+            "XROS_DEPLOYMENT_TARGET" : "1.0"
+          },
+          "guid" : "PACKAGE:voconative::BUILDCONFIG_0",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Debug"
+        },
+        {
+          "buildSettings" : {
+            "CLANG_ENABLE_MODULES[__platform_filter=driverkit]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=ios-maccatalyst]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=ios;ios-simulator]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=macos]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=tvos;tvos-simulator]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=watchos;watchos-simulator]" : "YES",
+            "CLANG_ENABLE_MODULES[__platform_filter=xros;xros-simulator]" : "YES",
+            "CODE_SIGNING_REQUIRED" : "NO",
+            "CODE_SIGN_IDENTITY" : "",
+            "COMPILER_WORKING_DIRECTORY" : "$(WORKSPACE_DIR)",
+            "COPY_PHASE_STRIP" : "YES",
+            "DEBUG_INFORMATION_FORMAT" : "dwarf-with-dsym",
+            "DEPLOYMENT_POSTPROCESSING" : "YES",
+            "DRIVERKIT_DEPLOYMENT_TARGET" : "21.0",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=driverkit]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=ios-maccatalyst]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=ios;ios-simulator]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=macos]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=tvos;tvos-simulator]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=watchos;watchos-simulator]" : "@rpath",
+            "DYLIB_INSTALL_NAME_BASE[__platform_filter=xros;xros-simulator]" : "@rpath",
+            "ENABLE_TESTING_SEARCH_PATHS" : "YES",
+            "ENTITLEMENTS_REQUIRED" : "NO",
+            "GCC_OPTIMIZATION_LEVEL" : "s",
+            "GCC_PREPROCESSOR_DEFINITIONS" : [
+              "$(inherited)",
+              "SWIFT_PACKAGE"
+            ],
+            "IPHONEOS_DEPLOYMENT_TARGET" : "16.0",
+            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "16.0",
+            "KEEP_PRIVATE_EXTERNS" : "NO",
+            "LIBTOOL_NO_WARNING_FOR_NO_SYMBOLS" : "YES",
+            "LINKER_DRIVER" : "auto",
+            "MACOSX_DEPLOYMENT_TARGET" : "13.0",
+            "OTHER_CFLAGS" : [
+              "$(inherited)",
+              "-DXcode"
+            ],
+            "OTHER_LDRFLAGS" : [
+
+            ],
+            "OTHER_SWIFT_FLAGS" : [
+              "$(inherited)",
+              "-DXcode"
+            ],
+            "PRODUCT_NAME" : "$(TARGET_NAME)",
+            "SKIP_INSTALL" : "YES",
+            "SPECIALIZATION_SDK_OPTIONS[__platform_filter=ios;ios-simulator]" : [
+
+            ],
+            "SPECIALIZATION_SDK_OPTIONS[__platform_filter=macos]" : [
+
+            ],
+            "SUPPORTED_PLATFORMS" : [
+              "$(AVAILABLE_PLATFORMS)"
+            ],
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : [
+              "$(inherited)",
+              "SWIFT_PACKAGE"
+            ],
+            "SWIFT_INSTALL_OBJC_HEADER" : "NO",
+            "SWIFT_OBJC_INTERFACE_HEADER_NAME" : "",
+            "SWIFT_OPTIMIZATION_LEVEL" : "-Owholemodule",
+            "TARGETED_DEVICE_FAMILY" : "",
+            "TVOS_DEPLOYMENT_TARGET" : "15.0",
+            "USE_HEADERMAP" : "NO",
+            "WATCHOS_DEPLOYMENT_TARGET" : "9.0",
+            "XROS_DEPLOYMENT_TARGET" : "1.0"
+          },
+          "guid" : "PACKAGE:voconative::BUILDCONFIG_1",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Release"
+        }
+      ],
+      "defaultConfigurationName" : "Release",
+      "groupTree" : {
+        "children" : [
+          {
+            "children" : [
+
+            ],
+            "guid" : "PACKAGE:voconative::MAINGROUP::REF_0",
+            "name" : "AdditionalFiles",
+            "path" : "/",
+            "sourceTree" : "<absolute>",
+            "type" : "group"
+          },
+          {
+            "children" : [
+
+            ],
+            "guid" : "PACKAGE:voconative::MAINGROUP::REF_1",
+            "name" : "Binaries",
+            "path" : "/",
+            "sourceTree" : "<absolute>",
+            "type" : "group"
+          },
+          {
+            "children" : [
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_2::REF_0",
+                "name" : "VoCoNativeTests.swift",
+                "path" : "VoCoNativeTests.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              }
+            ],
+            "guid" : "PACKAGE:voconative::MAINGROUP::REF_2",
+            "name" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Tests",
+            "path" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Tests",
+            "sourceTree" : "<absolute>",
+            "type" : "group"
+          },
+          {
+            "children" : [
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_0",
+                "name" : "Models/AuthUser.swift",
+                "path" : "Models/AuthUser.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_1",
+                "name" : "Models/Course.swift",
+                "path" : "Models/Course.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_2",
+                "name" : "Models/PracticeSentence.swift",
+                "path" : "Models/PracticeSentence.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_3",
+                "name" : "Models/QuizQuestion.swift",
+                "path" : "Models/QuizQuestion.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_4",
+                "name" : "Models/Story.swift",
+                "path" : "Models/Story.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_5",
+                "name" : "Models/UserProfile.swift",
+                "path" : "Models/UserProfile.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_6",
+                "name" : "Services/Audio/NativeAudioPlayer.swift",
+                "path" : "Services/Audio/NativeAudioPlayer.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_7",
+                "name" : "Services/Audio/NativeAudioRecorder.swift",
+                "path" : "Services/Audio/NativeAudioRecorder.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_8",
+                "name" : "Services/Audio/NativeSpeechRecognitionService.swift",
+                "path" : "Services/Audio/NativeSpeechRecognitionService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_9",
+                "name" : "Services/Audio/NativeSpeechService.swift",
+                "path" : "Services/Audio/NativeSpeechService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_10",
+                "name" : "Services/Audio/VoiceCommandParser.swift",
+                "path" : "Services/Audio/VoiceCommandParser.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_11",
+                "name" : "Services/Audio/VoiceEmailSpellingParser.swift",
+                "path" : "Services/Audio/VoiceEmailSpellingParser.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_12",
+                "name" : "Services/Audio/VoiceGuidanceCoordinator.swift",
+                "path" : "Services/Audio/VoiceGuidanceCoordinator.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_13",
+                "name" : "Services/Auth/KeychainTokenStore.swift",
+                "path" : "Services/Auth/KeychainTokenStore.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_14",
+                "name" : "Services/Auth/NativeBiometricAuthService.swift",
+                "path" : "Services/Auth/NativeBiometricAuthService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_15",
+                "name" : "Services/Firebase/FirebaseAuthService.swift",
+                "path" : "Services/Firebase/FirebaseAuthService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_16",
+                "name" : "Services/Firebase/FirestoreSentenceService.swift",
+                "path" : "Services/Firebase/FirestoreSentenceService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_17",
+                "name" : "Services/Mock/MockAuthService.swift",
+                "path" : "Services/Mock/MockAuthService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_18",
+                "name" : "Services/Mock/MockBiometricAuthService.swift",
+                "path" : "Services/Mock/MockBiometricAuthService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_19",
+                "name" : "Services/Mock/MockSentenceService.swift",
+                "path" : "Services/Mock/MockSentenceService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_20",
+                "name" : "Services/Mock/MockSpeechRecognitionService.swift",
+                "path" : "Services/Mock/MockSpeechRecognitionService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_21",
+                "name" : "Services/Mock/MockSpeechService.swift",
+                "path" : "Services/Mock/MockSpeechService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_22",
+                "name" : "Services/Mock/MockTokenStore.swift",
+                "path" : "Services/Mock/MockTokenStore.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_23",
+                "name" : "Services/Navigation/AppNavigationStateMachine.swift",
+                "path" : "Services/Navigation/AppNavigationStateMachine.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_24",
+                "name" : "Services/Protocols/AudioPlaybackServiceProtocol.swift",
+                "path" : "Services/Protocols/AudioPlaybackServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_25",
+                "name" : "Services/Protocols/AudioRecordingServiceProtocol.swift",
+                "path" : "Services/Protocols/AudioRecordingServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_26",
+                "name" : "Services/Protocols/AuthServiceProtocol.swift",
+                "path" : "Services/Protocols/AuthServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_27",
+                "name" : "Services/Protocols/BiometricAuthServiceProtocol.swift",
+                "path" : "Services/Protocols/BiometricAuthServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_28",
+                "name" : "Services/Protocols/SecureTokenStoreProtocol.swift",
+                "path" : "Services/Protocols/SecureTokenStoreProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_29",
+                "name" : "Services/Protocols/SentenceServiceProtocol.swift",
+                "path" : "Services/Protocols/SentenceServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_30",
+                "name" : "Services/Protocols/SpeechRecognitionServiceProtocol.swift",
+                "path" : "Services/Protocols/SpeechRecognitionServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_31",
+                "name" : "Services/Protocols/SpeechServiceProtocol.swift",
+                "path" : "Services/Protocols/SpeechServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_32",
+                "name" : "Services/ServiceContainer.swift",
+                "path" : "Services/ServiceContainer.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_33",
+                "name" : "ViewModels/AuthViewModel.swift",
+                "path" : "ViewModels/AuthViewModel.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_34",
+                "name" : "ViewModels/PronunciationViewModel.swift",
+                "path" : "ViewModels/PronunciationViewModel.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_35",
+                "name" : "ViewModels/QuizViewModel.swift",
+                "path" : "ViewModels/QuizViewModel.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_36",
+                "name" : "ViewModels/VoiceCommandViewModel.swift",
+                "path" : "ViewModels/VoiceCommandViewModel.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_37",
+                "name" : "Views/Auth/LoginHomeView.swift",
+                "path" : "Views/Auth/LoginHomeView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_38",
+                "name" : "Views/Auth/SignInView.swift",
+                "path" : "Views/Auth/SignInView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_39",
+                "name" : "Views/Auth/SignUpView.swift",
+                "path" : "Views/Auth/SignUpView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_40",
+                "name" : "Views/Auth/SplashScreenView.swift",
+                "path" : "Views/Auth/SplashScreenView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_41",
+                "name" : "Views/Auth/UserProfileFormView.swift",
+                "path" : "Views/Auth/UserProfileFormView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_42",
+                "name" : "Views/Common/AccessibilityHelper.swift",
+                "path" : "Views/Common/AccessibilityHelper.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_43",
+                "name" : "Views/Common/ComingSoonView.swift",
+                "path" : "Views/Common/ComingSoonView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_44",
+                "name" : "Views/Common/QuadrantCardView.swift",
+                "path" : "Views/Common/QuadrantCardView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_45",
+                "name" : "Views/Common/VoiceCommandBarView.swift",
+                "path" : "Views/Common/VoiceCommandBarView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_46",
+                "name" : "Views/Games/GamesHubView.swift",
+                "path" : "Views/Games/GamesHubView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_47",
+                "name" : "Views/Games/InteractiveQuizView.swift",
+                "path" : "Views/Games/InteractiveQuizView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_48",
+                "name" : "Views/Games/StoryCatalogView.swift",
+                "path" : "Views/Games/StoryCatalogView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_49",
+                "name" : "Views/Games/StoryReaderView.swift",
+                "path" : "Views/Games/StoryReaderView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_50",
+                "name" : "Views/Home/HomeDashboardView.swift",
+                "path" : "Views/Home/HomeDashboardView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_51",
+                "name" : "Views/Pronunciation/PronunciationRecordView.swift",
+                "path" : "Views/Pronunciation/PronunciationRecordView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_52",
+                "name" : "Views/Pronunciation/PronunciationReviewView.swift",
+                "path" : "Views/Pronunciation/PronunciationReviewView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_53",
+                "name" : "Views/Talk/TalkWithVoCoHubView.swift",
+                "path" : "Views/Talk/TalkWithVoCoHubView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_54",
+                "name" : "Views/Talk/VoCoBotConversationView.swift",
+                "path" : "Views/Talk/VoCoBotConversationView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_55",
+                "name" : "Views/VoCoGyan/DSAEpisodesView.swift",
+                "path" : "Views/VoCoGyan/DSAEpisodesView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_56",
+                "name" : "Views/VoCoGyan/EpisodeDetailView.swift",
+                "path" : "Views/VoCoGyan/EpisodeDetailView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_57",
+                "name" : "Views/VoCoGyan/TechnicalCoursesView.swift",
+                "path" : "Views/VoCoGyan/TechnicalCoursesView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_58",
+                "name" : "Views/VoCoGyan/VoCoGyanHubView.swift",
+                "path" : "Views/VoCoGyan/VoCoGyanHubView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_59",
+                "name" : "Views/VoCoMainAppView.swift",
+                "path" : "Views/VoCoMainAppView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              }
+            ],
+            "guid" : "PACKAGE:voconative::MAINGROUP::REF_3",
+            "name" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative",
+            "path" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative",
+            "sourceTree" : "<absolute>",
+            "type" : "group"
+          },
+          {
+            "children" : [
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_0",
+                "name" : "Models/AuthUser.swift",
+                "path" : "Models/AuthUser.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_1",
+                "name" : "Models/Course.swift",
+                "path" : "Models/Course.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_2",
+                "name" : "Models/PracticeSentence.swift",
+                "path" : "Models/PracticeSentence.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_3",
+                "name" : "Models/QuizQuestion.swift",
+                "path" : "Models/QuizQuestion.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_4",
+                "name" : "Models/Story.swift",
+                "path" : "Models/Story.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_5",
+                "name" : "Models/UserProfile.swift",
+                "path" : "Models/UserProfile.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_6",
+                "name" : "Services/Audio/NativeAudioPlayer.swift",
+                "path" : "Services/Audio/NativeAudioPlayer.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_7",
+                "name" : "Services/Audio/NativeAudioRecorder.swift",
+                "path" : "Services/Audio/NativeAudioRecorder.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_8",
+                "name" : "Services/Audio/NativeSpeechRecognitionService.swift",
+                "path" : "Services/Audio/NativeSpeechRecognitionService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_9",
+                "name" : "Services/Audio/NativeSpeechService.swift",
+                "path" : "Services/Audio/NativeSpeechService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_10",
+                "name" : "Services/Audio/VoiceCommandParser.swift",
+                "path" : "Services/Audio/VoiceCommandParser.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_11",
+                "name" : "Services/Audio/VoiceEmailSpellingParser.swift",
+                "path" : "Services/Audio/VoiceEmailSpellingParser.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_12",
+                "name" : "Services/Audio/VoiceGuidanceCoordinator.swift",
+                "path" : "Services/Audio/VoiceGuidanceCoordinator.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_13",
+                "name" : "Services/Auth/KeychainTokenStore.swift",
+                "path" : "Services/Auth/KeychainTokenStore.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_14",
+                "name" : "Services/Auth/NativeBiometricAuthService.swift",
+                "path" : "Services/Auth/NativeBiometricAuthService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_15",
+                "name" : "Services/Firebase/FirebaseAuthService.swift",
+                "path" : "Services/Firebase/FirebaseAuthService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_16",
+                "name" : "Services/Firebase/FirestoreSentenceService.swift",
+                "path" : "Services/Firebase/FirestoreSentenceService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_17",
+                "name" : "Services/Mock/MockAuthService.swift",
+                "path" : "Services/Mock/MockAuthService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_18",
+                "name" : "Services/Mock/MockBiometricAuthService.swift",
+                "path" : "Services/Mock/MockBiometricAuthService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_19",
+                "name" : "Services/Mock/MockSentenceService.swift",
+                "path" : "Services/Mock/MockSentenceService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_20",
+                "name" : "Services/Mock/MockSpeechRecognitionService.swift",
+                "path" : "Services/Mock/MockSpeechRecognitionService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_21",
+                "name" : "Services/Mock/MockSpeechService.swift",
+                "path" : "Services/Mock/MockSpeechService.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_22",
+                "name" : "Services/Mock/MockTokenStore.swift",
+                "path" : "Services/Mock/MockTokenStore.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_23",
+                "name" : "Services/Navigation/AppNavigationStateMachine.swift",
+                "path" : "Services/Navigation/AppNavigationStateMachine.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_24",
+                "name" : "Services/Protocols/AudioPlaybackServiceProtocol.swift",
+                "path" : "Services/Protocols/AudioPlaybackServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_25",
+                "name" : "Services/Protocols/AudioRecordingServiceProtocol.swift",
+                "path" : "Services/Protocols/AudioRecordingServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_26",
+                "name" : "Services/Protocols/AuthServiceProtocol.swift",
+                "path" : "Services/Protocols/AuthServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_27",
+                "name" : "Services/Protocols/BiometricAuthServiceProtocol.swift",
+                "path" : "Services/Protocols/BiometricAuthServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_28",
+                "name" : "Services/Protocols/SecureTokenStoreProtocol.swift",
+                "path" : "Services/Protocols/SecureTokenStoreProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_29",
+                "name" : "Services/Protocols/SentenceServiceProtocol.swift",
+                "path" : "Services/Protocols/SentenceServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_30",
+                "name" : "Services/Protocols/SpeechRecognitionServiceProtocol.swift",
+                "path" : "Services/Protocols/SpeechRecognitionServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_31",
+                "name" : "Services/Protocols/SpeechServiceProtocol.swift",
+                "path" : "Services/Protocols/SpeechServiceProtocol.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_32",
+                "name" : "Services/ServiceContainer.swift",
+                "path" : "Services/ServiceContainer.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_33",
+                "name" : "ViewModels/AuthViewModel.swift",
+                "path" : "ViewModels/AuthViewModel.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_34",
+                "name" : "ViewModels/PronunciationViewModel.swift",
+                "path" : "ViewModels/PronunciationViewModel.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_35",
+                "name" : "ViewModels/QuizViewModel.swift",
+                "path" : "ViewModels/QuizViewModel.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_36",
+                "name" : "ViewModels/VoiceCommandViewModel.swift",
+                "path" : "ViewModels/VoiceCommandViewModel.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_37",
+                "name" : "Views/Auth/LoginHomeView.swift",
+                "path" : "Views/Auth/LoginHomeView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_38",
+                "name" : "Views/Auth/SignInView.swift",
+                "path" : "Views/Auth/SignInView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_39",
+                "name" : "Views/Auth/SignUpView.swift",
+                "path" : "Views/Auth/SignUpView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_40",
+                "name" : "Views/Auth/SplashScreenView.swift",
+                "path" : "Views/Auth/SplashScreenView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_41",
+                "name" : "Views/Auth/UserProfileFormView.swift",
+                "path" : "Views/Auth/UserProfileFormView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_42",
+                "name" : "Views/Common/AccessibilityHelper.swift",
+                "path" : "Views/Common/AccessibilityHelper.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_43",
+                "name" : "Views/Common/ComingSoonView.swift",
+                "path" : "Views/Common/ComingSoonView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_44",
+                "name" : "Views/Common/QuadrantCardView.swift",
+                "path" : "Views/Common/QuadrantCardView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_45",
+                "name" : "Views/Common/VoiceCommandBarView.swift",
+                "path" : "Views/Common/VoiceCommandBarView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_46",
+                "name" : "Views/Games/GamesHubView.swift",
+                "path" : "Views/Games/GamesHubView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_47",
+                "name" : "Views/Games/InteractiveQuizView.swift",
+                "path" : "Views/Games/InteractiveQuizView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_48",
+                "name" : "Views/Games/StoryCatalogView.swift",
+                "path" : "Views/Games/StoryCatalogView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_49",
+                "name" : "Views/Games/StoryReaderView.swift",
+                "path" : "Views/Games/StoryReaderView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_50",
+                "name" : "Views/Home/HomeDashboardView.swift",
+                "path" : "Views/Home/HomeDashboardView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_51",
+                "name" : "Views/Pronunciation/PronunciationRecordView.swift",
+                "path" : "Views/Pronunciation/PronunciationRecordView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_52",
+                "name" : "Views/Pronunciation/PronunciationReviewView.swift",
+                "path" : "Views/Pronunciation/PronunciationReviewView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_53",
+                "name" : "Views/Talk/TalkWithVoCoHubView.swift",
+                "path" : "Views/Talk/TalkWithVoCoHubView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_54",
+                "name" : "Views/Talk/VoCoBotConversationView.swift",
+                "path" : "Views/Talk/VoCoBotConversationView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_55",
+                "name" : "Views/VoCoGyan/DSAEpisodesView.swift",
+                "path" : "Views/VoCoGyan/DSAEpisodesView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_56",
+                "name" : "Views/VoCoGyan/EpisodeDetailView.swift",
+                "path" : "Views/VoCoGyan/EpisodeDetailView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_57",
+                "name" : "Views/VoCoGyan/TechnicalCoursesView.swift",
+                "path" : "Views/VoCoGyan/TechnicalCoursesView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_58",
+                "name" : "Views/VoCoGyan/VoCoGyanHubView.swift",
+                "path" : "Views/VoCoGyan/VoCoGyanHubView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_59",
+                "name" : "Views/VoCoMainAppView.swift",
+                "path" : "Views/VoCoMainAppView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              }
+            ],
+            "guid" : "PACKAGE:voconative::MAINGROUP::REF_4",
+            "name" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative",
+            "path" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative",
+            "sourceTree" : "<absolute>",
+            "type" : "group"
+          }
+        ],
+        "guid" : "PACKAGE:voconative::MAINGROUP",
+        "name" : "",
+        "path" : "",
+        "sourceTree" : "<group>",
+        "type" : "group"
+      },
+      "guid" : "PACKAGE:voconative",
+      "path" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Package.swift",
+      "projectDirectory" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative",
+      "projectIsPackage" : "true",
+      "projectName" : "VoCoNative",
+      "targets" : [
+        "8f9f6ec4e91e4000f7ca9e79e8194d4cf1214ea8906a21c6e2c166645c72c77d",
+        "fb2b817b6dc464c95f7af4620f17dde480caf1cea56beba33b7726b52d1dde2f",
+        "f59e18dcd15ad2c3cdcf6226ee977290c59f4c22520121b80bb388da5128e8f1",
+        "f004708a206e4b679bdb6cb47d2f6abb9d0a8f492da17ca5560d6e29422f2236",
+        "52d4a2e0ffcdcb623da5e037a58ce43ef5c7c5110f7103c7e00e2573efec0c6d",
+        "b1e0507900d0de023fb05342deb5ee9b6ad36a38fc655233c0ce0be29e27a57f"
+      ]
+    },
+    "signature" : "42746d5dcd5d16d3a0989e86f5aa267e4828adcc2ce8b0f299148de307ffc144",
+    "type" : "project"
+  },
+  {
+    "contents" : {
+      "approvedByUser" : "true",
+      "buildConfigurations" : [
+        {
+          "buildSettings" : {
+            "APPLE_TEST_BUNDLE_RPATH" : "$(APPLE_TEST_BUNDLE_RPATH_SHALLOW_BUNDLE_$(SHALLOW_BUNDLE:default=NO))",
+            "APPLE_TEST_BUNDLE_RPATH_SHALLOW_BUNDLE_NO" : "@loader_path/../../..",
+            "APPLE_TEST_BUNDLE_RPATH_SHALLOW_BUNDLE_YES" : "@loader_path/../..",
+            "BUILD_SERVER_PROTOCOL_TARGET_TAGS" : [
+              "$(inherited)",
+              "test"
+            ],
+            "DOCC_EXTRACT_PROJECT_HEADERS_DOCUMENTATION" : "YES",
+            "DRIVERKIT_DEPLOYMENT_TARGET" : "21.0",
+            "GENERATE_EMBED_IN_CODE_ACCESSORS" : "NO",
+            "GENERATE_INFOPLIST_FILE" : "YES",
+            "GENERATE_RESOURCE_ACCESSORS" : "YES",
+            "INDEX_ENABLE_DATA_STORE" : "YES",
+            "IPHONEOS_DEPLOYMENT_TARGET" : "17.0",
+            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "17.0",
+            "LD_RUNPATH_SEARCH_PATHS" : [
+              "$(RPATH_ORIGIN)/Frameworks",
+              "$(RPATH_ORIGIN)/../Frameworks",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=driverkit]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=ios-maccatalyst]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=ios;ios-simulator]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=macos]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=tvos;tvos-simulator]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=watchos;watchos-simulator]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=xros;xros-simulator]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "MACOSX_DEPLOYMENT_TARGET" : "14.0",
+            "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "voconative.VoCoNativeTests",
+            "PRODUCT_MODULE_NAME" : "VoCoNativeTests",
+            "PRODUCT_NAME" : "$(TARGET_NAME)",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "SKIP_INSTALL" : "NO",
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : [
+              "$(inherited)"
+            ],
+            "SWIFT_DISABLE_PARSE_AS_LIBRARY" : "NO",
+            "SWIFT_ENABLE_BARE_SLASH_REGEX" : "NO",
+            "SWIFT_LIBRARIES_ONLY" : "YES",
+            "SWIFT_PACKAGE_NAME" : "voconative",
+            "SWIFT_VERSION" : "5",
+            "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNativeTests.symbolgraphs",
+            "TAPI_EXTRACT_API_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNativeTests.symbolgraphs",
+            "TARGET_NAME" : "VoCoNativeTests",
+            "TARGET_TEMP_DIR_SUFFIX" : "-p",
+            "TVOS_DEPLOYMENT_TARGET" : "17.0",
+            "WATCHOS_DEPLOYMENT_TARGET" : "26.0",
+            "XROS_DEPLOYMENT_TARGET" : "1.0"
+          },
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests::BUILDCONFIG_0",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Debug"
+        },
+        {
+          "buildSettings" : {
+            "APPLE_TEST_BUNDLE_RPATH" : "$(APPLE_TEST_BUNDLE_RPATH_SHALLOW_BUNDLE_$(SHALLOW_BUNDLE:default=NO))",
+            "APPLE_TEST_BUNDLE_RPATH_SHALLOW_BUNDLE_NO" : "@loader_path/../../..",
+            "APPLE_TEST_BUNDLE_RPATH_SHALLOW_BUNDLE_YES" : "@loader_path/../..",
+            "BUILD_SERVER_PROTOCOL_TARGET_TAGS" : [
+              "$(inherited)",
+              "test"
+            ],
+            "DOCC_EXTRACT_PROJECT_HEADERS_DOCUMENTATION" : "YES",
+            "DRIVERKIT_DEPLOYMENT_TARGET" : "21.0",
+            "GENERATE_EMBED_IN_CODE_ACCESSORS" : "NO",
+            "GENERATE_INFOPLIST_FILE" : "YES",
+            "GENERATE_RESOURCE_ACCESSORS" : "YES",
+            "INDEX_ENABLE_DATA_STORE" : "YES",
+            "IPHONEOS_DEPLOYMENT_TARGET" : "17.0",
+            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "17.0",
+            "LD_RUNPATH_SEARCH_PATHS" : [
+              "$(RPATH_ORIGIN)/Frameworks",
+              "$(RPATH_ORIGIN)/../Frameworks",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=driverkit]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=ios-maccatalyst]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=ios;ios-simulator]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=macos]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=tvos;tvos-simulator]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=watchos;watchos-simulator]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "LD_RUNPATH_SEARCH_PATHS[__platform_filter=xros;xros-simulator]" : [
+              "$(APPLE_TEST_BUNDLE_RPATH)",
+              "$(inherited)"
+            ],
+            "MACOSX_DEPLOYMENT_TARGET" : "14.0",
+            "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "voconative.VoCoNativeTests",
+            "PRODUCT_MODULE_NAME" : "VoCoNativeTests",
+            "PRODUCT_NAME" : "$(TARGET_NAME)",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "SKIP_INSTALL" : "NO",
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : [
+              "$(inherited)"
+            ],
+            "SWIFT_DISABLE_PARSE_AS_LIBRARY" : "NO",
+            "SWIFT_ENABLE_BARE_SLASH_REGEX" : "NO",
+            "SWIFT_LIBRARIES_ONLY" : "YES",
+            "SWIFT_PACKAGE_NAME" : "voconative",
+            "SWIFT_VERSION" : "5",
+            "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNativeTests.symbolgraphs",
+            "TAPI_EXTRACT_API_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNativeTests.symbolgraphs",
+            "TARGET_NAME" : "VoCoNativeTests",
+            "TARGET_TEMP_DIR_SUFFIX" : "-p",
+            "TVOS_DEPLOYMENT_TARGET" : "17.0",
+            "WATCHOS_DEPLOYMENT_TARGET" : "26.0",
+            "XROS_DEPLOYMENT_TARGET" : "1.0"
+          },
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests::BUILDCONFIG_1",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Release"
+        }
+      ],
+      "buildPhases" : [
+        {
+          "buildFiles" : [
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_2::REF_0",
+              "guid" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests::BUILDPHASE_0::0",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            }
+          ],
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests::BUILDPHASE_0",
+          "type" : "com.apple.buildphase.sources"
+        },
+        {
+          "buildFiles" : [
+            {
+              "guid" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests::BUILDPHASE_1::0",
+              "platformFilters" : [
+
+              ],
+              "targetReference" : "PACKAGE-TARGET:VoCoNative"
+            }
+          ],
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests::BUILDPHASE_1",
+          "type" : "com.apple.buildphase.frameworks"
+        }
+      ],
+      "buildRules" : [
+
+      ],
+      "customTasks" : [
+
+      ],
+      "dependencies" : [
+        {
+          "guid" : "PACKAGE-TARGET:VoCoNative",
+          "platformFilters" : [
+
+          ]
+        }
+      ],
+      "guid" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests",
+      "name" : "VoCoNativeTests-product",
+      "productReference" : {
+        "guid" : "PRODUCTREF-PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests",
+        "name" : "$(EXECUTABLE_NAME)",
+        "type" : "file"
+      },
+      "productTypeIdentifier" : "com.apple.product-type.bundle.unit-test",
+      "type" : "standard"
+    },
+    "signature" : "8f9f6ec4e91e4000f7ca9e79e8194d4cf1214ea8906a21c6e2c166645c72c77d",
+    "type" : "target"
+  },
+  {
+    "contents" : {
+      "approvedByUser" : "true",
+      "buildConfigurations" : [
+        {
+          "buildSettings" : {
+            "DRIVERKIT_DEPLOYMENT_TARGET" : "21.0",
+            "IPHONEOS_DEPLOYMENT_TARGET" : "17.0",
+            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "17.0",
+            "LD_RUNPATH_SEARCH_PATHS" : [
+              "$(inherited)",
+              "$(RPATH_ORIGIN)"
+            ],
+            "LINKER_DRIVER" : "swiftc",
+            "MACOSX_DEPLOYMENT_TARGET" : "14.0",
+            "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "voconative.VoCoNativeTests-test-runner",
+            "PRODUCT_MODULE_NAME" : "VoCoNativeTests_test_runner",
+            "PRODUCT_NAME" : "$(TARGET_NAME)",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "SKIP_INSTALL" : "NO",
+            "SWIFT_VERSION" : "5.0",
+            "TARGET_NAME" : "VoCoNativeTests-test-runner",
+            "TVOS_DEPLOYMENT_TARGET" : "17.0",
+            "WATCHOS_DEPLOYMENT_TARGET" : "26.0",
+            "XROS_DEPLOYMENT_TARGET" : "1.0"
+          },
+          "guid" : "PACKAGE-TARGET:VoCoNativeTests_test_runner::BUILDCONFIG_0",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Debug"
+        },
+        {
+          "buildSettings" : {
+            "DRIVERKIT_DEPLOYMENT_TARGET" : "21.0",
+            "IPHONEOS_DEPLOYMENT_TARGET" : "17.0",
+            "IPHONEOS_DEPLOYMENT_TARGET[__platform_filter=ios-maccatalyst]" : "17.0",
+            "LD_RUNPATH_SEARCH_PATHS" : [
+              "$(inherited)",
+              "$(RPATH_ORIGIN)"
+            ],
+            "LINKER_DRIVER" : "swiftc",
+            "MACOSX_DEPLOYMENT_TARGET" : "14.0",
+            "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "voconative.VoCoNativeTests-test-runner",
+            "PRODUCT_MODULE_NAME" : "VoCoNativeTests_test_runner",
+            "PRODUCT_NAME" : "$(TARGET_NAME)",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "SKIP_INSTALL" : "NO",
+            "SWIFT_VERSION" : "5.0",
+            "TARGET_NAME" : "VoCoNativeTests-test-runner",
+            "TVOS_DEPLOYMENT_TARGET" : "17.0",
+            "WATCHOS_DEPLOYMENT_TARGET" : "26.0",
+            "XROS_DEPLOYMENT_TARGET" : "1.0"
+          },
+          "guid" : "PACKAGE-TARGET:VoCoNativeTests_test_runner::BUILDCONFIG_1",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Release"
+        }
+      ],
+      "buildPhases" : [
+        {
+          "buildFiles" : [
+
+          ],
+          "guid" : "PACKAGE-TARGET:VoCoNativeTests_test_runner::BUILDPHASE_0",
+          "type" : "com.apple.buildphase.sources"
+        },
+        {
+          "buildFiles" : [
+            {
+              "guid" : "PACKAGE-TARGET:VoCoNativeTests_test_runner::BUILDPHASE_1::0",
+              "platformFilters" : [
+
+              ],
+              "targetReference" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests"
+            }
+          ],
+          "guid" : "PACKAGE-TARGET:VoCoNativeTests_test_runner::BUILDPHASE_1",
+          "type" : "com.apple.buildphase.frameworks"
+        }
+      ],
+      "buildRules" : [
+
+      ],
+      "customTasks" : [
+
+      ],
+      "dependencies" : [
+        {
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests",
+          "platformFilters" : [
+
+          ]
+        }
+      ],
+      "guid" : "PACKAGE-TARGET:VoCoNativeTests_test_runner",
+      "name" : "VoCoNativeTests-test-runner",
+      "productReference" : {
+        "guid" : "PRODUCTREF-PACKAGE-TARGET:VoCoNativeTests_test_runner",
+        "name" : "VoCoNativeTests-test-runner",
+        "type" : "file"
+      },
+      "productTypeIdentifier" : "com.apple.product-type.tool.swiftpm-test-runner",
+      "type" : "standard"
+    },
+    "signature" : "fb2b817b6dc464c95f7af4620f17dde480caf1cea56beba33b7726b52d1dde2f",
+    "type" : "target"
+  },
+  {
+    "contents" : {
+      "approvedByUser" : "true",
+      "buildConfigurations" : [
+        {
+          "buildSettings" : {
+            "EXECUTABLE_PREFIX" : "lib",
+            "EXECUTABLE_PREFIX[__platform_filter=windows-msvc]" : "",
+            "PRODUCT_NAME" : "VoCoNative",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "TARGET_NAME" : "VoCoNative-product",
+            "TARGET_TEMP_DIR_SUFFIX" : "-p",
+            "USES_SWIFTPM_UNSAFE_FLAGS" : "NO"
+          },
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNative.VoCoNative::BUILDCONFIG_0",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Debug"
+        },
+        {
+          "buildSettings" : {
+            "EXECUTABLE_PREFIX" : "lib",
+            "EXECUTABLE_PREFIX[__platform_filter=windows-msvc]" : "",
+            "PRODUCT_NAME" : "VoCoNative",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "TARGET_NAME" : "VoCoNative-product",
+            "TARGET_TEMP_DIR_SUFFIX" : "-p",
+            "USES_SWIFTPM_UNSAFE_FLAGS" : "NO"
+          },
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNative.VoCoNative::BUILDCONFIG_1",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Release"
+        }
+      ],
+      "buildPhases" : [
+        {
+          "buildFiles" : [
+            {
+              "guid" : "PACKAGE-PRODUCT:voconative_VoCoNative.VoCoNative::BUILDPHASE_0::0",
+              "platformFilters" : [
+
+              ],
+              "targetReference" : "PACKAGE-TARGET:VoCoNative"
+            }
+          ],
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNative.VoCoNative::BUILDPHASE_0",
+          "type" : "com.apple.buildphase.frameworks"
+        },
+        {
+          "buildFiles" : [
+
+          ],
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNative.VoCoNative::BUILDPHASE_1",
+          "type" : "com.apple.buildphase.sources"
+        }
+      ],
+      "buildRules" : [
+
+      ],
+      "customTasks" : [
+
+      ],
+      "dependencies" : [
+        {
+          "guid" : "PACKAGE-TARGET:VoCoNative",
+          "platformFilters" : [
+
+          ]
+        }
+      ],
+      "guid" : "PACKAGE-PRODUCT:voconative_VoCoNative.VoCoNative",
+      "name" : "VoCoNative-product",
+      "productReference" : {
+        "guid" : "PRODUCTREF-PACKAGE-PRODUCT:voconative_VoCoNative.VoCoNative",
+        "name" : "$(EXECUTABLE_NAME)",
+        "type" : "file"
+      },
+      "productTypeIdentifier" : "com.apple.product-type.library.static",
+      "type" : "standard"
+    },
+    "signature" : "f59e18dcd15ad2c3cdcf6226ee977290c59f4c22520121b80bb388da5128e8f1",
+    "type" : "target"
+  },
+  {
+    "contents" : {
+      "approvedByUser" : "true",
+      "buildConfigurations" : [
+        {
+          "buildSettings" : {
+            "DEFINES_MODULE" : "YES",
+            "DOCC_EXTRACT_PROJECT_HEADERS_DOCUMENTATION" : "YES",
+            "GENERATE_PRELINK_OBJECT_FILE" : "NO",
+            "MODULEMAP_FILE_CONTENTS" : "module VoCoNative {\nheader \"VoCoNative-Swift.h\"\nexport *\n}",
+            "MODULEMAP_PATH" : "$(GENERATED_MODULEMAP_DIR)/VoCoNative.modulemap",
+            "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "voconative.VoCoNative",
+            "PRODUCT_MODULE_NAME" : "VoCoNative",
+            "PRODUCT_NAME" : "$(TARGET_NAME)",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "STRIP_INSTALLED_PRODUCT" : "NO",
+            "SUPPORTS_TEXT_BASED_API" : "NO",
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : [
+              "$(inherited)",
+              "SWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE"
+            ],
+            "SWIFT_DISABLE_PARSE_AS_LIBRARY" : "NO",
+            "SWIFT_ENABLE_BARE_SLASH_REGEX" : "NO",
+            "SWIFT_LIBRARIES_ONLY" : "YES",
+            "SWIFT_OBJC_INTERFACE_HEADER_DIR" : "$(GENERATED_MODULEMAP_DIR)",
+            "SWIFT_OBJC_INTERFACE_HEADER_NAME" : "VoCoNative-Swift.h",
+            "SWIFT_PACKAGE_NAME" : "voconative",
+            "SWIFT_VERSION" : "5",
+            "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNative.symbolgraphs",
+            "TAPI_DYLIB_INSTALL_NAME" : "VoCoNative",
+            "TAPI_EXTRACT_API_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNative.symbolgraphs",
+            "TARGET_NAME" : "VoCoNative",
+            "TARGET_TEMP_DIR_SUFFIX" : "-t"
+          },
+          "guid" : "PACKAGE-TARGET:VoCoNative::BUILDCONFIG_0",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+              "FRAMEWORK_SEARCH_PATHS" : [
+                "$(BUILT_PRODUCTS_DIR)/PackageFrameworks",
+                "$(inherited)"
+              ],
+              "LD_RUNPATH_SEARCH_PATHS" : [
+                "$(RPATH_ORIGIN)",
+                "$(BUILT_PRODUCTS_DIR)/PackageFrameworks",
+                "$(inherited)"
+              ],
+              "LD_WARN_DUPLICATE_LIBRARIES" : "NO",
+              "OTHER_CFLAGS" : [
+                "-fmodule-map-file=$(GENERATED_MODULEMAP_DIR)/VoCoNative.modulemap",
+                "$(inherited)"
+              ]
+            }
+          },
+          "name" : "Debug"
+        },
+        {
+          "buildSettings" : {
+            "DEFINES_MODULE" : "YES",
+            "DOCC_EXTRACT_PROJECT_HEADERS_DOCUMENTATION" : "YES",
+            "GENERATE_PRELINK_OBJECT_FILE" : "NO",
+            "MODULEMAP_FILE_CONTENTS" : "module VoCoNative {\nheader \"VoCoNative-Swift.h\"\nexport *\n}",
+            "MODULEMAP_PATH" : "$(GENERATED_MODULEMAP_DIR)/VoCoNative.modulemap",
+            "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "voconative.VoCoNative",
+            "PRODUCT_MODULE_NAME" : "VoCoNative",
+            "PRODUCT_NAME" : "$(TARGET_NAME)",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "STRIP_INSTALLED_PRODUCT" : "NO",
+            "SUPPORTS_TEXT_BASED_API" : "NO",
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : [
+              "$(inherited)",
+              "SWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE"
+            ],
+            "SWIFT_DISABLE_PARSE_AS_LIBRARY" : "NO",
+            "SWIFT_ENABLE_BARE_SLASH_REGEX" : "NO",
+            "SWIFT_LIBRARIES_ONLY" : "YES",
+            "SWIFT_OBJC_INTERFACE_HEADER_DIR" : "$(GENERATED_MODULEMAP_DIR)",
+            "SWIFT_OBJC_INTERFACE_HEADER_NAME" : "VoCoNative-Swift.h",
+            "SWIFT_PACKAGE_NAME" : "voconative",
+            "SWIFT_VERSION" : "5",
+            "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNative.symbolgraphs",
+            "TAPI_DYLIB_INSTALL_NAME" : "VoCoNative",
+            "TAPI_EXTRACT_API_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNative.symbolgraphs",
+            "TARGET_NAME" : "VoCoNative",
+            "TARGET_TEMP_DIR_SUFFIX" : "-t"
+          },
+          "guid" : "PACKAGE-TARGET:VoCoNative::BUILDCONFIG_1",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+              "FRAMEWORK_SEARCH_PATHS" : [
+                "$(BUILT_PRODUCTS_DIR)/PackageFrameworks",
+                "$(inherited)"
+              ],
+              "LD_RUNPATH_SEARCH_PATHS" : [
+                "$(RPATH_ORIGIN)",
+                "$(inherited)"
+              ],
+              "LD_WARN_DUPLICATE_LIBRARIES" : "NO",
+              "OTHER_CFLAGS" : [
+                "-fmodule-map-file=$(GENERATED_MODULEMAP_DIR)/VoCoNative.modulemap",
+                "$(inherited)"
+              ]
+            }
+          },
+          "name" : "Release"
+        }
+      ],
+      "buildPhases" : [
+        {
+          "buildFiles" : [
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_0",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::0",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_1",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::1",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_2",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::2",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_3",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::3",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_4",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::4",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_5",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::5",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_6",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::6",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_7",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::7",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_8",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::8",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_9",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::9",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_10",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::10",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_11",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::11",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_12",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::12",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_13",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::13",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_14",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::14",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_15",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::15",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_16",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::16",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_17",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::17",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_18",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::18",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_19",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::19",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_20",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::20",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_21",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::21",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_22",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::22",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_23",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::23",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_24",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::24",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_25",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::25",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_26",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::26",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_27",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::27",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_28",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::28",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_29",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::29",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_30",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::30",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_31",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::31",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_32",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::32",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_33",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::33",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_34",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::34",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_35",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::35",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_36",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::36",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_37",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::37",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_38",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::38",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_39",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::39",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_40",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::40",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_41",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::41",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_42",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::42",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_43",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::43",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_44",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::44",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_45",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::45",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_46",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::46",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_47",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::47",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_48",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::48",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_49",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::49",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_50",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::50",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_51",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::51",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_52",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::52",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_53",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::53",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_54",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::54",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_55",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::55",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_56",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::56",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_57",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::57",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_58",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::58",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_59",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::59",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            }
+          ],
+          "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0",
+          "type" : "com.apple.buildphase.sources"
+        }
+      ],
+      "buildRules" : [
+
+      ],
+      "customTasks" : [
+
+      ],
+      "dependencies" : [
+
+      ],
+      "dynamicTargetVariantGuid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic",
+      "guid" : "PACKAGE-TARGET:VoCoNative",
+      "name" : "VoCoNative",
+      "productReference" : {
+        "guid" : "PRODUCTREF-PACKAGE-TARGET:VoCoNative",
+        "name" : "$(EXECUTABLE_NAME)",
+        "type" : "file"
+      },
+      "productTypeIdentifier" : "org.swift.product-type.library.static",
+      "type" : "standard"
+    },
+    "signature" : "f004708a206e4b679bdb6cb47d2f6abb9d0a8f492da17ca5560d6e29422f2236",
+    "type" : "target"
+  },
+  {
+    "contents" : {
+      "buildConfigurations" : [
+        {
+          "buildSettings" : {
+
+          },
+          "guid" : "PACKAGE-PRODUCT:voconative-VoCoNativePackageTests.VoCoNativePackageTests::BUILDCONFIG_0",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Debug"
+        },
+        {
+          "buildSettings" : {
+
+          },
+          "guid" : "PACKAGE-PRODUCT:voconative-VoCoNativePackageTests.VoCoNativePackageTests::BUILDCONFIG_1",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Release"
+        }
+      ],
+      "buildPhases" : [
+
+      ],
+      "buildRules" : [
+
+      ],
+      "customTasks" : [
+
+      ],
+      "dependencies" : [
+        {
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests",
+          "platformFilters" : [
+
+          ]
+        },
+        {
+          "guid" : "PACKAGE-TARGET:VoCoNativeTests_test_runner",
+          "platformFilters" : [
+
+          ]
+        }
+      ],
+      "guid" : "PACKAGE-PRODUCT:voconative-VoCoNativePackageTests.VoCoNativePackageTests",
+      "name" : "VoCoNativePackageTests-product",
+      "type" : "aggregate"
+    },
+    "signature" : "b1e0507900d0de023fb05342deb5ee9b6ad36a38fc655233c0ce0be29e27a57f",
+    "type" : "target"
+  },
+  {
+    "contents" : {
+      "approvedByUser" : "true",
+      "buildConfigurations" : [
+        {
+          "buildSettings" : {
+            "DEFINES_MODULE" : "YES",
+            "DOCC_EXTRACT_PROJECT_HEADERS_DOCUMENTATION" : "YES",
+            "EXECUTABLE_PREFIX" : "lib",
+            "EXECUTABLE_PREFIX[__platform_filter=windows-msvc]" : "",
+            "MODULEMAP_FILE_CONTENTS" : "module VoCoNative {\nheader \"VoCoNative-Swift.h\"\nexport *\n}",
+            "MODULEMAP_PATH" : "$(GENERATED_MODULEMAP_DIR)/VoCoNative.modulemap",
+            "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "voconative.VoCoNative",
+            "PRODUCT_MODULE_NAME" : "VoCoNative",
+            "PRODUCT_NAME" : "VoCoNative",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "SUPPORTS_TEXT_BASED_API" : "NO",
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : [
+              "$(inherited)",
+              "SWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE"
+            ],
+            "SWIFT_DISABLE_PARSE_AS_LIBRARY" : "NO",
+            "SWIFT_ENABLE_BARE_SLASH_REGEX" : "NO",
+            "SWIFT_LIBRARIES_ONLY" : "YES",
+            "SWIFT_OBJC_INTERFACE_HEADER_DIR" : "$(GENERATED_MODULEMAP_DIR)",
+            "SWIFT_OBJC_INTERFACE_HEADER_NAME" : "VoCoNative-Swift.h",
+            "SWIFT_PACKAGE_NAME" : "voconative",
+            "SWIFT_VERSION" : "5",
+            "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNative.symbolgraphs",
+            "TAPI_EXTRACT_API_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNative.symbolgraphs",
+            "TARGET_NAME" : "VoCoNative",
+            "TARGET_TEMP_DIR_SUFFIX" : "-t"
+          },
+          "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDCONFIG_0",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+              "FRAMEWORK_SEARCH_PATHS" : [
+                "$(BUILT_PRODUCTS_DIR)/PackageFrameworks",
+                "$(inherited)"
+              ],
+              "LD_RUNPATH_SEARCH_PATHS" : [
+                "$(RPATH_ORIGIN)",
+                "$(BUILT_PRODUCTS_DIR)/PackageFrameworks",
+                "$(inherited)"
+              ],
+              "LD_WARN_DUPLICATE_LIBRARIES" : "NO",
+              "OTHER_CFLAGS" : [
+                "-fmodule-map-file=$(GENERATED_MODULEMAP_DIR)/VoCoNative.modulemap",
+                "$(inherited)"
+              ]
+            }
+          },
+          "name" : "Debug"
+        },
+        {
+          "buildSettings" : {
+            "DEFINES_MODULE" : "YES",
+            "DOCC_EXTRACT_PROJECT_HEADERS_DOCUMENTATION" : "YES",
+            "EXECUTABLE_PREFIX" : "lib",
+            "EXECUTABLE_PREFIX[__platform_filter=windows-msvc]" : "",
+            "MODULEMAP_FILE_CONTENTS" : "module VoCoNative {\nheader \"VoCoNative-Swift.h\"\nexport *\n}",
+            "MODULEMAP_PATH" : "$(GENERATED_MODULEMAP_DIR)/VoCoNative.modulemap",
+            "PACKAGE_RESOURCE_TARGET_KIND" : "regular",
+            "PRODUCT_BUNDLE_IDENTIFIER" : "voconative.VoCoNative",
+            "PRODUCT_MODULE_NAME" : "VoCoNative",
+            "PRODUCT_NAME" : "VoCoNative",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "SUPPORTS_TEXT_BASED_API" : "NO",
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : [
+              "$(inherited)",
+              "SWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE"
+            ],
+            "SWIFT_DISABLE_PARSE_AS_LIBRARY" : "NO",
+            "SWIFT_ENABLE_BARE_SLASH_REGEX" : "NO",
+            "SWIFT_LIBRARIES_ONLY" : "YES",
+            "SWIFT_OBJC_INTERFACE_HEADER_DIR" : "$(GENERATED_MODULEMAP_DIR)",
+            "SWIFT_OBJC_INTERFACE_HEADER_NAME" : "VoCoNative-Swift.h",
+            "SWIFT_PACKAGE_NAME" : "voconative",
+            "SWIFT_VERSION" : "5",
+            "SYMBOL_GRAPH_EXTRACTOR_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNative.symbolgraphs",
+            "TAPI_EXTRACT_API_OUTPUT_DIR" : "$(TARGET_BUILD_DIR)/$(CURRENT_ARCH)/VoCoNative.symbolgraphs",
+            "TARGET_NAME" : "VoCoNative",
+            "TARGET_TEMP_DIR_SUFFIX" : "-t"
+          },
+          "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDCONFIG_1",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+              "FRAMEWORK_SEARCH_PATHS" : [
+                "$(BUILT_PRODUCTS_DIR)/PackageFrameworks",
+                "$(inherited)"
+              ],
+              "LD_RUNPATH_SEARCH_PATHS" : [
+                "$(RPATH_ORIGIN)",
+                "$(inherited)"
+              ],
+              "LD_WARN_DUPLICATE_LIBRARIES" : "NO",
+              "OTHER_CFLAGS" : [
+                "-fmodule-map-file=$(GENERATED_MODULEMAP_DIR)/VoCoNative.modulemap",
+                "$(inherited)"
+              ]
+            }
+          },
+          "name" : "Release"
+        }
+      ],
+      "buildPhases" : [
+        {
+          "buildFiles" : [
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_0",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::0",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_1",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::1",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_2",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::2",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_3",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::3",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_4",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::4",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_5",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::5",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_6",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::6",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_7",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::7",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_8",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::8",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_9",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::9",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_10",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::10",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_11",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::11",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_12",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::12",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_13",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::13",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_14",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::14",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_15",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::15",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_16",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::16",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_17",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::17",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_18",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::18",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_19",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::19",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_20",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::20",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_21",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::21",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_22",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::22",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_23",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::23",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_24",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::24",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_25",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::25",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_26",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::26",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_27",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::27",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_28",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::28",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_29",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::29",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_30",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::30",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_31",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::31",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_32",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::32",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_33",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::33",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_34",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::34",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_35",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::35",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_36",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::36",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_37",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::37",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_38",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::38",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_39",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::39",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_40",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::40",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_41",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::41",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_42",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::42",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_43",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::43",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_44",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::44",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_45",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::45",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_46",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::46",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_47",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::47",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_48",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::48",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_49",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::49",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_50",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::50",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_51",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::51",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_52",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::52",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_53",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::53",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_54",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::54",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_55",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::55",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_56",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::56",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_57",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::57",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_58",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::58",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_59",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::59",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            }
+          ],
+          "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0",
+          "type" : "com.apple.buildphase.sources"
+        }
+      ],
+      "buildRules" : [
+
+      ],
+      "customTasks" : [
+
+      ],
+      "dependencies" : [
+
+      ],
+      "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic",
+      "name" : "VoCoNative",
+      "productReference" : {
+        "guid" : "PRODUCTREF-PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic",
+        "name" : "$(EXECUTABLE_NAME)",
+        "type" : "file"
+      },
+      "productTypeIdentifier" : "com.apple.product-type.library.dynamic",
+      "type" : "standard"
+    },
+    "signature" : "52d4a2e0ffcdcb623da5e037a58ce43ef5c7c5110f7103c7e00e2573efec0c6d",
+    "type" : "target"
+  },
+  {
+    "contents" : {
+      "buildConfigurations" : [
+        {
+          "buildSettings" : {
+            "PRODUCT_NAME" : "$(TARGET_NAME)",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "SKIP_INSTALL" : "YES",
+            "SUPPORTED_PLATFORMS" : [
+              "$(AVAILABLE_PLATFORMS)"
+            ]
+          },
+          "guid" : "AGGREGATE::BUILDCONFIG_0",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Debug"
+        },
+        {
+          "buildSettings" : {
+            "PRODUCT_NAME" : "$(TARGET_NAME)",
+            "SDKROOT" : "auto",
+            "SDK_VARIANT" : "auto",
+            "SKIP_INSTALL" : "YES",
+            "SUPPORTED_PLATFORMS" : [
+              "$(AVAILABLE_PLATFORMS)"
+            ]
+          },
+          "guid" : "AGGREGATE::BUILDCONFIG_1",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Release"
+        }
+      ],
+      "defaultConfigurationName" : "Release",
+      "developmentRegion" : "en",
+      "groupTree" : {
+        "children" : [
+
+        ],
+        "guid" : "AGGREGATE::MAINGROUP",
+        "name" : "",
+        "path" : "",
+        "sourceTree" : "<group>",
+        "type" : "group"
+      },
+      "guid" : "AGGREGATE",
+      "path" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Package.swift",
+      "projectDirectory" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative",
+      "projectIsPackage" : "true",
+      "projectName" : "Aggregate",
+      "targets" : [
+        "dafeedd6cae94c3d5c9e7be34c57e07adeb982e2dd1c0c35ea7e80d8d216d9b3",
+        "e956c998e97caa8eb9cada089beb5867f154a50cb6040b61ef3b373d0d0bfd75"
+      ]
+    },
+    "signature" : "9a01eadcbe87d83dd5cf9f63f88b9f9e3c3f85d771ec838dfd1639284aa026aa",
+    "type" : "project"
+  },
+  {
+    "contents" : {
+      "buildConfigurations" : [
+        {
+          "buildSettings" : {
+
+          },
+          "guid" : "ALL-INCLUDING-TESTS::BUILDCONFIG_0",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Debug"
+        },
+        {
+          "buildSettings" : {
+
+          },
+          "guid" : "ALL-INCLUDING-TESTS::BUILDCONFIG_1",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Release"
+        }
+      ],
+      "buildPhases" : [
+
+      ],
+      "buildRules" : [
+
+      ],
+      "customTasks" : [
+
+      ],
+      "dependencies" : [
+        {
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNativeTests.VoCoNativeTests",
+          "platformFilters" : [
+
+          ]
+        },
+        {
+          "guid" : "PACKAGE-TARGET:VoCoNativeTests_test_runner",
+          "platformFilters" : [
+
+          ]
+        },
+        {
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNative.VoCoNative",
+          "platformFilters" : [
+
+          ]
+        },
+        {
+          "guid" : "PACKAGE-TARGET:VoCoNative",
+          "platformFilters" : [
+
+          ]
+        }
+      ],
+      "guid" : "ALL-INCLUDING-TESTS",
+      "name" : "AllIncludingTests",
+      "type" : "aggregate"
+    },
+    "signature" : "dafeedd6cae94c3d5c9e7be34c57e07adeb982e2dd1c0c35ea7e80d8d216d9b3",
+    "type" : "target"
+  },
+  {
+    "contents" : {
+      "buildConfigurations" : [
+        {
+          "buildSettings" : {
+
+          },
+          "guid" : "ALL-EXCLUDING-TESTS::BUILDCONFIG_0",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Debug"
+        },
+        {
+          "buildSettings" : {
+
+          },
+          "guid" : "ALL-EXCLUDING-TESTS::BUILDCONFIG_1",
+          "impartedBuildProperties" : {
+            "buildSettings" : {
+
+            }
+          },
+          "name" : "Release"
+        }
+      ],
+      "buildPhases" : [
+
+      ],
+      "buildRules" : [
+
+      ],
+      "customTasks" : [
+
+      ],
+      "dependencies" : [
+        {
+          "guid" : "PACKAGE-PRODUCT:voconative_VoCoNative.VoCoNative",
+          "platformFilters" : [
+
+          ]
+        },
+        {
+          "guid" : "PACKAGE-TARGET:VoCoNative",
+          "platformFilters" : [
+
+          ]
+        }
+      ],
+      "guid" : "ALL-EXCLUDING-TESTS",
+      "name" : "AllExcludingTests",
+      "type" : "aggregate"
+    },
+    "signature" : "e956c998e97caa8eb9cada089beb5867f154a50cb6040b61ef3b373d0d0bfd75",
+    "type" : "target"
+  }
+]

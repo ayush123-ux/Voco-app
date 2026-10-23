@@ -1,0 +1,204 @@
+import SwiftUI
+
+/// True/False Interactive Quiz screen preserving StartQuiz.dart logic and score alerts
+public struct InteractiveQuizView: View {
+    @ObservedObject public var viewModel: QuizViewModel
+    public let onExitToHome: () -> Void
+
+    public init(
+        viewModel: QuizViewModel,
+        onExitToHome: @escaping () -> Void
+    ) {
+        self.viewModel = viewModel
+        self.onExitToHome = onExitToHome
+    }
+
+    public var body: some View {
+        VStack(spacing: 20) {
+            // Progress Bar & Question Counter
+            VStack(alignment: .leading, spacing: 8) {
+                HStack {
+                    Text("Question \(viewModel.currentIndex + 1) of \(viewModel.questions.count)")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.secondary)
+
+                    Spacer()
+
+                    Text("Score: \(viewModel.score)")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                        .foregroundColor(.blue)
+                }
+
+                ProgressView(value: viewModel.progress)
+                    .tint(.blue)
+            }
+            .padding(.horizontal)
+            .padding(.top, 12)
+
+            Spacer()
+
+            // Question Card
+            if let question = viewModel.currentQuestion {
+                VStack(spacing: 16) {
+                    Text("QUESTION")
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .tracking(1.5)
+                        .foregroundColor(.blue)
+
+                    Text(question.prompt)
+                        .font(.system(size: 22, weight: .semibold, design: .rounded))
+                        .foregroundColor(.primary)
+                        .multilineTextAlignment(.center)
+                        .lineSpacing(6)
+                        .padding(.horizontal, 8)
+                }
+                .padding(28)
+                .frame(maxWidth: .infinity)
+                .background(Color.gray.opacity(0.08))
+                .cornerRadius(24)
+                .padding(.horizontal, 20)
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Question \(viewModel.currentIndex + 1): \(question.prompt)")
+            }
+
+            // Explanation / Feedback Box after answer submission
+            if viewModel.isAnswerSubmitted, let question = viewModel.currentQuestion {
+                let isCorrect = viewModel.selectedAnswer == question.correctAnswer
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack(spacing: 8) {
+                        Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
+                            .font(.title3)
+                            .foregroundColor(isCorrect ? .green : .red)
+                            .accessibilityHidden(true)
+                        Text(isCorrect ? "Correct!" : "Incorrect")
+                            .font(.headline)
+                            .foregroundColor(isCorrect ? .green : .red)
+                    }
+
+                    if let explanation = question.explanation {
+                        Text(explanation)
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                            .padding(.top, 2)
+                    }
+                }
+                .padding(16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(isCorrect ? Color.green.opacity(0.1) : Color.red.opacity(0.1))
+                .cornerRadius(14)
+                .padding(.horizontal, 20)
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("\(isCorrect ? "Correct!" : "Incorrect.") \(question.explanation ?? "")")
+            }
+
+            Spacer()
+
+            // Action Buttons: TRUE & FALSE or Next Question
+            if !viewModel.isAnswerSubmitted {
+                HStack(spacing: 16) {
+                    // True Button
+                    Button {
+                        submitAnswer(true)
+                    } label: {
+                        HStack {
+                            Image(systemName: "checkmark")
+                            Text("TRUE")
+                        }
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 56)
+                        .background(Color.green)
+                        .cornerRadius(16)
+                        .shadow(color: .green.opacity(0.3), radius: 6, y: 3)
+                    }
+                    .accessibilityLabel("Select True")
+                    .accessibilityHint("Submits True as your answer")
+                    .accessibilityAddTraits(.isButton)
+
+                    // False Button
+                    Button {
+                        submitAnswer(false)
+                    } label: {
+                        HStack {
+                            Image(systemName: "xmark")
+                            Text("FALSE")
+                        }
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 56)
+                        .background(Color.red)
+                        .cornerRadius(16)
+                        .shadow(color: .red.opacity(0.3), radius: 6, y: 3)
+                    }
+                    .accessibilityLabel("Select False")
+                    .accessibilityHint("Submits False as your answer")
+                    .accessibilityAddTraits(.isButton)
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 24)
+            } else {
+                Button {
+                    advanceQuestion()
+                } label: {
+                    HStack {
+                        Text(viewModel.currentIndex + 1 < viewModel.questions.count ? "Next Question" : "See Final Results")
+                        Image(systemName: "arrow.right")
+                    }
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 54)
+                    .background(Color.blue)
+                    .cornerRadius(16)
+                }
+                .accessibilityLabel(viewModel.currentIndex + 1 < viewModel.questions.count ? "Next Question" : "See Final Results")
+                .accessibilityHint("Proceeds to the next item")
+                .padding(.horizontal, 20)
+                .padding(.bottom, 24)
+            }
+        }
+        .navigationTitle("VoCo Quiz")
+        #if os(iOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
+        .alert("Quiz Completed!", isPresented: Binding(
+            get: { viewModel.isQuizCompleted },
+            set: { _ in }
+        )) {
+            Button("Play Again") {
+                viewModel.resetQuiz()
+            }
+            Button("Return to Home", role: .cancel) {
+                onExitToHome()
+            }
+        } message: {
+            Text("You answered \(viewModel.score) out of \(viewModel.questions.count) correctly (\(viewModel.percentageScore)%).")
+        }
+    }
+
+    private func submitAnswer(_ answer: Bool) {
+        guard let question = viewModel.currentQuestion else { return }
+        viewModel.answerCurrentQuestion(with: answer)
+        let isCorrect = answer == question.correctAnswer
+        let message = "\(isCorrect ? "Correct!" : "Incorrect.") \(question.explanation ?? "")"
+        AccessibilityHelper.announce(message)
+    }
+
+    private func advanceQuestion() {
+        viewModel.nextQuestion()
+        if let nextQ = viewModel.currentQuestion {
+            let msg = "Question \(viewModel.currentIndex + 1) of \(viewModel.questions.count): \(nextQ.prompt)"
+            AccessibilityHelper.announce(msg)
+        } else if viewModel.isQuizCompleted {
+            AccessibilityHelper.announce("Quiz completed. Your score is \(viewModel.score) out of \(viewModel.questions.count).")
+        }
+    }
+}

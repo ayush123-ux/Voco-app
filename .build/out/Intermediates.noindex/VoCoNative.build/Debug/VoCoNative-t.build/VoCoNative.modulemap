@@ -1,0 +1,4 @@
+module VoCoNative {
+header "VoCoNative-Swift.h"
+export *
+}

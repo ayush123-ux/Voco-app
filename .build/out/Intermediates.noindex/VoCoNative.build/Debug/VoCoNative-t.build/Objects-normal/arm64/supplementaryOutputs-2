@@ -1,0 +1,23 @@
+{
+  "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/QuizQuestion.swift" : {
+    "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/QuizQuestion.swiftconstvalues",
+    "dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/QuizQuestion.d",
+    "diagnostics" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/QuizQuestion.dia",
+    "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/QuizQuestion.o",
+    "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/QuizQuestion.swiftdeps"
+  },
+  "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/Story.swift" : {
+    "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/Story.swiftconstvalues",
+    "dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/Story.d",
+    "diagnostics" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/Story.dia",
+    "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/Story.o",
+    "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/Story.swiftdeps"
+  },
+  "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/UserProfile.swift" : {
+    "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/UserProfile.swiftconstvalues",
+    "dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/UserProfile.d",
+    "diagnostics" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/UserProfile.dia",
+    "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/UserProfile.o",
+    "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/UserProfile.swiftdeps"
+  }
+}

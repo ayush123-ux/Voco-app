@@ -1,0 +1,11 @@
+Target dependency graph (4 targets)
+Target 'AllIncludingTests' in project 'Aggregate'
+➜ Explicit dependency on target 'VoCoNativeTests-product' in project 'VoCoNative'
+➜ Dependency on target 'VoCoNativeTests-product' in project 'VoCoNative' via transitive dependency through 'VoCoNativeTests-test-runner'
+➜ Explicit dependency on target 'VoCoNative-product' in project 'VoCoNative'
+➜ Explicit dependency on target 'VoCoNative' in project 'VoCoNative'
+Target 'VoCoNative-product' in project 'VoCoNative'
+➜ Explicit dependency on target 'VoCoNative' in project 'VoCoNative'
+Target 'VoCoNativeTests-product' in project 'VoCoNative'
+➜ Explicit dependency on target 'VoCoNative' in project 'VoCoNative'
+Target 'VoCoNative' in project 'VoCoNative' (no dependencies)

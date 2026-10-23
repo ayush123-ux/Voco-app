@@ -1,0 +1,23 @@
+{
+  "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Audio/NativeAudioPlayer.swift" : {
+    "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioPlayer.swiftconstvalues",
+    "dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioPlayer.d",
+    "diagnostics" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioPlayer.dia",
+    "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioPlayer.o",
+    "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioPlayer.swiftdeps"
+  },
+  "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Audio/NativeAudioRecorder.swift" : {
+    "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioRecorder.swiftconstvalues",
+    "dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioRecorder.d",
+    "diagnostics" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioRecorder.dia",
+    "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioRecorder.o",
+    "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioRecorder.swiftdeps"
+  },
+  "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Audio/NativeSpeechService.swift" : {
+    "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeSpeechService.swiftconstvalues",
+    "dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeSpeechService.d",
+    "diagnostics" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeSpeechService.dia",
+    "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeSpeechService.o",
+    "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeSpeechService.swiftdeps"
+  }
+}

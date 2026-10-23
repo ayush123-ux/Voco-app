@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000030000000000000001 /* App/VoCoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000001 /* App/VoCoApp.swift */; };
+		000000030000000000000002 /* Models/AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000002 /* Models/AuthUser.swift */; };
+		000000030000000000000003 /* Models/Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000003 /* Models/Course.swift */; };
+		000000030000000000000004 /* Models/PracticeSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000004 /* Models/PracticeSentence.swift */; };
+		000000030000000000000005 /* Models/QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000005 /* Models/QuizQuestion.swift */; };
+		000000030000000000000006 /* Models/Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000006 /* Models/Story.swift */; };
+		000000030000000000000007 /* Models/UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000007 /* Models/UserProfile.swift */; };
+		000000030000000000000008 /* Services/ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000008 /* Services/ServiceContainer.swift */; };
+		000000030000000000000009 /* Services/Audio/NativeAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000009 /* Services/Audio/NativeAudioPlayer.swift */; };
+		00000003000000000000000A /* Services/Audio/NativeAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000A /* Services/Audio/NativeAudioRecorder.swift */; };
+		00000003000000000000000B /* Services/Audio/NativeSpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000B /* Services/Audio/NativeSpeechRecognitionService.swift */; };
+		00000003000000000000000C /* Services/Audio/NativeSpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000C /* Services/Audio/NativeSpeechService.swift */; };
+		00000003000000000000000D /* Services/Audio/VoiceCommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000D /* Services/Audio/VoiceCommandParser.swift */; };
+		00000003000000000000000E /* Services/Audio/VoiceEmailSpellingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000E /* Services/Audio/VoiceEmailSpellingParser.swift */; };
+		00000003000000000000000F /* Services/Audio/VoiceGuidanceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000F /* Services/Audio/VoiceGuidanceCoordinator.swift */; };
+		000000030000000000000010 /* Services/Auth/KeychainTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000010 /* Services/Auth/KeychainTokenStore.swift */; };
+		000000030000000000000011 /* Services/Auth/NativeBiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000011 /* Services/Auth/NativeBiometricAuthService.swift */; };
+		000000030000000000000012 /* Services/Firebase/FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000012 /* Services/Firebase/FirebaseAuthService.swift */; };
+		000000030000000000000013 /* Services/Firebase/FirestoreSentenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000013 /* Services/Firebase/FirestoreSentenceService.swift */; };
+		000000030000000000000014 /* Services/Mock/MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000014 /* Services/Mock/MockAuthService.swift */; };
+		000000030000000000000015 /* Services/Mock/MockBiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000015 /* Services/Mock/MockBiometricAuthService.swift */; };
+		000000030000000000000016 /* Services/Mock/MockSentenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000016 /* Services/Mock/MockSentenceService.swift */; };
+		000000030000000000000017 /* Services/Mock/MockSpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000017 /* Services/Mock/MockSpeechRecognitionService.swift */; };
+		000000030000000000000018 /* Services/Mock/MockSpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000018 /* Services/Mock/MockSpeechService.swift */; };
+		000000030000000000000019 /* Services/Mock/MockTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000019 /* Services/Mock/MockTokenStore.swift */; };
+		00000003000000000000001A /* Services/Navigation/AppNavigationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001A /* Services/Navigation/AppNavigationStateMachine.swift */; };
+		00000003000000000000001B /* Services/Protocols/AudioPlaybackServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001B /* Services/Protocols/AudioPlaybackServiceProtocol.swift */; };
+		00000003000000000000001C /* Services/Protocols/AudioRecordingServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001C /* Services/Protocols/AudioRecordingServiceProtocol.swift */; };
+		00000003000000000000001D /* Services/Protocols/AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001D /* Services/Protocols/AuthServiceProtocol.swift */; };
+		00000003000000000000001E /* Services/Protocols/BiometricAuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001E /* Services/Protocols/BiometricAuthServiceProtocol.swift */; };
+		00000003000000000000001F /* Services/Protocols/SecureTokenStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001F /* Services/Protocols/SecureTokenStoreProtocol.swift */; };
+		000000030000000000000020 /* Services/Protocols/SentenceServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000020 /* Services/Protocols/SentenceServiceProtocol.swift */; };
+		000000030000000000000021 /* Services/Protocols/SpeechRecognitionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000021 /* Services/Protocols/SpeechRecognitionServiceProtocol.swift */; };
+		000000030000000000000022 /* Services/Protocols/SpeechServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000022 /* Services/Protocols/SpeechServiceProtocol.swift */; };
+		000000030000000000000023 /* ViewModels/AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000023 /* ViewModels/AuthViewModel.swift */; };
+		000000030000000000000024 /* ViewModels/PronunciationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000024 /* ViewModels/PronunciationViewModel.swift */; };
+		000000030000000000000025 /* ViewModels/QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000025 /* ViewModels/QuizViewModel.swift */; };
+		000000030000000000000026 /* ViewModels/VoiceCommandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000026 /* ViewModels/VoiceCommandViewModel.swift */; };
+		000000030000000000000027 /* Views/VoCoMainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000027 /* Views/VoCoMainAppView.swift */; };
+		000000030000000000000028 /* Views/Auth/LoginHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000028 /* Views/Auth/LoginHomeView.swift */; };
+		000000030000000000000029 /* Views/Auth/SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000029 /* Views/Auth/SignInView.swift */; };
+		00000003000000000000002A /* Views/Auth/SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002A /* Views/Auth/SignUpView.swift */; };
+		00000003000000000000002B /* Views/Auth/SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002B /* Views/Auth/SplashScreenView.swift */; };
+		00000003000000000000002C /* Views/Auth/UserProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002C /* Views/Auth/UserProfileFormView.swift */; };
+		00000003000000000000002D /* Views/Common/AccessibilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002D /* Views/Common/AccessibilityHelper.swift */; };
+		00000003000000000000002E /* Views/Common/ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002E /* Views/Common/ComingSoonView.swift */; };
+		00000003000000000000002F /* Views/Common/QuadrantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002F /* Views/Common/QuadrantCardView.swift */; };
+		000000030000000000000030 /* Views/Common/VoiceCommandBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000030 /* Views/Common/VoiceCommandBarView.swift */; };
+		000000030000000000000031 /* Views/Games/GamesHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000031 /* Views/Games/GamesHubView.swift */; };
+		000000030000000000000032 /* Views/Games/InteractiveQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000032 /* Views/Games/InteractiveQuizView.swift */; };
+		000000030000000000000033 /* Views/Games/StoryCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000033 /* Views/Games/StoryCatalogView.swift */; };
+		000000030000000000000034 /* Views/Games/StoryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000034 /* Views/Games/StoryReaderView.swift */; };
+		000000030000000000000035 /* Views/Home/HomeDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000035 /* Views/Home/HomeDashboardView.swift */; };
+		000000030000000000000036 /* Views/Pronunciation/PronunciationRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000036 /* Views/Pronunciation/PronunciationRecordView.swift */; };
+		000000030000000000000037 /* Views/Pronunciation/PronunciationReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000037 /* Views/Pronunciation/PronunciationReviewView.swift */; };
+		000000030000000000000038 /* Views/Talk/TalkWithVoCoHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000038 /* Views/Talk/TalkWithVoCoHubView.swift */; };
+		000000030000000000000039 /* Views/Talk/VoCoBotConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000039 /* Views/Talk/VoCoBotConversationView.swift */; };
+		00000003000000000000003A /* Views/VoCoGyan/DSAEpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003A /* Views/VoCoGyan/DSAEpisodesView.swift */; };
+		00000003000000000000003B /* Views/VoCoGyan/EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003B /* Views/VoCoGyan/EpisodeDetailView.swift */; };
+		00000003000000000000003C /* Views/VoCoGyan/TechnicalCoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003C /* Views/VoCoGyan/TechnicalCoursesView.swift */; };
+		00000003000000000000003D /* Views/VoCoGyan/VoCoGyanHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003D /* Views/VoCoGyan/VoCoGyanHubView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0000000100000000000003E8 /* App/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = App/Info.plist; sourceTree = "<group>"; };
+		000000020000000000000001 /* App/VoCoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/VoCoApp.swift; sourceTree = "<group>"; };
+		000000020000000000000002 /* Models/AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/AuthUser.swift; sourceTree = "<group>"; };
+		000000020000000000000003 /* Models/Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Course.swift; sourceTree = "<group>"; };
+		000000020000000000000004 /* Models/PracticeSentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/PracticeSentence.swift; sourceTree = "<group>"; };
+		000000020000000000000005 /* Models/QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/QuizQuestion.swift; sourceTree = "<group>"; };
+		000000020000000000000006 /* Models/Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Story.swift; sourceTree = "<group>"; };
+		000000020000000000000007 /* Models/UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/UserProfile.swift; sourceTree = "<group>"; };
+		000000020000000000000008 /* Services/ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ServiceContainer.swift; sourceTree = "<group>"; };
+		000000020000000000000009 /* Services/Audio/NativeAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Audio/NativeAudioPlayer.swift; sourceTree = "<group>"; };
+		00000002000000000000000A /* Services/Audio/NativeAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Audio/NativeAudioRecorder.swift; sourceTree = "<group>"; };
+		00000002000000000000000B /* Services/Audio/NativeSpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Audio/NativeSpeechRecognitionService.swift; sourceTree = "<group>"; };
+		00000002000000000000000C /* Services/Audio/NativeSpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Audio/NativeSpeechService.swift; sourceTree = "<group>"; };
+		00000002000000000000000D /* Services/Audio/VoiceCommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Audio/VoiceCommandParser.swift; sourceTree = "<group>"; };
+		00000002000000000000000E /* Services/Audio/VoiceEmailSpellingParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Audio/VoiceEmailSpellingParser.swift; sourceTree = "<group>"; };
+		00000002000000000000000F /* Services/Audio/VoiceGuidanceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Audio/VoiceGuidanceCoordinator.swift; sourceTree = "<group>"; };
+		000000020000000000000010 /* Services/Auth/KeychainTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Auth/KeychainTokenStore.swift; sourceTree = "<group>"; };
+		000000020000000000000011 /* Services/Auth/NativeBiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Auth/NativeBiometricAuthService.swift; sourceTree = "<group>"; };
+		000000020000000000000012 /* Services/Firebase/FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Firebase/FirebaseAuthService.swift; sourceTree = "<group>"; };
+		000000020000000000000013 /* Services/Firebase/FirestoreSentenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Firebase/FirestoreSentenceService.swift; sourceTree = "<group>"; };
+		000000020000000000000014 /* Services/Mock/MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Mock/MockAuthService.swift; sourceTree = "<group>"; };
+		000000020000000000000015 /* Services/Mock/MockBiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Mock/MockBiometricAuthService.swift; sourceTree = "<group>"; };
+		000000020000000000000016 /* Services/Mock/MockSentenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Mock/MockSentenceService.swift; sourceTree = "<group>"; };
+		000000020000000000000017 /* Services/Mock/MockSpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Mock/MockSpeechRecognitionService.swift; sourceTree = "<group>"; };
+		000000020000000000000018 /* Services/Mock/MockSpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Mock/MockSpeechService.swift; sourceTree = "<group>"; };
+		000000020000000000000019 /* Services/Mock/MockTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Mock/MockTokenStore.swift; sourceTree = "<group>"; };
+		00000002000000000000001A /* Services/Navigation/AppNavigationStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Navigation/AppNavigationStateMachine.swift; sourceTree = "<group>"; };
+		00000002000000000000001B /* Services/Protocols/AudioPlaybackServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols/AudioPlaybackServiceProtocol.swift; sourceTree = "<group>"; };
+		00000002000000000000001C /* Services/Protocols/AudioRecordingServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols/AudioRecordingServiceProtocol.swift; sourceTree = "<group>"; };
+		00000002000000000000001D /* Services/Protocols/AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols/AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		00000002000000000000001E /* Services/Protocols/BiometricAuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols/BiometricAuthServiceProtocol.swift; sourceTree = "<group>"; };
+		00000002000000000000001F /* Services/Protocols/SecureTokenStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols/SecureTokenStoreProtocol.swift; sourceTree = "<group>"; };
+		000000020000000000000020 /* Services/Protocols/SentenceServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols/SentenceServiceProtocol.swift; sourceTree = "<group>"; };
+		000000020000000000000021 /* Services/Protocols/SpeechRecognitionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols/SpeechRecognitionServiceProtocol.swift; sourceTree = "<group>"; };
+		000000020000000000000022 /* Services/Protocols/SpeechServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols/SpeechServiceProtocol.swift; sourceTree = "<group>"; };
+		000000020000000000000023 /* ViewModels/AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/AuthViewModel.swift; sourceTree = "<group>"; };
+		000000020000000000000024 /* ViewModels/PronunciationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/PronunciationViewModel.swift; sourceTree = "<group>"; };
+		000000020000000000000025 /* ViewModels/QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/QuizViewModel.swift; sourceTree = "<group>"; };
+		000000020000000000000026 /* ViewModels/VoiceCommandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/VoiceCommandViewModel.swift; sourceTree = "<group>"; };
+		000000020000000000000027 /* Views/VoCoMainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/VoCoMainAppView.swift; sourceTree = "<group>"; };
+		000000020000000000000028 /* Views/Auth/LoginHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Auth/LoginHomeView.swift; sourceTree = "<group>"; };
+		000000020000000000000029 /* Views/Auth/SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Auth/SignInView.swift; sourceTree = "<group>"; };
+		00000002000000000000002A /* Views/Auth/SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Auth/SignUpView.swift; sourceTree = "<group>"; };
+		00000002000000000000002B /* Views/Auth/SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Auth/SplashScreenView.swift; sourceTree = "<group>"; };
+		00000002000000000000002C /* Views/Auth/UserProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Auth/UserProfileFormView.swift; sourceTree = "<group>"; };
+		00000002000000000000002D /* Views/Common/AccessibilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Common/AccessibilityHelper.swift; sourceTree = "<group>"; };
+		00000002000000000000002E /* Views/Common/ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Common/ComingSoonView.swift; sourceTree = "<group>"; };
+		00000002000000000000002F /* Views/Common/QuadrantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Common/QuadrantCardView.swift; sourceTree = "<group>"; };
+		000000020000000000000030 /* Views/Common/VoiceCommandBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Common/VoiceCommandBarView.swift; sourceTree = "<group>"; };
+		000000020000000000000031 /* Views/Games/GamesHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Games/GamesHubView.swift; sourceTree = "<group>"; };
+		000000020000000000000032 /* Views/Games/InteractiveQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Games/InteractiveQuizView.swift; sourceTree = "<group>"; };
+		000000020000000000000033 /* Views/Games/StoryCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Games/StoryCatalogView.swift; sourceTree = "<group>"; };
+		000000020000000000000034 /* Views/Games/StoryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Games/StoryReaderView.swift; sourceTree = "<group>"; };
+		000000020000000000000035 /* Views/Home/HomeDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Home/HomeDashboardView.swift; sourceTree = "<group>"; };
+		000000020000000000000036 /* Views/Pronunciation/PronunciationRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Pronunciation/PronunciationRecordView.swift; sourceTree = "<group>"; };
+		000000020000000000000037 /* Views/Pronunciation/PronunciationReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Pronunciation/PronunciationReviewView.swift; sourceTree = "<group>"; };
+		000000020000000000000038 /* Views/Talk/TalkWithVoCoHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Talk/TalkWithVoCoHubView.swift; sourceTree = "<group>"; };
+		000000020000000000000039 /* Views/Talk/VoCoBotConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Talk/VoCoBotConversationView.swift; sourceTree = "<group>"; };
+		00000002000000000000003A /* Views/VoCoGyan/DSAEpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/VoCoGyan/DSAEpisodesView.swift; sourceTree = "<group>"; };
+		00000002000000000000003B /* Views/VoCoGyan/EpisodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/VoCoGyan/EpisodeDetailView.swift; sourceTree = "<group>"; };
+		00000002000000000000003C /* Views/VoCoGyan/TechnicalCoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/VoCoGyan/TechnicalCoursesView.swift; sourceTree = "<group>"; };
+		00000002000000000000003D /* Views/VoCoGyan/VoCoGyanHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/VoCoGyan/VoCoGyanHubView.swift; sourceTree = "<group>"; };
+		0000000B0000000000000001 /* VoCoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoCoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000050000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000090000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				0000000100000000000003E8 /* App/Info.plist */,
+				000000020000000000000001 /* App/VoCoApp.swift */,
+				000000020000000000000002 /* Models/AuthUser.swift */,
+				000000020000000000000003 /* Models/Course.swift */,
+				000000020000000000000004 /* Models/PracticeSentence.swift */,
+				000000020000000000000005 /* Models/QuizQuestion.swift */,
+				000000020000000000000006 /* Models/Story.swift */,
+				000000020000000000000007 /* Models/UserProfile.swift */,
+				000000020000000000000008 /* Services/ServiceContainer.swift */,
+				000000020000000000000009 /* Services/Audio/NativeAudioPlayer.swift */,
+				00000002000000000000000A /* Services/Audio/NativeAudioRecorder.swift */,
+				00000002000000000000000B /* Services/Audio/NativeSpeechRecognitionService.swift */,
+				00000002000000000000000C /* Services/Audio/NativeSpeechService.swift */,
+				00000002000000000000000D /* Services/Audio/VoiceCommandParser.swift */,
+				00000002000000000000000E /* Services/Audio/VoiceEmailSpellingParser.swift */,
+				00000002000000000000000F /* Services/Audio/VoiceGuidanceCoordinator.swift */,
+				000000020000000000000010 /* Services/Auth/KeychainTokenStore.swift */,
+				000000020000000000000011 /* Services/Auth/NativeBiometricAuthService.swift */,
+				000000020000000000000012 /* Services/Firebase/FirebaseAuthService.swift */,
+				000000020000000000000013 /* Services/Firebase/FirestoreSentenceService.swift */,
+				000000020000000000000014 /* Services/Mock/MockAuthService.swift */,
+				000000020000000000000015 /* Services/Mock/MockBiometricAuthService.swift */,
+				000000020000000000000016 /* Services/Mock/MockSentenceService.swift */,
+				000000020000000000000017 /* Services/Mock/MockSpeechRecognitionService.swift */,
+				000000020000000000000018 /* Services/Mock/MockSpeechService.swift */,
+				000000020000000000000019 /* Services/Mock/MockTokenStore.swift */,
+				00000002000000000000001A /* Services/Navigation/AppNavigationStateMachine.swift */,
+				00000002000000000000001B /* Services/Protocols/AudioPlaybackServiceProtocol.swift */,
+				00000002000000000000001C /* Services/Protocols/AudioRecordingServiceProtocol.swift */,
+				00000002000000000000001D /* Services/Protocols/AuthServiceProtocol.swift */,
+				00000002000000000000001E /* Services/Protocols/BiometricAuthServiceProtocol.swift */,
+				00000002000000000000001F /* Services/Protocols/SecureTokenStoreProtocol.swift */,
+				000000020000000000000020 /* Services/Protocols/SentenceServiceProtocol.swift */,
+				000000020000000000000021 /* Services/Protocols/SpeechRecognitionServiceProtocol.swift */,
+				000000020000000000000022 /* Services/Protocols/SpeechServiceProtocol.swift */,
+				000000020000000000000023 /* ViewModels/AuthViewModel.swift */,
+				000000020000000000000024 /* ViewModels/PronunciationViewModel.swift */,
+				000000020000000000000025 /* ViewModels/QuizViewModel.swift */,
+				000000020000000000000026 /* ViewModels/VoiceCommandViewModel.swift */,
+				000000020000000000000027 /* Views/VoCoMainAppView.swift */,
+				000000020000000000000028 /* Views/Auth/LoginHomeView.swift */,
+				000000020000000000000029 /* Views/Auth/SignInView.swift */,
+				00000002000000000000002A /* Views/Auth/SignUpView.swift */,
+				00000002000000000000002B /* Views/Auth/SplashScreenView.swift */,
+				00000002000000000000002C /* Views/Auth/UserProfileFormView.swift */,
+				00000002000000000000002D /* Views/Common/AccessibilityHelper.swift */,
+				00000002000000000000002E /* Views/Common/ComingSoonView.swift */,
+				00000002000000000000002F /* Views/Common/QuadrantCardView.swift */,
+				000000020000000000000030 /* Views/Common/VoiceCommandBarView.swift */,
+				000000020000000000000031 /* Views/Games/GamesHubView.swift */,
+				000000020000000000000032 /* Views/Games/InteractiveQuizView.swift */,
+				000000020000000000000033 /* Views/Games/StoryCatalogView.swift */,
+				000000020000000000000034 /* Views/Games/StoryReaderView.swift */,
+				000000020000000000000035 /* Views/Home/HomeDashboardView.swift */,
+				000000020000000000000036 /* Views/Pronunciation/PronunciationRecordView.swift */,
+				000000020000000000000037 /* Views/Pronunciation/PronunciationReviewView.swift */,
+				000000020000000000000038 /* Views/Talk/TalkWithVoCoHubView.swift */,
+				000000020000000000000039 /* Views/Talk/VoCoBotConversationView.swift */,
+				00000002000000000000003A /* Views/VoCoGyan/DSAEpisodesView.swift */,
+				00000002000000000000003B /* Views/VoCoGyan/EpisodeDetailView.swift */,
+				00000002000000000000003C /* Views/VoCoGyan/TechnicalCoursesView.swift */,
+				00000002000000000000003D /* Views/VoCoGyan/VoCoGyanHubView.swift */,
+				0000000A0000000000000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0000000A0000000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0000000B0000000000000001 /* VoCoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000070000000000000001 /* VoCoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000000D0000000000000003 /* Build configuration list for PBXNativeTarget "VoCoApp" */;
+			buildPhases = (
+				000000040000000000000001 /* Sources */,
+				000000050000000000000001 /* Frameworks */,
+				000000060000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoCoApp;
+			productName = VoCoApp;
+			productReference = 0000000B0000000000000001 /* VoCoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000080000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					000000070000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 0000000C0000000000000003 /* Build configuration list for PBXProject "VoCoApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000090000000000000001;
+			productRefGroup = 0000000A0000000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000070000000000000001 /* VoCoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000060000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000040000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000030000000000000001 /* App/VoCoApp.swift in Sources */,
+				000000030000000000000002 /* Models/AuthUser.swift in Sources */,
+				000000030000000000000003 /* Models/Course.swift in Sources */,
+				000000030000000000000004 /* Models/PracticeSentence.swift in Sources */,
+				000000030000000000000005 /* Models/QuizQuestion.swift in Sources */,
+				000000030000000000000006 /* Models/Story.swift in Sources */,
+				000000030000000000000007 /* Models/UserProfile.swift in Sources */,
+				000000030000000000000008 /* Services/ServiceContainer.swift in Sources */,
+				000000030000000000000009 /* Services/Audio/NativeAudioPlayer.swift in Sources */,
+				00000003000000000000000A /* Services/Audio/NativeAudioRecorder.swift in Sources */,
+				00000003000000000000000B /* Services/Audio/NativeSpeechRecognitionService.swift in Sources */,
+				00000003000000000000000C /* Services/Audio/NativeSpeechService.swift in Sources */,
+				00000003000000000000000D /* Services/Audio/VoiceCommandParser.swift in Sources */,
+				00000003000000000000000E /* Services/Audio/VoiceEmailSpellingParser.swift in Sources */,
+				00000003000000000000000F /* Services/Audio/VoiceGuidanceCoordinator.swift in Sources */,
+				000000030000000000000010 /* Services/Auth/KeychainTokenStore.swift in Sources */,
+				000000030000000000000011 /* Services/Auth/NativeBiometricAuthService.swift in Sources */,
+				000000030000000000000012 /* Services/Firebase/FirebaseAuthService.swift in Sources */,
+				000000030000000000000013 /* Services/Firebase/FirestoreSentenceService.swift in Sources */,
+				000000030000000000000014 /* Services/Mock/MockAuthService.swift in Sources */,
+				000000030000000000000015 /* Services/Mock/MockBiometricAuthService.swift in Sources */,
+				000000030000000000000016 /* Services/Mock/MockSentenceService.swift in Sources */,
+				000000030000000000000017 /* Services/Mock/MockSpeechRecognitionService.swift in Sources */,
+				000000030000000000000018 /* Services/Mock/MockSpeechService.swift in Sources */,
+				000000030000000000000019 /* Services/Mock/MockTokenStore.swift in Sources */,
+				00000003000000000000001A /* Services/Navigation/AppNavigationStateMachine.swift in Sources */,
+				00000003000000000000001B /* Services/Protocols/AudioPlaybackServiceProtocol.swift in Sources */,
+				00000003000000000000001C /* Services/Protocols/AudioRecordingServiceProtocol.swift in Sources */,
+				00000003000000000000001D /* Services/Protocols/AuthServiceProtocol.swift in Sources */,
+				00000003000000000000001E /* Services/Protocols/BiometricAuthServiceProtocol.swift in Sources */,
+				00000003000000000000001F /* Services/Protocols/SecureTokenStoreProtocol.swift in Sources */,
+				000000030000000000000020 /* Services/Protocols/SentenceServiceProtocol.swift in Sources */,
+				000000030000000000000021 /* Services/Protocols/SpeechRecognitionServiceProtocol.swift in Sources */,
+				000000030000000000000022 /* Services/Protocols/SpeechServiceProtocol.swift in Sources */,
+				000000030000000000000023 /* ViewModels/AuthViewModel.swift in Sources */,
+				000000030000000000000024 /* ViewModels/PronunciationViewModel.swift in Sources */,
+				000000030000000000000025 /* ViewModels/QuizViewModel.swift in Sources */,
+				000000030000000000000026 /* ViewModels/VoiceCommandViewModel.swift in Sources */,
+				000000030000000000000027 /* Views/VoCoMainAppView.swift in Sources */,
+				000000030000000000000028 /* Views/Auth/LoginHomeView.swift in Sources */,
+				000000030000000000000029 /* Views/Auth/SignInView.swift in Sources */,
+				00000003000000000000002A /* Views/Auth/SignUpView.swift in Sources */,
+				00000003000000000000002B /* Views/Auth/SplashScreenView.swift in Sources */,
+				00000003000000000000002C /* Views/Auth/UserProfileFormView.swift in Sources */,
+				00000003000000000000002D /* Views/Common/AccessibilityHelper.swift in Sources */,
+				00000003000000000000002E /* Views/Common/ComingSoonView.swift in Sources */,
+				00000003000000000000002F /* Views/Common/QuadrantCardView.swift in Sources */,
+				000000030000000000000030 /* Views/Common/VoiceCommandBarView.swift in Sources */,
+				000000030000000000000031 /* Views/Games/GamesHubView.swift in Sources */,
+				000000030000000000000032 /* Views/Games/InteractiveQuizView.swift in Sources */,
+				000000030000000000000033 /* Views/Games/StoryCatalogView.swift in Sources */,
+				000000030000000000000034 /* Views/Games/StoryReaderView.swift in Sources */,
+				000000030000000000000035 /* Views/Home/HomeDashboardView.swift in Sources */,
+				000000030000000000000036 /* Views/Pronunciation/PronunciationRecordView.swift in Sources */,
+				000000030000000000000037 /* Views/Pronunciation/PronunciationReviewView.swift in Sources */,
+				000000030000000000000038 /* Views/Talk/TalkWithVoCoHubView.swift in Sources */,
+				000000030000000000000039 /* Views/Talk/VoCoBotConversationView.swift in Sources */,
+				00000003000000000000003A /* Views/VoCoGyan/DSAEpisodesView.swift in Sources */,
+				00000003000000000000003B /* Views/VoCoGyan/EpisodeDetailView.swift in Sources */,
+				00000003000000000000003C /* Views/VoCoGyan/TechnicalCoursesView.swift in Sources */,
+				00000003000000000000003D /* Views/VoCoGyan/VoCoGyanHubView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0000000C0000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0000000C0000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		0000000D0000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snapsid.voco.native;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0000000D0000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snapsid.voco.native;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0000000C0000000000000003 /* Build configuration list for PBXProject "VoCoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0000000C0000000000000001 /* Debug */,
+				0000000C0000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0000000D0000000000000003 /* Build configuration list for PBXNativeTarget "VoCoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0000000D0000000000000001 /* Debug */,
+				0000000D0000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000080000000000000001 /* Project object */;
+}
