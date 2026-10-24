@@ -8,6 +8,12 @@ public protocol SpeechRecognitionServiceProtocol: AnyObject, Sendable {
     /// Current authorization status for speech recognition
     var isAuthorized: Bool { get }
 
+    /// Current active locale identifier (e.g. "en-IN", "hi-IN")
+    var currentLocaleIdentifier: String { get }
+
+    /// Sets or updates the speech recognition locale dynamically
+    func setLocale(_ localeIdentifier: String)
+
     /// Requests user authorization for speech recognition and microphone access
     func requestAuthorization() async -> Bool
 

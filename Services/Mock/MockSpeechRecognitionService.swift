@@ -4,6 +4,7 @@ import Foundation
 public final class MockSpeechRecognitionService: SpeechRecognitionServiceProtocol, @unchecked Sendable {
     public var isListening: Bool = false
     public var isAuthorized: Bool = true
+    public var currentLocaleIdentifier: String = "en-IN"
     public var simulatedTranscription: String = ""
     public var shouldFailAuthorization: Bool = false
     public var shouldThrowStartError: Bool = false
@@ -13,8 +14,13 @@ public final class MockSpeechRecognitionService: SpeechRecognitionServiceProtoco
     public var onTranscriptionCallback: ((String) -> Void)?
     public var onErrorCallback: ((Error) -> Void)?
 
-    public init(isAuthorized: Bool = true) {
+    public init(isAuthorized: Bool = true, localeIdentifier: String = "en-IN") {
         self.isAuthorized = isAuthorized
+        self.currentLocaleIdentifier = localeIdentifier
+    }
+
+    public func setLocale(_ localeIdentifier: String) {
+        self.currentLocaleIdentifier = localeIdentifier
     }
 
     public func requestAuthorization() async -> Bool {
@@ -61,6 +67,7 @@ public final class MockSpeechRecognitionService: SpeechRecognitionServiceProtoco
         }
     }
 
+    /// Simulates incoming speech recognition error during tests
     public func simulateError(_ error: Error) {
         onErrorCallback?(error)
     }

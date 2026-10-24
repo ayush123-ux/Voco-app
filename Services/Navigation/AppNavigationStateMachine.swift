@@ -164,6 +164,28 @@ public final class AppNavigationStateMachine: ObservableObject {
         case .openVoCoGyan:
             return navigateToProtectedDestination(.voCoGyan, announcement: "Opening VoCo Gyan lessons.")
 
+        case .openTechnicalCourses:
+            return navigateToProtectedDestination(.technicalCourses(.technical), announcement: "Opening Technical Courses.")
+
+        case .openNonTechnicalCourses:
+            return navigateToProtectedDestination(.technicalCourses(.nonTechnical), announcement: "Opening Non-Technical Courses.")
+
+        case .openCourseTopic(let topicId):
+            guard isAuthenticated else {
+                let feedback = "Please sign in before opening courses."
+                recordAnnouncement(feedback)
+                return .rejected(reason: "Authentication required", spokenFeedback: feedback)
+            }
+            if let topic = CourseTopic.standardTopics.first(where: { $0.id == topicId || $0.id.localizedCaseInsensitiveContains(topicId) }) {
+                if navigationStack.last != .dsaEpisodes(topic) {
+                    push(.dsaEpisodes(topic))
+                }
+                let feedback = "Opening \(topic.title)."
+                recordAnnouncement(feedback)
+                return .navigated(destination: .dsaEpisodes(topic), spokenFeedback: feedback)
+            }
+            return navigateToProtectedDestination(.voCoGyan, announcement: "Opening VoCo Gyan lessons.")
+
         case .openGames:
             return navigateToProtectedDestination(.gamesHub, announcement: "Opening Games and Challenges.")
 
@@ -226,6 +248,21 @@ public final class AppNavigationStateMachine: ObservableObject {
             let feedback = "Hands-free voice mode toggled."
             recordAnnouncement(feedback)
             return .actionExecuted(actionName: "ToggleHandsFree", spokenFeedback: feedback)
+
+        case .switchLanguage(let localeCode):
+            if let lang = AppLanguage.standardLanguages.first(where: { $0.id == localeCode || $0.id.hasPrefix(localeCode) }) {
+                LanguageManager.shared.setLanguage(lang)
+                let feedback = LanguageManager.shared.localizedAnnouncementForSwitch(to: lang)
+                recordAnnouncement(feedback)
+                return .actionExecuted(actionName: "SwitchLanguage_\(lang.id)", spokenFeedback: feedback)
+            }
+            let feedback = "Language switched."
+            recordAnnouncement(feedback)
+            return .actionExecuted(actionName: "SwitchLanguage", spokenFeedback: feedback)
+
+        case .clarificationNeeded(let prompt, _):
+            recordAnnouncement(prompt)
+            return .actionExecuted(actionName: "ClarificationNeeded", spokenFeedback: prompt)
 
         // MARK: General & Utility
         case .repeatSpoken:

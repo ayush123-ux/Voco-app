@@ -61,8 +61,8 @@ public final class VoiceCommandViewModel: ObservableObject {
 
     public var onIntentCallback: ((VoiceCommandIntent) -> Void)?
 
-    /// Trailing silence delay in seconds before auto-finalizing in hands-free mode
-    public var silenceThreshold: TimeInterval = 1.4
+    /// Trailing silence delay in seconds before auto-finalizing utterances
+    public var silenceThreshold: TimeInterval = 1.2
 
     public init(
         speechRecognizer: SpeechRecognitionServiceProtocol,
@@ -100,33 +100,31 @@ public final class VoiceCommandViewModel: ObservableObject {
         await setHandsFreeMode(enabled: !isHandsFreeModeEnabled, onIntentRecognized: onIntentRecognized)
     }
 
-    /// User-initiated or voice-command pause
+    /// User pauses microphone capture (e.g. for privacy in public spaces)
     public func pauseListening() async {
         isPaused = true
         cancelSilenceTask()
         cancelReArmTask()
         speechRecognizer.stopListening()
         updateListeningState(.paused)
-        statusMessage = "Listening Paused"
-        AccessibilityHelper.announce("Voice listening paused. Manual tap or resume button required to continue.")
+        self.statusMessage = "Voice Paused"
+        AccessibilityHelper.announce("Voice listening paused for privacy.")
     }
 
-    /// Resumes listening after a pause
+    /// User resumes microphone capture after a pause
     public func resumeListening(onIntentRecognized: ((VoiceCommandIntent) -> Void)? = nil) async {
         if let onIntent = onIntentRecognized {
             self.onIntentCallback = onIntent
         }
         isPaused = false
         consecutiveErrors = 0
-        statusMessage = "Listening Resumed"
+        self.statusMessage = "Resuming Voice..."
         AccessibilityHelper.announce("Voice listening resumed.")
         await startListeningLoop()
     }
 
-    /// Primary toggle button on voice bar
     public func toggleListening(onIntentRecognized: @escaping (VoiceCommandIntent) -> Void) async {
-        self.onIntentCallback = onIntentRecognized
-        if isListening {
+        if isListening || listeningState == .listening {
             await stopListeningAndProcess(onIntentRecognized: onIntentRecognized)
         } else if isPaused {
             await resumeListening(onIntentRecognized: onIntentRecognized)
@@ -140,6 +138,8 @@ public final class VoiceCommandViewModel: ObservableObject {
     /// Starts streaming microphone audio with overlap guard
     public func startListening(onIntentRecognized: @escaping (VoiceCommandIntent) -> Void) async {
         self.onIntentCallback = onIntentRecognized
+        self.isPaused = false
+        self.consecutiveErrors = 0
         await startListeningLoop()
     }
 
@@ -166,15 +166,16 @@ public final class VoiceCommandViewModel: ObservableObject {
         guard authorized else {
             consecutiveErrors += 1
             self.errorMessage = "Microphone or Speech Recognition permission was denied. Please enable in Settings."
-            self.statusMessage = "Permission Denied"
+            self.statusMessage = "Permission Denied: Enable in Settings"
             updateListeningState(.error("Permission Denied"))
-            AccessibilityHelper.announce("Microphone or speech permission denied.")
+            AccessibilityHelper.announce("Microphone or speech recognition permission was denied. Please enable in Settings.")
             return
         }
 
         do {
             updateListeningState(.listening)
             self.statusMessage = isHandsFreeModeEnabled ? "Listening (Hands-Free)..." : "Listening... speak now"
+            AccessibilityHelper.playListeningStartCue()
 
             try await speechRecognizer.startListening { [weak self] transcription in
                 Task { @MainActor [weak self] in
@@ -202,19 +203,17 @@ public final class VoiceCommandViewModel: ObservableObject {
         self.liveTranscription = cleanText
         self.statusMessage = "\"\(cleanText)\""
 
-        // Reset silence detection debounce
+        // Reset silence detection debounce for automatic command finalization
         cancelSilenceTask()
 
-        if isHandsFreeModeEnabled {
-            silenceTask = Task { [weak self, threshold = silenceThreshold] in
-                try? await Task.sleep(nanoseconds: UInt64(threshold * 1_000_000_000))
-                guard !Task.isCancelled else { return }
-                await self?.autoFinalizeHandsFreeUtterance()
-            }
+        silenceTask = Task { [weak self, threshold = silenceThreshold] in
+            try? await Task.sleep(nanoseconds: UInt64(threshold * 1_000_000_000))
+            guard !Task.isCancelled else { return }
+            await self?.autoFinalizeUtterance()
         }
     }
 
-    private func autoFinalizeHandsFreeUtterance() async {
+    private func autoFinalizeUtterance() async {
         guard listeningState == .listening, !liveTranscription.isEmpty else { return }
         await stopListeningAndProcess(onIntentRecognized: onIntentCallback ?? { _ in })
     }
@@ -247,6 +246,7 @@ public final class VoiceCommandViewModel: ObservableObject {
         cancelSilenceTask()
         guard listeningState == .listening || isListening else { return }
 
+        AccessibilityHelper.playListeningStopCue()
         speechRecognizer.stopListening()
         isListening = false
         updateListeningState(.processing)
@@ -304,7 +304,7 @@ public final class VoiceCommandViewModel: ObservableObject {
         // Dispatch action to coordinator
         onIntentRecognized(intent)
 
-        // Re-arm hands-free loop safely after speech finishes
+        // Re-arm hands-free loop safely after speech finishes, or return to idle for single-turn
         if isHandsFreeModeEnabled && !isPaused {
             scheduleSafeReArm(delayNanoseconds: 400_000_000)
         } else {

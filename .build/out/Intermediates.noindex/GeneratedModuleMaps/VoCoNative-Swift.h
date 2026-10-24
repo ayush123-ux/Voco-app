@@ -348,6 +348,7 @@ extern "C" {
 #endif
 @import AVFAudio;
 @import ObjectiveC;
+@import Speech;
 #endif
 
 #endif // defined(__OBJC__)
@@ -391,10 +392,13 @@ SWIFT_CLASS("_TtC10VoCoNative19NativeAudioRecorder")
 - (void)audioRecorderEncodeErrorDidOccur:(AVAudioRecorder * _Nonnull)recorder error:(NSError * _Nullable)error;
 @end
 
+@class SFSpeechRecognizer;
 /// Native Speech-to-Text service utilizing Apple’s Speech Framework (SFSpeechRecognizer) and AVAudioEngine
 SWIFT_CLASS("_TtC10VoCoNative30NativeSpeechRecognitionService")
-@interface NativeSpeechRecognitionService : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@interface NativeSpeechRecognitionService : NSObject <SFSpeechRecognizerDelegate>
+- (void)speechRecognizer:(SFSpeechRecognizer * _Nonnull)speechRecognizer availabilityDidChange:(BOOL)available;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class AVSpeechSynthesizer;

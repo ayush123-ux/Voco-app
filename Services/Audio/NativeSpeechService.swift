@@ -6,6 +6,7 @@ import AVFoundation
 public final class NativeSpeechService: NSObject, SpeechServiceProtocol, AVSpeechSynthesizerDelegate, @unchecked Sendable {
     private let synthesizer = AVSpeechSynthesizer()
     public private(set) var isSpeaking: Bool = false
+    public var defaultLanguage: String = "en-IN"
 
     private var speechContinuation: CheckedContinuation<Void, Never>?
 
@@ -16,26 +17,41 @@ public final class NativeSpeechService: NSObject, SpeechServiceProtocol, AVSpeec
 
     public func speak(
         text: String,
-        language: String = "en-US",
+        language: String? = nil,
         pitchMultiplier: Float = 1.0,
         rate: Float = 0.5
     ) async {
         // Ensure any previous utterance is stopped
         stopSpeaking()
 
+        let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmedText.isEmpty else {
+            isSpeaking = false
+            return
+        }
+
         #if os(iOS)
-        // Configure audio session for playback on iOS
+        // Maintain playAndRecord category with speaker and bluetooth options so TTS
+        // plays clearly without tearing down or permanently blocking microphone input.
         do {
             let session = AVAudioSession.sharedInstance()
-            try session.setCategory(.playback, mode: .spokenAudio, options: [.duckOthers])
-            try session.setActive(true)
+            try session.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker, .allowBluetooth])
+            try session.setActive(true, options: .notifyOthersOnDeactivation)
         } catch {
             print("[NativeSpeechService] Failed to configure audio session: \(error)")
         }
         #endif
 
-        let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: language) ?? AVSpeechSynthesisVoice(language: "en-US")
+        let targetLanguage = language ?? defaultLanguage
+        let utterance = AVSpeechUtterance(string: trimmedText)
+
+        #if os(iOS)
+        utterance.voice = AVSpeechSynthesisVoice(language: targetLanguage)
+            ?? AVSpeechSynthesisVoice(language: String(targetLanguage.prefix(2)))
+            ?? AVSpeechSynthesisVoice(language: "en-IN")
+            ?? AVSpeechSynthesisVoice(language: "en-US")
+        #endif
+
         utterance.pitchMultiplier = max(0.5, min(2.0, pitchMultiplier))
         utterance.rate = max(AVSpeechUtteranceMinimumSpeechRate, min(AVSpeechUtteranceMaximumSpeechRate, rate * AVSpeechUtteranceDefaultSpeechRate * 2.0))
 

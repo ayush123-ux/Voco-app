@@ -1,3 +1,4 @@
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppLanguage.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AuthUser.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/Course.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/PracticeSentence.o
@@ -10,14 +11,17 @@
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeSpeechService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/VoiceCommandParser.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/VoiceEmailSpellingParser.o
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/VoiceGuidanceCoordinator.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/KeychainTokenStore.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeBiometricAuthService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/FirebaseAuthService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/FirestoreSentenceService.o
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageManager.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockAuthService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockBiometricAuthService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockSentenceService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockSpeechRecognitionService.o
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockSpeechService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockTokenStore.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppNavigationStateMachine.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AudioPlaybackServiceProtocol.o
@@ -40,6 +44,7 @@
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/UserProfileFormView.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AccessibilityHelper.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/ComingSoonView.o
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageSelectionView.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/QuadrantCardView.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/VoiceCommandBarView.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/GamesHubView.o

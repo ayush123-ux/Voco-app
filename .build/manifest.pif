@@ -5,11 +5,11 @@
       "name" : "VoCoNative",
       "path" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative",
       "projects" : [
-        "42746d5dcd5d16d3a0989e86f5aa267e4828adcc2ce8b0f299148de307ffc144",
+        "b0f879d5ac638a31f51251e8ca25473f89ff2125af8ce213a530527a84adc70d",
         "9a01eadcbe87d83dd5cf9f63f88b9f9e3c3f85d771ec838dfd1639284aa026aa"
       ]
     },
-    "signature" : "99e416e68de29ab051f890f8e0767d084f529dc521308f171b47dbfb6ebfcad8",
+    "signature" : "487d74402251330739fbf50599985c215a4fbfc40fe9cd8dac619da7d22afb15",
     "type" : "workspace"
   },
   {
@@ -224,6 +224,14 @@
               {
                 "fileType" : "sourcecode.swift",
                 "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_0",
+                "name" : "Models/AppLanguage.swift",
+                "path" : "Models/AppLanguage.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_1",
                 "name" : "Models/AuthUser.swift",
                 "path" : "Models/AuthUser.swift",
                 "sourceTree" : "<group>",
@@ -231,7 +239,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_1",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_2",
                 "name" : "Models/Course.swift",
                 "path" : "Models/Course.swift",
                 "sourceTree" : "<group>",
@@ -239,7 +247,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_2",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_3",
                 "name" : "Models/PracticeSentence.swift",
                 "path" : "Models/PracticeSentence.swift",
                 "sourceTree" : "<group>",
@@ -247,7 +255,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_3",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_4",
                 "name" : "Models/QuizQuestion.swift",
                 "path" : "Models/QuizQuestion.swift",
                 "sourceTree" : "<group>",
@@ -255,7 +263,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_4",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_5",
                 "name" : "Models/Story.swift",
                 "path" : "Models/Story.swift",
                 "sourceTree" : "<group>",
@@ -263,7 +271,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_5",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_6",
                 "name" : "Models/UserProfile.swift",
                 "path" : "Models/UserProfile.swift",
                 "sourceTree" : "<group>",
@@ -271,7 +279,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_6",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_7",
                 "name" : "Services/Audio/NativeAudioPlayer.swift",
                 "path" : "Services/Audio/NativeAudioPlayer.swift",
                 "sourceTree" : "<group>",
@@ -279,7 +287,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_7",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_8",
                 "name" : "Services/Audio/NativeAudioRecorder.swift",
                 "path" : "Services/Audio/NativeAudioRecorder.swift",
                 "sourceTree" : "<group>",
@@ -287,7 +295,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_8",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_9",
                 "name" : "Services/Audio/NativeSpeechRecognitionService.swift",
                 "path" : "Services/Audio/NativeSpeechRecognitionService.swift",
                 "sourceTree" : "<group>",
@@ -295,7 +303,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_9",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_10",
                 "name" : "Services/Audio/NativeSpeechService.swift",
                 "path" : "Services/Audio/NativeSpeechService.swift",
                 "sourceTree" : "<group>",
@@ -303,7 +311,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_10",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_11",
                 "name" : "Services/Audio/VoiceCommandParser.swift",
                 "path" : "Services/Audio/VoiceCommandParser.swift",
                 "sourceTree" : "<group>",
@@ -311,7 +319,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_11",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_12",
                 "name" : "Services/Audio/VoiceEmailSpellingParser.swift",
                 "path" : "Services/Audio/VoiceEmailSpellingParser.swift",
                 "sourceTree" : "<group>",
@@ -319,7 +327,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_12",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_13",
                 "name" : "Services/Audio/VoiceGuidanceCoordinator.swift",
                 "path" : "Services/Audio/VoiceGuidanceCoordinator.swift",
                 "sourceTree" : "<group>",
@@ -327,7 +335,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_13",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_14",
                 "name" : "Services/Auth/KeychainTokenStore.swift",
                 "path" : "Services/Auth/KeychainTokenStore.swift",
                 "sourceTree" : "<group>",
@@ -335,7 +343,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_14",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_15",
                 "name" : "Services/Auth/NativeBiometricAuthService.swift",
                 "path" : "Services/Auth/NativeBiometricAuthService.swift",
                 "sourceTree" : "<group>",
@@ -343,7 +351,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_15",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_16",
                 "name" : "Services/Firebase/FirebaseAuthService.swift",
                 "path" : "Services/Firebase/FirebaseAuthService.swift",
                 "sourceTree" : "<group>",
@@ -351,7 +359,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_16",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_17",
                 "name" : "Services/Firebase/FirestoreSentenceService.swift",
                 "path" : "Services/Firebase/FirestoreSentenceService.swift",
                 "sourceTree" : "<group>",
@@ -359,7 +367,15 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_17",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_18",
+                "name" : "Services/Language/LanguageManager.swift",
+                "path" : "Services/Language/LanguageManager.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_19",
                 "name" : "Services/Mock/MockAuthService.swift",
                 "path" : "Services/Mock/MockAuthService.swift",
                 "sourceTree" : "<group>",
@@ -367,7 +383,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_18",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_20",
                 "name" : "Services/Mock/MockBiometricAuthService.swift",
                 "path" : "Services/Mock/MockBiometricAuthService.swift",
                 "sourceTree" : "<group>",
@@ -375,7 +391,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_19",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_21",
                 "name" : "Services/Mock/MockSentenceService.swift",
                 "path" : "Services/Mock/MockSentenceService.swift",
                 "sourceTree" : "<group>",
@@ -383,7 +399,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_20",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_22",
                 "name" : "Services/Mock/MockSpeechRecognitionService.swift",
                 "path" : "Services/Mock/MockSpeechRecognitionService.swift",
                 "sourceTree" : "<group>",
@@ -391,7 +407,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_21",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_23",
                 "name" : "Services/Mock/MockSpeechService.swift",
                 "path" : "Services/Mock/MockSpeechService.swift",
                 "sourceTree" : "<group>",
@@ -399,7 +415,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_22",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_24",
                 "name" : "Services/Mock/MockTokenStore.swift",
                 "path" : "Services/Mock/MockTokenStore.swift",
                 "sourceTree" : "<group>",
@@ -407,7 +423,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_23",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_25",
                 "name" : "Services/Navigation/AppNavigationStateMachine.swift",
                 "path" : "Services/Navigation/AppNavigationStateMachine.swift",
                 "sourceTree" : "<group>",
@@ -415,7 +431,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_24",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_26",
                 "name" : "Services/Protocols/AudioPlaybackServiceProtocol.swift",
                 "path" : "Services/Protocols/AudioPlaybackServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -423,7 +439,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_25",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_27",
                 "name" : "Services/Protocols/AudioRecordingServiceProtocol.swift",
                 "path" : "Services/Protocols/AudioRecordingServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -431,7 +447,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_26",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_28",
                 "name" : "Services/Protocols/AuthServiceProtocol.swift",
                 "path" : "Services/Protocols/AuthServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -439,7 +455,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_27",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_29",
                 "name" : "Services/Protocols/BiometricAuthServiceProtocol.swift",
                 "path" : "Services/Protocols/BiometricAuthServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -447,7 +463,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_28",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_30",
                 "name" : "Services/Protocols/SecureTokenStoreProtocol.swift",
                 "path" : "Services/Protocols/SecureTokenStoreProtocol.swift",
                 "sourceTree" : "<group>",
@@ -455,7 +471,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_29",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_31",
                 "name" : "Services/Protocols/SentenceServiceProtocol.swift",
                 "path" : "Services/Protocols/SentenceServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -463,7 +479,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_30",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_32",
                 "name" : "Services/Protocols/SpeechRecognitionServiceProtocol.swift",
                 "path" : "Services/Protocols/SpeechRecognitionServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -471,7 +487,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_31",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_33",
                 "name" : "Services/Protocols/SpeechServiceProtocol.swift",
                 "path" : "Services/Protocols/SpeechServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -479,7 +495,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_32",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_34",
                 "name" : "Services/ServiceContainer.swift",
                 "path" : "Services/ServiceContainer.swift",
                 "sourceTree" : "<group>",
@@ -487,7 +503,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_33",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_35",
                 "name" : "ViewModels/AuthViewModel.swift",
                 "path" : "ViewModels/AuthViewModel.swift",
                 "sourceTree" : "<group>",
@@ -495,7 +511,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_34",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_36",
                 "name" : "ViewModels/PronunciationViewModel.swift",
                 "path" : "ViewModels/PronunciationViewModel.swift",
                 "sourceTree" : "<group>",
@@ -503,7 +519,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_35",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_37",
                 "name" : "ViewModels/QuizViewModel.swift",
                 "path" : "ViewModels/QuizViewModel.swift",
                 "sourceTree" : "<group>",
@@ -511,7 +527,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_36",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_38",
                 "name" : "ViewModels/VoiceCommandViewModel.swift",
                 "path" : "ViewModels/VoiceCommandViewModel.swift",
                 "sourceTree" : "<group>",
@@ -519,7 +535,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_37",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_39",
                 "name" : "Views/Auth/LoginHomeView.swift",
                 "path" : "Views/Auth/LoginHomeView.swift",
                 "sourceTree" : "<group>",
@@ -527,7 +543,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_38",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_40",
                 "name" : "Views/Auth/SignInView.swift",
                 "path" : "Views/Auth/SignInView.swift",
                 "sourceTree" : "<group>",
@@ -535,7 +551,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_39",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_41",
                 "name" : "Views/Auth/SignUpView.swift",
                 "path" : "Views/Auth/SignUpView.swift",
                 "sourceTree" : "<group>",
@@ -543,7 +559,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_40",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_42",
                 "name" : "Views/Auth/SplashScreenView.swift",
                 "path" : "Views/Auth/SplashScreenView.swift",
                 "sourceTree" : "<group>",
@@ -551,7 +567,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_41",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_43",
                 "name" : "Views/Auth/UserProfileFormView.swift",
                 "path" : "Views/Auth/UserProfileFormView.swift",
                 "sourceTree" : "<group>",
@@ -559,7 +575,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_42",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_44",
                 "name" : "Views/Common/AccessibilityHelper.swift",
                 "path" : "Views/Common/AccessibilityHelper.swift",
                 "sourceTree" : "<group>",
@@ -567,7 +583,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_43",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_45",
                 "name" : "Views/Common/ComingSoonView.swift",
                 "path" : "Views/Common/ComingSoonView.swift",
                 "sourceTree" : "<group>",
@@ -575,7 +591,15 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_44",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_46",
+                "name" : "Views/Common/LanguageSelectionView.swift",
+                "path" : "Views/Common/LanguageSelectionView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_47",
                 "name" : "Views/Common/QuadrantCardView.swift",
                 "path" : "Views/Common/QuadrantCardView.swift",
                 "sourceTree" : "<group>",
@@ -583,7 +607,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_45",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_48",
                 "name" : "Views/Common/VoiceCommandBarView.swift",
                 "path" : "Views/Common/VoiceCommandBarView.swift",
                 "sourceTree" : "<group>",
@@ -591,7 +615,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_46",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_49",
                 "name" : "Views/Games/GamesHubView.swift",
                 "path" : "Views/Games/GamesHubView.swift",
                 "sourceTree" : "<group>",
@@ -599,7 +623,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_47",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_50",
                 "name" : "Views/Games/InteractiveQuizView.swift",
                 "path" : "Views/Games/InteractiveQuizView.swift",
                 "sourceTree" : "<group>",
@@ -607,7 +631,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_48",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_51",
                 "name" : "Views/Games/StoryCatalogView.swift",
                 "path" : "Views/Games/StoryCatalogView.swift",
                 "sourceTree" : "<group>",
@@ -615,7 +639,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_49",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_52",
                 "name" : "Views/Games/StoryReaderView.swift",
                 "path" : "Views/Games/StoryReaderView.swift",
                 "sourceTree" : "<group>",
@@ -623,7 +647,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_50",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_53",
                 "name" : "Views/Home/HomeDashboardView.swift",
                 "path" : "Views/Home/HomeDashboardView.swift",
                 "sourceTree" : "<group>",
@@ -631,7 +655,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_51",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_54",
                 "name" : "Views/Pronunciation/PronunciationRecordView.swift",
                 "path" : "Views/Pronunciation/PronunciationRecordView.swift",
                 "sourceTree" : "<group>",
@@ -639,7 +663,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_52",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_55",
                 "name" : "Views/Pronunciation/PronunciationReviewView.swift",
                 "path" : "Views/Pronunciation/PronunciationReviewView.swift",
                 "sourceTree" : "<group>",
@@ -647,7 +671,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_53",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_56",
                 "name" : "Views/Talk/TalkWithVoCoHubView.swift",
                 "path" : "Views/Talk/TalkWithVoCoHubView.swift",
                 "sourceTree" : "<group>",
@@ -655,7 +679,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_54",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_57",
                 "name" : "Views/Talk/VoCoBotConversationView.swift",
                 "path" : "Views/Talk/VoCoBotConversationView.swift",
                 "sourceTree" : "<group>",
@@ -663,7 +687,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_55",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_58",
                 "name" : "Views/VoCoGyan/DSAEpisodesView.swift",
                 "path" : "Views/VoCoGyan/DSAEpisodesView.swift",
                 "sourceTree" : "<group>",
@@ -671,7 +695,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_56",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_59",
                 "name" : "Views/VoCoGyan/EpisodeDetailView.swift",
                 "path" : "Views/VoCoGyan/EpisodeDetailView.swift",
                 "sourceTree" : "<group>",
@@ -679,7 +703,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_57",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_60",
                 "name" : "Views/VoCoGyan/TechnicalCoursesView.swift",
                 "path" : "Views/VoCoGyan/TechnicalCoursesView.swift",
                 "sourceTree" : "<group>",
@@ -687,7 +711,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_58",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_61",
                 "name" : "Views/VoCoGyan/VoCoGyanHubView.swift",
                 "path" : "Views/VoCoGyan/VoCoGyanHubView.swift",
                 "sourceTree" : "<group>",
@@ -695,7 +719,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_59",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_62",
                 "name" : "Views/VoCoMainAppView.swift",
                 "path" : "Views/VoCoMainAppView.swift",
                 "sourceTree" : "<group>",
@@ -713,6 +737,14 @@
               {
                 "fileType" : "sourcecode.swift",
                 "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_0",
+                "name" : "Models/AppLanguage.swift",
+                "path" : "Models/AppLanguage.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_1",
                 "name" : "Models/AuthUser.swift",
                 "path" : "Models/AuthUser.swift",
                 "sourceTree" : "<group>",
@@ -720,7 +752,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_1",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_2",
                 "name" : "Models/Course.swift",
                 "path" : "Models/Course.swift",
                 "sourceTree" : "<group>",
@@ -728,7 +760,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_2",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_3",
                 "name" : "Models/PracticeSentence.swift",
                 "path" : "Models/PracticeSentence.swift",
                 "sourceTree" : "<group>",
@@ -736,7 +768,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_3",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_4",
                 "name" : "Models/QuizQuestion.swift",
                 "path" : "Models/QuizQuestion.swift",
                 "sourceTree" : "<group>",
@@ -744,7 +776,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_4",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_5",
                 "name" : "Models/Story.swift",
                 "path" : "Models/Story.swift",
                 "sourceTree" : "<group>",
@@ -752,7 +784,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_5",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_6",
                 "name" : "Models/UserProfile.swift",
                 "path" : "Models/UserProfile.swift",
                 "sourceTree" : "<group>",
@@ -760,7 +792,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_6",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_7",
                 "name" : "Services/Audio/NativeAudioPlayer.swift",
                 "path" : "Services/Audio/NativeAudioPlayer.swift",
                 "sourceTree" : "<group>",
@@ -768,7 +800,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_7",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_8",
                 "name" : "Services/Audio/NativeAudioRecorder.swift",
                 "path" : "Services/Audio/NativeAudioRecorder.swift",
                 "sourceTree" : "<group>",
@@ -776,7 +808,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_8",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_9",
                 "name" : "Services/Audio/NativeSpeechRecognitionService.swift",
                 "path" : "Services/Audio/NativeSpeechRecognitionService.swift",
                 "sourceTree" : "<group>",
@@ -784,7 +816,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_9",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_10",
                 "name" : "Services/Audio/NativeSpeechService.swift",
                 "path" : "Services/Audio/NativeSpeechService.swift",
                 "sourceTree" : "<group>",
@@ -792,7 +824,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_10",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_11",
                 "name" : "Services/Audio/VoiceCommandParser.swift",
                 "path" : "Services/Audio/VoiceCommandParser.swift",
                 "sourceTree" : "<group>",
@@ -800,7 +832,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_11",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_12",
                 "name" : "Services/Audio/VoiceEmailSpellingParser.swift",
                 "path" : "Services/Audio/VoiceEmailSpellingParser.swift",
                 "sourceTree" : "<group>",
@@ -808,7 +840,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_12",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_13",
                 "name" : "Services/Audio/VoiceGuidanceCoordinator.swift",
                 "path" : "Services/Audio/VoiceGuidanceCoordinator.swift",
                 "sourceTree" : "<group>",
@@ -816,7 +848,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_13",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_14",
                 "name" : "Services/Auth/KeychainTokenStore.swift",
                 "path" : "Services/Auth/KeychainTokenStore.swift",
                 "sourceTree" : "<group>",
@@ -824,7 +856,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_14",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_15",
                 "name" : "Services/Auth/NativeBiometricAuthService.swift",
                 "path" : "Services/Auth/NativeBiometricAuthService.swift",
                 "sourceTree" : "<group>",
@@ -832,7 +864,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_15",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_16",
                 "name" : "Services/Firebase/FirebaseAuthService.swift",
                 "path" : "Services/Firebase/FirebaseAuthService.swift",
                 "sourceTree" : "<group>",
@@ -840,7 +872,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_16",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_17",
                 "name" : "Services/Firebase/FirestoreSentenceService.swift",
                 "path" : "Services/Firebase/FirestoreSentenceService.swift",
                 "sourceTree" : "<group>",
@@ -848,7 +880,15 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_17",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_18",
+                "name" : "Services/Language/LanguageManager.swift",
+                "path" : "Services/Language/LanguageManager.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_19",
                 "name" : "Services/Mock/MockAuthService.swift",
                 "path" : "Services/Mock/MockAuthService.swift",
                 "sourceTree" : "<group>",
@@ -856,7 +896,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_18",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_20",
                 "name" : "Services/Mock/MockBiometricAuthService.swift",
                 "path" : "Services/Mock/MockBiometricAuthService.swift",
                 "sourceTree" : "<group>",
@@ -864,7 +904,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_19",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_21",
                 "name" : "Services/Mock/MockSentenceService.swift",
                 "path" : "Services/Mock/MockSentenceService.swift",
                 "sourceTree" : "<group>",
@@ -872,7 +912,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_20",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_22",
                 "name" : "Services/Mock/MockSpeechRecognitionService.swift",
                 "path" : "Services/Mock/MockSpeechRecognitionService.swift",
                 "sourceTree" : "<group>",
@@ -880,7 +920,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_21",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_23",
                 "name" : "Services/Mock/MockSpeechService.swift",
                 "path" : "Services/Mock/MockSpeechService.swift",
                 "sourceTree" : "<group>",
@@ -888,7 +928,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_22",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_24",
                 "name" : "Services/Mock/MockTokenStore.swift",
                 "path" : "Services/Mock/MockTokenStore.swift",
                 "sourceTree" : "<group>",
@@ -896,7 +936,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_23",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_25",
                 "name" : "Services/Navigation/AppNavigationStateMachine.swift",
                 "path" : "Services/Navigation/AppNavigationStateMachine.swift",
                 "sourceTree" : "<group>",
@@ -904,7 +944,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_24",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_26",
                 "name" : "Services/Protocols/AudioPlaybackServiceProtocol.swift",
                 "path" : "Services/Protocols/AudioPlaybackServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -912,7 +952,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_25",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_27",
                 "name" : "Services/Protocols/AudioRecordingServiceProtocol.swift",
                 "path" : "Services/Protocols/AudioRecordingServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -920,7 +960,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_26",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_28",
                 "name" : "Services/Protocols/AuthServiceProtocol.swift",
                 "path" : "Services/Protocols/AuthServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -928,7 +968,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_27",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_29",
                 "name" : "Services/Protocols/BiometricAuthServiceProtocol.swift",
                 "path" : "Services/Protocols/BiometricAuthServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -936,7 +976,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_28",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_30",
                 "name" : "Services/Protocols/SecureTokenStoreProtocol.swift",
                 "path" : "Services/Protocols/SecureTokenStoreProtocol.swift",
                 "sourceTree" : "<group>",
@@ -944,7 +984,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_29",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_31",
                 "name" : "Services/Protocols/SentenceServiceProtocol.swift",
                 "path" : "Services/Protocols/SentenceServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -952,7 +992,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_30",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_32",
                 "name" : "Services/Protocols/SpeechRecognitionServiceProtocol.swift",
                 "path" : "Services/Protocols/SpeechRecognitionServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -960,7 +1000,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_31",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_33",
                 "name" : "Services/Protocols/SpeechServiceProtocol.swift",
                 "path" : "Services/Protocols/SpeechServiceProtocol.swift",
                 "sourceTree" : "<group>",
@@ -968,7 +1008,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_32",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_34",
                 "name" : "Services/ServiceContainer.swift",
                 "path" : "Services/ServiceContainer.swift",
                 "sourceTree" : "<group>",
@@ -976,7 +1016,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_33",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_35",
                 "name" : "ViewModels/AuthViewModel.swift",
                 "path" : "ViewModels/AuthViewModel.swift",
                 "sourceTree" : "<group>",
@@ -984,7 +1024,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_34",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_36",
                 "name" : "ViewModels/PronunciationViewModel.swift",
                 "path" : "ViewModels/PronunciationViewModel.swift",
                 "sourceTree" : "<group>",
@@ -992,7 +1032,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_35",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_37",
                 "name" : "ViewModels/QuizViewModel.swift",
                 "path" : "ViewModels/QuizViewModel.swift",
                 "sourceTree" : "<group>",
@@ -1000,7 +1040,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_36",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_38",
                 "name" : "ViewModels/VoiceCommandViewModel.swift",
                 "path" : "ViewModels/VoiceCommandViewModel.swift",
                 "sourceTree" : "<group>",
@@ -1008,7 +1048,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_37",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_39",
                 "name" : "Views/Auth/LoginHomeView.swift",
                 "path" : "Views/Auth/LoginHomeView.swift",
                 "sourceTree" : "<group>",
@@ -1016,7 +1056,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_38",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_40",
                 "name" : "Views/Auth/SignInView.swift",
                 "path" : "Views/Auth/SignInView.swift",
                 "sourceTree" : "<group>",
@@ -1024,7 +1064,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_39",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_41",
                 "name" : "Views/Auth/SignUpView.swift",
                 "path" : "Views/Auth/SignUpView.swift",
                 "sourceTree" : "<group>",
@@ -1032,7 +1072,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_40",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_42",
                 "name" : "Views/Auth/SplashScreenView.swift",
                 "path" : "Views/Auth/SplashScreenView.swift",
                 "sourceTree" : "<group>",
@@ -1040,7 +1080,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_41",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_43",
                 "name" : "Views/Auth/UserProfileFormView.swift",
                 "path" : "Views/Auth/UserProfileFormView.swift",
                 "sourceTree" : "<group>",
@@ -1048,7 +1088,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_42",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_44",
                 "name" : "Views/Common/AccessibilityHelper.swift",
                 "path" : "Views/Common/AccessibilityHelper.swift",
                 "sourceTree" : "<group>",
@@ -1056,7 +1096,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_43",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_45",
                 "name" : "Views/Common/ComingSoonView.swift",
                 "path" : "Views/Common/ComingSoonView.swift",
                 "sourceTree" : "<group>",
@@ -1064,7 +1104,15 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_44",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_46",
+                "name" : "Views/Common/LanguageSelectionView.swift",
+                "path" : "Views/Common/LanguageSelectionView.swift",
+                "sourceTree" : "<group>",
+                "type" : "file"
+              },
+              {
+                "fileType" : "sourcecode.swift",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_47",
                 "name" : "Views/Common/QuadrantCardView.swift",
                 "path" : "Views/Common/QuadrantCardView.swift",
                 "sourceTree" : "<group>",
@@ -1072,7 +1120,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_45",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_48",
                 "name" : "Views/Common/VoiceCommandBarView.swift",
                 "path" : "Views/Common/VoiceCommandBarView.swift",
                 "sourceTree" : "<group>",
@@ -1080,7 +1128,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_46",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_49",
                 "name" : "Views/Games/GamesHubView.swift",
                 "path" : "Views/Games/GamesHubView.swift",
                 "sourceTree" : "<group>",
@@ -1088,7 +1136,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_47",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_50",
                 "name" : "Views/Games/InteractiveQuizView.swift",
                 "path" : "Views/Games/InteractiveQuizView.swift",
                 "sourceTree" : "<group>",
@@ -1096,7 +1144,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_48",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_51",
                 "name" : "Views/Games/StoryCatalogView.swift",
                 "path" : "Views/Games/StoryCatalogView.swift",
                 "sourceTree" : "<group>",
@@ -1104,7 +1152,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_49",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_52",
                 "name" : "Views/Games/StoryReaderView.swift",
                 "path" : "Views/Games/StoryReaderView.swift",
                 "sourceTree" : "<group>",
@@ -1112,7 +1160,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_50",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_53",
                 "name" : "Views/Home/HomeDashboardView.swift",
                 "path" : "Views/Home/HomeDashboardView.swift",
                 "sourceTree" : "<group>",
@@ -1120,7 +1168,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_51",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_54",
                 "name" : "Views/Pronunciation/PronunciationRecordView.swift",
                 "path" : "Views/Pronunciation/PronunciationRecordView.swift",
                 "sourceTree" : "<group>",
@@ -1128,7 +1176,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_52",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_55",
                 "name" : "Views/Pronunciation/PronunciationReviewView.swift",
                 "path" : "Views/Pronunciation/PronunciationReviewView.swift",
                 "sourceTree" : "<group>",
@@ -1136,7 +1184,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_53",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_56",
                 "name" : "Views/Talk/TalkWithVoCoHubView.swift",
                 "path" : "Views/Talk/TalkWithVoCoHubView.swift",
                 "sourceTree" : "<group>",
@@ -1144,7 +1192,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_54",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_57",
                 "name" : "Views/Talk/VoCoBotConversationView.swift",
                 "path" : "Views/Talk/VoCoBotConversationView.swift",
                 "sourceTree" : "<group>",
@@ -1152,7 +1200,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_55",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_58",
                 "name" : "Views/VoCoGyan/DSAEpisodesView.swift",
                 "path" : "Views/VoCoGyan/DSAEpisodesView.swift",
                 "sourceTree" : "<group>",
@@ -1160,7 +1208,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_56",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_59",
                 "name" : "Views/VoCoGyan/EpisodeDetailView.swift",
                 "path" : "Views/VoCoGyan/EpisodeDetailView.swift",
                 "sourceTree" : "<group>",
@@ -1168,7 +1216,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_57",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_60",
                 "name" : "Views/VoCoGyan/TechnicalCoursesView.swift",
                 "path" : "Views/VoCoGyan/TechnicalCoursesView.swift",
                 "sourceTree" : "<group>",
@@ -1176,7 +1224,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_58",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_61",
                 "name" : "Views/VoCoGyan/VoCoGyanHubView.swift",
                 "path" : "Views/VoCoGyan/VoCoGyanHubView.swift",
                 "sourceTree" : "<group>",
@@ -1184,7 +1232,7 @@
               },
               {
                 "fileType" : "sourcecode.swift",
-                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_59",
+                "guid" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_62",
                 "name" : "Views/VoCoMainAppView.swift",
                 "path" : "Views/VoCoMainAppView.swift",
                 "sourceTree" : "<group>",
@@ -1213,12 +1261,12 @@
         "8f9f6ec4e91e4000f7ca9e79e8194d4cf1214ea8906a21c6e2c166645c72c77d",
         "fb2b817b6dc464c95f7af4620f17dde480caf1cea56beba33b7726b52d1dde2f",
         "f59e18dcd15ad2c3cdcf6226ee977290c59f4c22520121b80bb388da5128e8f1",
-        "f004708a206e4b679bdb6cb47d2f6abb9d0a8f492da17ca5560d6e29422f2236",
-        "52d4a2e0ffcdcb623da5e037a58ce43ef5c7c5110f7103c7e00e2573efec0c6d",
+        "befa9e2642cbf1b8973f35b357268477a9681c6116e3b4112d25e1a1696bfa22",
+        "9f76a37a1d0b3187ea36a898ec51bada035126fee0f9e62d745e1918d35e5e57",
         "b1e0507900d0de023fb05342deb5ee9b6ad36a38fc655233c0ce0be29e27a57f"
       ]
     },
-    "signature" : "42746d5dcd5d16d3a0989e86f5aa267e4828adcc2ce8b0f299148de307ffc144",
+    "signature" : "b0f879d5ac638a31f51251e8ca25473f89ff2125af8ce213a530527a84adc70d",
     "type" : "project"
   },
   {
@@ -2309,6 +2357,33 @@
 
               ],
               "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_60",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::60",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_61",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::61",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_3::REF_62",
+              "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0::62",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
             }
           ],
           "guid" : "PACKAGE-TARGET:VoCoNative::BUILDPHASE_0",
@@ -2335,7 +2410,7 @@
       "productTypeIdentifier" : "org.swift.product-type.library.static",
       "type" : "standard"
     },
-    "signature" : "f004708a206e4b679bdb6cb47d2f6abb9d0a8f492da17ca5560d6e29422f2236",
+    "signature" : "befa9e2642cbf1b8973f35b357268477a9681c6116e3b4112d25e1a1696bfa22",
     "type" : "target"
   },
   {
@@ -3046,6 +3121,33 @@
 
               ],
               "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_60",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::60",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_61",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::61",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
+            },
+            {
+              "codeSignOnCopy" : "false",
+              "fileReference" : "PACKAGE:voconative::MAINGROUP::REF_4::REF_62",
+              "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0::62",
+              "platformFilters" : [
+
+              ],
+              "removeHeadersOnCopy" : "false"
             }
           ],
           "guid" : "PACKAGE-TARGET:VoCoNative--16696BEF31CE5D18-dynamic::BUILDPHASE_0",
@@ -3071,7 +3173,7 @@
       "productTypeIdentifier" : "com.apple.product-type.library.dynamic",
       "type" : "standard"
     },
-    "signature" : "52d4a2e0ffcdcb623da5e037a58ce43ef5c7c5110f7103c7e00e2573efec0c6d",
+    "signature" : "9f76a37a1d0b3187ea36a898ec51bada035126fee0f9e62d745e1918d35e5e57",
     "type" : "target"
   },
   {

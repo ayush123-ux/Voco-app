@@ -6,6 +6,16 @@
     "pch" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/VoCoNative-primary-Bridging-header.pch",
     "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/VoCoNative-primary.swiftdeps"
   },
+  "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/AppLanguage.swift" : {
+    "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppLanguage.swiftconstvalues",
+    "dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppLanguage.d",
+    "diagnostics" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppLanguage.dia",
+    "index-unit-output-path" : "/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppLanguage.o",
+    "llvm-bc" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppLanguage.bc",
+    "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppLanguage.o",
+    "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppLanguage.swiftdeps",
+    "swiftmodule" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppLanguage~partial.swiftmodule"
+  },
   "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/AuthUser.swift" : {
     "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AuthUser.swiftconstvalues",
     "dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AuthUser.d",
@@ -175,6 +185,16 @@
     "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/FirestoreSentenceService.o",
     "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/FirestoreSentenceService.swiftdeps",
     "swiftmodule" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/FirestoreSentenceService~partial.swiftmodule"
+  },
+  "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Language/LanguageManager.swift" : {
+    "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageManager.swiftconstvalues",
+    "dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageManager.d",
+    "diagnostics" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageManager.dia",
+    "index-unit-output-path" : "/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageManager.o",
+    "llvm-bc" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageManager.bc",
+    "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageManager.o",
+    "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageManager.swiftdeps",
+    "swiftmodule" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageManager~partial.swiftmodule"
   },
   "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Mock/MockAuthService.swift" : {
     "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockAuthService.swiftconstvalues",
@@ -445,6 +465,16 @@
     "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/ComingSoonView.o",
     "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/ComingSoonView.swiftdeps",
     "swiftmodule" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/ComingSoonView~partial.swiftmodule"
+  },
+  "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Views/Common/LanguageSelectionView.swift" : {
+    "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageSelectionView.swiftconstvalues",
+    "dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageSelectionView.d",
+    "diagnostics" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageSelectionView.dia",
+    "index-unit-output-path" : "/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageSelectionView.o",
+    "llvm-bc" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageSelectionView.bc",
+    "object" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageSelectionView.o",
+    "swift-dependencies" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageSelectionView.swiftdeps",
+    "swiftmodule" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageSelectionView~partial.swiftmodule"
   },
   "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Views/Common/QuadrantCardView.swift" : {
     "const-values" : "/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/QuadrantCardView.swiftconstvalues",

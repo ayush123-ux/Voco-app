@@ -49,8 +49,12 @@ final class VoCoNativeTests: XCTestCase {
         XCTAssertTrue(categories.contains(.nonTechnical))
 
         let topics = CourseTopic.standardTopics
-        XCTAssertEqual(topics.count, 4)
-        XCTAssertEqual(topics[0].episodes.count, 10)
+        let technical = topics.filter { $0.category == .technical }
+        let nonTechnical = topics.filter { $0.category == .nonTechnical }
+        XCTAssertEqual(technical.count, 4)
+        XCTAssertEqual(technical[0].episodes.count, 10)
+        XCTAssertGreaterThanOrEqual(nonTechnical.count, 8)
+        XCTAssertTrue(nonTechnical.contains { $0.id == "topic-communication" })
     }
 
     // MARK: - ViewModels & Workflows
@@ -1299,12 +1303,12 @@ final class VoCoNativeTests: XCTestCase {
         XCTAssertEqual(sm.navigationStack.last, .pronunciationReview)
         XCTAssertEqual(stopRec.spokenFeedback, "Recording stopped.")
 
-        let reRec = sm.process(intent: parser.parse(phrase: "re record"))
+        _ = sm.process(intent: parser.parse(phrase: "re record"))
         XCTAssertEqual(sm.navigationStack.last, .pronunciationRecord)
 
         // 3. Return to Dashboard
         let homeIntent = parser.parse(phrase: "go home")
-        let homeNav = sm.process(intent: homeIntent)
+        _ = sm.process(intent: homeIntent)
         XCTAssertEqual(sm.currentRoot, .dashboard)
         XCTAssertTrue(sm.navigationStack.isEmpty)
 
@@ -1429,4 +1433,135 @@ final class VoCoNativeTests: XCTestCase {
         XCTAssertEqual(AccessibilityHelper.lastAnnouncement, "VoCo accessibility regression test")
     }
 
+
+    // MARK: - Step 6: Multilingual & Intelligent Voice Command Tests
+
+    func testAppLanguageCatalogAndFallback() {
+        let allLanguages = AppLanguage.standardLanguages
+        XCTAssertEqual(allLanguages.count, 25, "Must support 25 languages (15 Indian + 10 International)")
+
+        let indian = allLanguages.filter { $0.region == .indian }
+        XCTAssertEqual(indian.count, 15)
+
+        let international = allLanguages.filter { $0.region == .international }
+        XCTAssertEqual(international.count, 10)
+
+        // Verify key Indian languages
+        let indianCodes = Set(indian.map { $0.id })
+        XCTAssertTrue(indianCodes.contains("hi-IN")) // Hindi
+        XCTAssertTrue(indianCodes.contains("en-IN")) // Indian English
+        XCTAssertTrue(indianCodes.contains("ta-IN")) // Tamil
+        XCTAssertTrue(indianCodes.contains("te-IN")) // Telugu
+        XCTAssertTrue(indianCodes.contains("bn-IN")) // Bengali
+        XCTAssertTrue(indianCodes.contains("mr-IN")) // Marathi
+        XCTAssertTrue(indianCodes.contains("gu-IN")) // Gujarati
+        XCTAssertTrue(indianCodes.contains("kn-IN")) // Kannada
+        XCTAssertTrue(indianCodes.contains("ml-IN")) // Malayalam
+        XCTAssertTrue(indianCodes.contains("pa-IN")) // Punjabi
+        XCTAssertTrue(indianCodes.contains("ur-IN")) // Urdu
+
+        // Verify key International languages
+        let intlCodes = Set(international.map { $0.id })
+        XCTAssertTrue(intlCodes.contains("es-ES")) // Spanish
+        XCTAssertTrue(intlCodes.contains("fr-FR")) // French
+        XCTAssertTrue(intlCodes.contains("de-DE")) // German
+        XCTAssertTrue(intlCodes.contains("zh-CN")) // Mandarin
+        XCTAssertTrue(intlCodes.contains("ja-JP")) // Japanese
+        XCTAssertTrue(intlCodes.contains("ar-SA")) // Arabic
+
+        // Each language has valid metadata
+        for lang in allLanguages {
+            XCTAssertFalse(lang.id.isEmpty)
+            XCTAssertFalse(lang.name.isEmpty)
+            XCTAssertFalse(lang.nativeName.isEmpty)
+            XCTAssertFalse(lang.flagEmoji.isEmpty)
+            XCTAssertFalse(lang.verifiedSpeechLocaleIdentifier.isEmpty)
+        }
+
+        XCTAssertEqual(AppLanguage.defaultLanguage.id, "en-IN")
+    }
+
+    @MainActor
+    func testLanguageManagerSwitchingAndPersistence() {
+        let manager = LanguageManager.shared
+        let container = ServiceContainer.mock()
+
+        // 1. Switch to Hindi
+        guard let hindi = AppLanguage.standardLanguages.first(where: { $0.id == "hi-IN" }) else {
+            XCTFail("Hindi language missing")
+            return
+        }
+        manager.setLanguage(hindi, container: container)
+        XCTAssertEqual(manager.currentLanguage.id, "hi-IN")
+        XCTAssertEqual(container.speechService.defaultLanguage, "hi-IN")
+        XCTAssertTrue(manager.localizedAnnouncementForSwitch(to: hindi).contains("हिन्दी"))
+
+        // 2. Switch to Spanish
+        guard let spanish = AppLanguage.standardLanguages.first(where: { $0.id == "es-ES" }) else {
+            XCTFail("Spanish language missing")
+            return
+        }
+        manager.setLanguage(spanish, container: container)
+        XCTAssertEqual(manager.currentLanguage.id, "es-ES")
+        XCTAssertEqual(container.speechService.defaultLanguage, "es-ES")
+        XCTAssertTrue(manager.localizedAnnouncementForSwitch(to: spanish).contains("español"))
+
+        // Reset back to English
+        guard let english = AppLanguage.standardLanguages.first(where: { $0.id == "en-IN" }) else { return }
+        manager.setLanguage(english, container: container)
+    }
+
+    func testMultilingualVoiceCommandParser() {
+        let parser = VoiceCommandParser()
+
+        // Hindi and Hinglish voice phrases
+        XCTAssertEqual(parser.parse(phrase: "courses kholo"), .openVoCoGyan)
+        XCTAssertEqual(parser.parse(phrase: "non-technical courses dikhao"), .openNonTechnicalCourses)
+        XCTAssertEqual(parser.parse(phrase: "mujhe non-technical courses dikhao"), .openNonTechnicalCourses)
+        XCTAssertEqual(parser.parse(phrase: "interview prepare karwao"), .openCourseTopic(topicId: "topic-interview"))
+        XCTAssertEqual(parser.parse(phrase: "spoken english"), .openCourseTopic(topicId: "topic-communication"))
+        XCTAssertEqual(parser.parse(phrase: "uchharan abhyas"), .openPronunciation)
+        XCTAssertEqual(parser.parse(phrase: "kahani sunao"), .openStories)
+        XCTAssertEqual(parser.parse(phrase: "piche jao"), .goBack)
+        XCTAssertEqual(parser.parse(phrase: "ghar jao"), .goHome)
+        XCTAssertEqual(parser.parse(phrase: "bahar niklo"), .signOut)
+        XCTAssertEqual(parser.parse(phrase: "suno mat"), .pauseListening)
+        XCTAssertEqual(parser.parse(phrase: "chalu karo"), .resumeListening)
+
+        // Language switching intents
+        XCTAssertEqual(parser.parse(phrase: "switch to hindi"), .switchLanguage(localeCode: "hi-IN"))
+        XCTAssertEqual(parser.parse(phrase: "switch to spanish"), .switchLanguage(localeCode: "es-ES"))
+        XCTAssertEqual(parser.parse(phrase: "switch to french"), .switchLanguage(localeCode: "fr-FR"))
+        XCTAssertEqual(parser.parse(phrase: "switch to tamil"), .switchLanguage(localeCode: "ta-IN"))
+
+        // Spanish voice commands
+        XCTAssertEqual(parser.parse(phrase: "abrir cursos"), .openVoCoGyan)
+        XCTAssertEqual(parser.parse(phrase: "atrás"), .goBack)
+        XCTAssertEqual(parser.parse(phrase: "historias"), .openStories)
+        XCTAssertEqual(parser.parse(phrase: "cuestionario"), .openQuiz)
+    }
+
+    @MainActor
+    func testNonTechnicalCoursesNavigationRouting() {
+        let sm = AppNavigationStateMachine(initialRoot: .dashboard, isAuthenticated: true)
+
+        // Direct navigation to Non-Technical courses
+        let nonTechResult = sm.process(intent: .openNonTechnicalCourses)
+        XCTAssertEqual(nonTechResult, .navigated(destination: .technicalCourses(.nonTechnical), spokenFeedback: "Opening Non-Technical Courses."))
+        XCTAssertEqual(sm.navigationStack.last, .technicalCourses(.nonTechnical))
+
+        // Direct navigation to Interview topic
+        let topicResult = sm.process(intent: .openCourseTopic(topicId: "topic-interview"))
+        if case .navigated(let dest, let feedback) = topicResult {
+            XCTAssertTrue(feedback.contains("Interview Preparation"))
+            if case .dsaEpisodes(let topic) = dest {
+                XCTAssertEqual(topic.id, "topic-interview")
+                XCTAssertEqual(topic.category, .nonTechnical)
+            } else {
+                XCTFail("Expected .dsaEpisodes destination")
+            }
+        } else {
+            XCTFail("Expected navigated result")
+        }
+    }
 }

@@ -52,6 +52,7 @@ public struct VoCoMainAppView: View {
         _voiceCommandViewModel = StateObject(wrappedValue: voiceVM)
         _navigationStateMachine = StateObject(wrappedValue: navSM)
         _guidanceCoordinator = StateObject(wrappedValue: guidanceCoord)
+        LanguageManager.shared.applyLanguage(to: container)
     }
 
     public var body: some View {
@@ -512,8 +513,10 @@ public struct VoCoMainAppView: View {
                         totalQuestions: quizViewModel.questions.count
                     )
                 }
-            case "Repeat", "Help", "HelpTopic":
+            case "Repeat", "Help", "HelpTopic", "ClarificationNeeded":
                 Task { await voiceCommandViewModel.speakUtterance(spokenFeedback) }
+            case let act where act.starts(with: "SwitchLanguage"):
+                LanguageManager.shared.applyLanguage(to: container)
             default:
                 break
             }

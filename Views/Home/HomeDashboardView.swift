@@ -12,6 +12,8 @@ public struct HomeDashboardView: View {
     public let onSignOut: () -> Void
 
     @State private var isSpeakingBanner = false
+    @ObservedObject private var languageManager = LanguageManager.shared
+    @State private var showingLanguageSheet = false
 
     public init(
         container: ServiceContainer,
@@ -47,6 +49,26 @@ public struct HomeDashboardView: View {
                     }
 
                     Spacer()
+
+                    Button {
+                        showingLanguageSheet = true
+                    } label: {
+                        HStack(spacing: 4) {
+                            Text(languageManager.currentLanguage.flagEmoji)
+                            Text(languageManager.currentLanguage.name)
+                                .font(.footnote)
+                                .fontWeight(.semibold)
+                            Image(systemName: "chevron.down")
+                                .font(.caption2)
+                        }
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 8)
+                        .background(Color.blue.opacity(0.12))
+                        .foregroundColor(.blue)
+                        .cornerRadius(10)
+                    }
+                    .accessibilityLabel("Change Language. Current: \(languageManager.currentLanguage.name)")
+                    .accessibilityHint("Opens language selector to switch between Indian and international languages")
 
                     Button {
                         Task {
@@ -154,6 +176,9 @@ public struct HomeDashboardView: View {
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
+        .sheet(isPresented: $showingLanguageSheet) {
+            LanguageSelectionView(languageManager: languageManager, container: container)
+        }
     }
 
     private func toggleSpokenGuide() {

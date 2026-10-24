@@ -1,3 +1,4 @@
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/AppLanguage.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/AuthUser.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/Course.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/PracticeSentence.swift
@@ -15,6 +16,7 @@
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Auth/NativeBiometricAuthService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Firebase/FirebaseAuthService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Firebase/FirestoreSentenceService.swift
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Language/LanguageManager.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Mock/MockAuthService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Mock/MockBiometricAuthService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Mock/MockSentenceService.swift
@@ -42,6 +44,7 @@
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Views/Auth/UserProfileFormView.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Views/Common/AccessibilityHelper.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Views/Common/ComingSoonView.swift
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Views/Common/LanguageSelectionView.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Views/Common/QuadrantCardView.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Views/Common/VoiceCommandBarView.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Views/Games/GamesHubView.swift

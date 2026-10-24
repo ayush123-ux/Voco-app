@@ -36,14 +36,18 @@ public final class ServiceContainer: ObservableObject, @unchecked Sendable {
         self.audioPlayer = audioPlayer
     }
 
-    /// Offline mock container ready for immediate previewing, local development, and testing
-    public static func mock(preAuthenticated: Bool = false) -> ServiceContainer {
+    /// Offline demo / local container ready for immediate previewing, local development, and on-device testing.
+    /// Uses native audio hardware (speech synthesis, speech recognition, audio recording, playback)
+    /// paired with local mock auth and sentences so no cloud backend configuration is required.
+    public static func mock(
+        preAuthenticated: Bool = false,
+        speechRecognizer: SpeechRecognitionServiceProtocol = NativeSpeechRecognitionService()
+    ) -> ServiceContainer {
         let auth = MockAuthService(preAuthenticateWithEmail: preAuthenticated ? "learner@voco.app" : nil)
         let biometric = MockBiometricAuthService()
         let tokenStore = MockTokenStore()
         let sentences = MockSentenceService()
         let speech = NativeSpeechService()
-        let recognizer = MockSpeechRecognitionService()
         let recorder = NativeAudioRecorder()
         let player = NativeAudioPlayer()
 
@@ -53,7 +57,7 @@ public final class ServiceContainer: ObservableObject, @unchecked Sendable {
             tokenStore: tokenStore,
             sentenceService: sentences,
             speechService: speech,
-            speechRecognizer: recognizer,
+            speechRecognizer: speechRecognizer,
             audioRecorder: recorder,
             audioPlayer: player
         )
