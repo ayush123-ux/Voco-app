@@ -11,6 +11,7 @@ public final class ServiceContainer: ObservableObject, @unchecked Sendable {
     public let speechRecognizer: SpeechRecognitionServiceProtocol
     public let audioRecorder: AudioRecordingServiceProtocol
     public let audioPlayer: AudioPlaybackServiceProtocol
+    public let aiService: AIServiceProtocol
 
     public var isMockBackend: Bool {
         authService is MockAuthService
@@ -24,7 +25,8 @@ public final class ServiceContainer: ObservableObject, @unchecked Sendable {
         speechService: SpeechServiceProtocol,
         speechRecognizer: SpeechRecognitionServiceProtocol = NativeSpeechRecognitionService(),
         audioRecorder: AudioRecordingServiceProtocol,
-        audioPlayer: AudioPlaybackServiceProtocol
+        audioPlayer: AudioPlaybackServiceProtocol,
+        aiService: AIServiceProtocol = GeminiAIService()
     ) {
         self.authService = authService
         self.biometricService = biometricService
@@ -34,14 +36,14 @@ public final class ServiceContainer: ObservableObject, @unchecked Sendable {
         self.speechRecognizer = speechRecognizer
         self.audioRecorder = audioRecorder
         self.audioPlayer = audioPlayer
+        self.aiService = aiService
     }
 
     /// Offline demo / local container ready for immediate previewing, local development, and on-device testing.
-    /// Uses native audio hardware (speech synthesis, speech recognition, audio recording, playback)
-    /// paired with local mock auth and sentences so no cloud backend configuration is required.
     public static func mock(
         preAuthenticated: Bool = false,
-        speechRecognizer: SpeechRecognitionServiceProtocol = NativeSpeechRecognitionService()
+        speechRecognizer: SpeechRecognitionServiceProtocol = NativeSpeechRecognitionService(),
+        aiService: AIServiceProtocol = MockAIService()
     ) -> ServiceContainer {
         let auth = MockAuthService(preAuthenticateWithEmail: preAuthenticated ? "learner@voco.app" : nil)
         let biometric = MockBiometricAuthService()
@@ -59,12 +61,13 @@ public final class ServiceContainer: ObservableObject, @unchecked Sendable {
             speechService: speech,
             speechRecognizer: speechRecognizer,
             audioRecorder: recorder,
-            audioPlayer: player
+            audioPlayer: player,
+            aiService: aiService
         )
     }
 
     /// Production / Live service container
-    public static func live() -> ServiceContainer {
+    public static func live(aiService: AIServiceProtocol = GeminiAIService()) -> ServiceContainer {
         let auth = FirebaseAuthService()
         let biometric = NativeBiometricAuthService()
         let tokenStore = KeychainTokenStore()
@@ -82,7 +85,8 @@ public final class ServiceContainer: ObservableObject, @unchecked Sendable {
             speechService: speech,
             speechRecognizer: recognizer,
             audioRecorder: recorder,
-            audioPlayer: player
+            audioPlayer: player,
+            aiService: aiService
         )
     }
 }

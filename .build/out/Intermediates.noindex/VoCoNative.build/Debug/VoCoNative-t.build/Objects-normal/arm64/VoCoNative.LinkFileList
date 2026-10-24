@@ -5,6 +5,7 @@
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/QuizQuestion.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/Story.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/UserProfile.o
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/GeminiAIService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioPlayer.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeAudioRecorder.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/NativeSpeechRecognitionService.o
@@ -17,6 +18,7 @@
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/FirebaseAuthService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/FirestoreSentenceService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/LanguageManager.o
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockAIService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockAuthService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockBiometricAuthService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockSentenceService.o
@@ -24,6 +26,7 @@
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockSpeechService.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/MockTokenStore.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AppNavigationStateMachine.o
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AIServiceProtocol.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AudioPlaybackServiceProtocol.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AudioRecordingServiceProtocol.o
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/.build/out/Intermediates.noindex/VoCoNative.build/Debug/VoCoNative-t.build/Objects-normal/arm64/AuthServiceProtocol.o

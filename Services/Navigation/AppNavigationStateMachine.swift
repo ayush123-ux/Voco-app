@@ -170,6 +170,32 @@ public final class AppNavigationStateMachine: ObservableObject {
         case .openNonTechnicalCourses:
             return navigateToProtectedDestination(.technicalCourses(.nonTechnical), announcement: "Opening Non-Technical Courses.")
 
+        case .openEpisode(let number):
+            guard isAuthenticated else {
+                let feedback = "Please sign in before opening courses."
+                recordAnnouncement(feedback)
+                return .rejected(reason: "Authentication required", spokenFeedback: feedback)
+            }
+            if let topic = CourseTopic.standardTopics.first(where: { $0.id == "topic-dsa" }),
+               let ep = topic.episodes.first(where: { $0.episodeNumber == number }) {
+                return navigateToProtectedDestination(.episodeDetail(ep), announcement: "Opening Episode \(number): \(ep.title).")
+            }
+            return navigateToProtectedDestination(.voCoGyan, announcement: "Opening VoCo Gyan.")
+
+        case .openEpisodeByTitle(let title):
+            guard isAuthenticated else {
+                let feedback = "Please sign in before opening courses."
+                recordAnnouncement(feedback)
+                return .rejected(reason: "Authentication required", spokenFeedback: feedback)
+            }
+            let lower = title.lowercased()
+            for topic in CourseTopic.standardTopics {
+                if let ep = topic.episodes.first(where: { $0.title.lowercased().contains(lower) }) {
+                    return navigateToProtectedDestination(.episodeDetail(ep), announcement: "Opening \(ep.title).")
+                }
+            }
+            return navigateToProtectedDestination(.voCoGyan, announcement: "Opening VoCo Gyan.")
+
         case .openCourseTopic(let topicId):
             guard isAuthenticated else {
                 let feedback = "Please sign in before opening courses."
@@ -256,9 +282,24 @@ public final class AppNavigationStateMachine: ObservableObject {
                 recordAnnouncement(feedback)
                 return .actionExecuted(actionName: "SwitchLanguage_\(lang.id)", spokenFeedback: feedback)
             }
-            let feedback = "Language switched."
+            let feedback = LanguageManager.shared.localizedUnsupportedFeedback(for: localeCode)
             recordAnnouncement(feedback)
-            return .actionExecuted(actionName: "SwitchLanguage", spokenFeedback: feedback)
+            return .actionExecuted(actionName: "UnsupportedLanguage", spokenFeedback: feedback)
+
+        case .unsupportedLanguage(let requested):
+            let feedback = LanguageManager.shared.localizedUnsupportedFeedback(for: requested)
+            recordAnnouncement(feedback)
+            return .actionExecuted(actionName: "UnsupportedLanguage", spokenFeedback: feedback)
+
+        case .acknowledgeOK:
+            let feedback = "OK."
+            recordAnnouncement(feedback)
+            return .actionExecuted(actionName: "AcknowledgeOK", spokenFeedback: feedback)
+
+        case .continueAction:
+            let feedback = "Continuing."
+            recordAnnouncement(feedback)
+            return .actionExecuted(actionName: "Continue", spokenFeedback: feedback)
 
         case .clarificationNeeded(let prompt, _):
             recordAnnouncement(prompt)

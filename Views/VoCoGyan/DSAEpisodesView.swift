@@ -3,13 +3,16 @@ import SwiftUI
 /// Episodes list matching DSA.dart (Ep 1 to 10)
 public struct DSAEpisodesView: View {
     public let topic: CourseTopic
+    @ObservedObject public var container: ServiceContainer
     public let onSelectEpisode: (CourseEpisode) -> Void
 
     public init(
         topic: CourseTopic,
+        container: ServiceContainer,
         onSelectEpisode: @escaping (CourseEpisode) -> Void
     ) {
         self.topic = topic
+        self.container = container
         self.onSelectEpisode = onSelectEpisode
     }
 
@@ -67,5 +70,10 @@ public struct DSAEpisodesView: View {
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
+        .onAppear {
+            let availableCount = topic.episodes.filter { $0.isAvailable }.count
+            let msg = "\(topic.title). \(availableCount) episode\(availableCount == 1 ? "" : "s") available. Episode 1: \(topic.episodes.first?.title ?? ""). Say open episode 1 to begin."
+            AccessibilityHelper.announce(msg)
+        }
     }
 }

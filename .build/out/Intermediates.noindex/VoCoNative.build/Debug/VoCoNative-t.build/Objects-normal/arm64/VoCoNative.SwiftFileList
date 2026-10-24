@@ -5,6 +5,7 @@
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/QuizQuestion.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/Story.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Models/UserProfile.swift
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/AI/GeminiAIService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Audio/NativeAudioPlayer.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Audio/NativeAudioRecorder.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Audio/NativeSpeechRecognitionService.swift
@@ -17,6 +18,7 @@
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Firebase/FirebaseAuthService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Firebase/FirestoreSentenceService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Language/LanguageManager.swift
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Mock/MockAIService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Mock/MockAuthService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Mock/MockBiometricAuthService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Mock/MockSentenceService.swift
@@ -24,6 +26,7 @@
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Mock/MockSpeechService.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Mock/MockTokenStore.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Navigation/AppNavigationStateMachine.swift
+/Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Protocols/AIServiceProtocol.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Protocols/AudioPlaybackServiceProtocol.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Protocols/AudioRecordingServiceProtocol.swift
 /Users/kiet51/Downloads/Voco_App-master/VoCoNative/Services/Protocols/AuthServiceProtocol.swift

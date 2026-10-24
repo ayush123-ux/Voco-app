@@ -26,6 +26,15 @@
 	<string>VoCo requires microphone access to record and help practice your pronunciation.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>VoCo uses speech recognition to assist with voice learning and pronunciation feedback.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

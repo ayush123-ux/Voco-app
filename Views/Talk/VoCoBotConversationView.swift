@@ -6,19 +6,22 @@ public struct ChatMessage: Identifiable, Equatable {
     public let text: String
     public let isUser: Bool
     public let timestamp = Date()
+
+    public init(text: String, isUser: Bool) {
+        self.text = text
+        self.isUser = isUser
+    }
 }
 
-/// Interactive conversation screen with VoCo Bot
+/// Interactive conversation screen with VoCo Bot powered by Gemini Conversational AI
 public struct VoCoBotConversationView: View {
     @ObservedObject public var container: ServiceContainer
     @State private var inputText = ""
-    @State private var messages: [ChatMessage] = [
-        ChatMessage(
-            text: "Hello! I am VoCo Bot, your pronunciation and language companion. What would you like to practice today?",
-            isUser: false
-        )
-    ]
+    @State private var messages: [ChatMessage] = []
+    @State private var conversationHistory: [AIChatMessage] = []
+    @State private var isBotThinking = false
     @State private var isBotSpeaking = false
+    @State private var lastSpokenBotText: String = ""
 
     public init(container: ServiceContainer) {
         self.container = container
@@ -26,6 +29,46 @@ public struct VoCoBotConversationView: View {
 
     public var body: some View {
         VStack(spacing: 0) {
+            // Header status banner
+            HStack {
+                Circle()
+                    .fill(isBotSpeaking ? Color.green : (isBotThinking ? Color.orange : Color.blue))
+                    .frame(width: 10, height: 10)
+                Text(isBotSpeaking ? "VoCo is speaking..." : (isBotThinking ? "VoCo is thinking..." : "Ready to chat"))
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                Spacer()
+
+                if isBotSpeaking {
+                    Button {
+                        stopSpeaking()
+                    } label: {
+                        HStack(spacing: 4) {
+                            Image(systemName: "stop.circle.fill")
+                            Text("Stop")
+                        }
+                        .font(.caption)
+                        .foregroundColor(.red)
+                    }
+                    .accessibilityLabel("Stop speaking")
+                } else if !lastSpokenBotText.isEmpty {
+                    Button {
+                        speakText(lastSpokenBotText)
+                    } label: {
+                        HStack(spacing: 4) {
+                            Image(systemName: "arrow.counterclockwise")
+                            Text("Repeat")
+                        }
+                        .font(.caption)
+                        .foregroundColor(.blue)
+                    }
+                    .accessibilityLabel("Repeat last answer")
+                }
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+            .background(Color.gray.opacity(0.06))
+
             // Messages list
             ScrollViewReader { proxy in
                 ScrollView {
@@ -59,12 +102,27 @@ public struct VoCoBotConversationView: View {
                                             .foregroundColor(.blue)
                                         }
                                         .padding(.leading, 6)
+                                        .accessibilityLabel("Listen to message: \(msg.text)")
                                     }
                                 }
 
                                 if !msg.isUser { Spacer() }
                             }
                             .id(msg.id)
+                            .accessibilityElement(children: .combine)
+                            .accessibilityLabel("\(msg.isUser ? "You said" : "VoCo replied"): \(msg.text)")
+                        }
+
+                        if isBotThinking {
+                            HStack {
+                                ProgressView()
+                                    .padding(.trailing, 6)
+                                Text("VoCo is preparing your explanation...")
+                                    .font(.footnote)
+                                    .foregroundColor(.secondary)
+                                Spacer()
+                            }
+                            .padding(.horizontal)
                         }
                     }
                     .padding()
@@ -81,10 +139,10 @@ public struct VoCoBotConversationView: View {
             // Quick suggestion chips
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
-                    quickChip("Help me practice vowels")
-                    quickChip("Give me a tongue twister")
-                    quickChip("Explain linked lists")
-                    quickChip("Give me pronunciation tips")
+                    quickChip("Explain binary search in simple words")
+                    quickChip("Give me a speech tip")
+                    quickChip("Ab Hindi mein samjhao")
+                    quickChip("What is a linked list?")
                 }
                 .padding(.horizontal)
                 .padding(.vertical, 8)
@@ -94,12 +152,13 @@ public struct VoCoBotConversationView: View {
 
             // Input Bar
             HStack(spacing: 12) {
-                TextField("Type your message...", text: $inputText)
+                TextField("Ask anything or practice speaking...", text: $inputText)
                     .textFieldStyle(.plain)
                     .padding(.horizontal, 14)
                     .padding(.vertical, 10)
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(20)
+                    .accessibilityLabel("Chat message input")
 
                 Button {
                     sendMessage()
@@ -108,18 +167,35 @@ public struct VoCoBotConversationView: View {
                         .font(.system(size: 32))
                         .foregroundColor(inputText.trimmingCharacters(in: .whitespaces).isEmpty ? .gray : .blue)
                 }
-                .disabled(inputText.trimmingCharacters(in: .whitespaces).isEmpty)
-                .accessibilityLabel("Send Message")
+                .disabled(inputText.trimmingCharacters(in: .whitespaces).isEmpty || isBotThinking)
+                .accessibilityLabel("Send message")
+                .accessibilityHint("Sends your question to VoCo AI")
             }
             .padding(.horizontal)
             .padding(.vertical, 10)
         }
-        .navigationTitle("VoCo Bot")
+        .navigationTitle("Talk with VoCo")
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    startNewConversation()
+                } label: {
+                    Image(systemName: "trash")
+                        .foregroundColor(.secondary)
+                }
+                .accessibilityLabel("Start new conversation and clear chat history")
+            }
+        }
+        .onAppear {
+            if messages.isEmpty {
+                startNewConversation()
+            }
+        }
         .onDisappear {
-            container.speechService.stopSpeaking()
+            stopSpeaking()
         }
     }
 
@@ -137,6 +213,25 @@ public struct VoCoBotConversationView: View {
                 .foregroundColor(.blue)
                 .clipShape(Capsule())
         }
+        .accessibilityLabel("Suggestion: \(text)")
+        .accessibilityHint("Double tap to send this query")
+    }
+
+    private func startNewConversation() {
+        stopSpeaking()
+        conversationHistory.removeAll()
+        let currentLangId = LanguageManager.shared.currentLanguage.id
+        let greeting: String
+        if currentLangId.contains("mr") {
+            greeting = "नमस्कार! मी व्होको AI आहे. आज तुम्हाला काय शिकायचे किंवा विचारायचे आहे?"
+        } else if currentLangId.contains("hi") {
+            greeting = "नमस्ते! मैं वोको AI हूँ। आज आप क्या सीखना या पूछना चाहते हैं?"
+        } else {
+            greeting = "Hello! I am VoCo, your AI learning and language companion. Ask me any doubt or concept you would like to explore!"
+        }
+        messages = [ChatMessage(text: greeting, isUser: false)]
+        lastSpokenBotText = greeting
+        speakText(greeting)
     }
 
     private func sendMessage() {
@@ -145,28 +240,34 @@ public struct VoCoBotConversationView: View {
 
         messages.append(ChatMessage(text: text, isUser: true))
         inputText = ""
+        isBotThinking = true
 
-        // Generate intelligent reply matching VoCo curriculum
-        let response = generateBotResponse(for: text)
+        let activeLanguage = LanguageManager.shared.currentLanguage.name
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            messages.append(ChatMessage(text: response, isUser: false))
-            speakText(response)
-        }
-    }
+        Task {
+            let aiResponse = await container.aiService.sendMessage(
+                text,
+                history: conversationHistory,
+                language: activeLanguage
+            )
 
-    private func generateBotResponse(for query: String) -> String {
-        let lower = query.lowercased()
-        if lower.contains("vowel") {
-            return "Try practicing the five pure vowels: A as in father, E as in met, I as in see, O as in note, and U as in rule. Open your mouth wide and resonate from your diaphragm!"
-        } else if lower.contains("tongue twister") {
-            return "Here is a classic twister: 'She sells seashells by the seashore.' Focus on contrasting the sharp 'S' sound with the soft 'SH' sound."
-        } else if lower.contains("linked list") {
-            return "A linked list is a linear data structure where elements are not stored at contiguous memory locations. Instead, each node stores a reference or pointer to the next node."
-        } else if lower.contains("tip") || lower.contains("pronunciation") {
-            return "A great speech tip is to slow down by twenty percent. Record your voice in the Pronunciation Guide, then listen to your recording right next to the VoCo benchmark!"
-        } else {
-            return "That's an interesting thought! Keep practicing speaking aloud. Pronunciation improves rapidly with daily active repetition."
+            await MainActor.run {
+                self.isBotThinking = false
+                let reply = aiResponse.reply
+                self.messages.append(ChatMessage(text: reply, isUser: false))
+                self.lastSpokenBotText = reply
+
+                // Record history for conversational context
+                self.conversationHistory.append(AIChatMessage(role: "user", text: text))
+                self.conversationHistory.append(AIChatMessage(role: "model", text: reply))
+
+                // Bound history
+                if self.conversationHistory.count > 12 {
+                    self.conversationHistory.removeFirst(2)
+                }
+
+                self.speakText(reply)
+            }
         }
     }
 
@@ -178,5 +279,10 @@ public struct VoCoBotConversationView: View {
                 self.isBotSpeaking = false
             }
         }
+    }
+
+    private func stopSpeaking() {
+        container.speechService.stopSpeaking()
+        isBotSpeaking = false
     }
 }

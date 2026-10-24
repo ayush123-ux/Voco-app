@@ -82,6 +82,7 @@ public struct VoCoMainAppView: View {
             }
         }
         .onAppear {
+            LanguageManager.shared.applyLanguage(to: container)
             guidanceCoordinator.onSpeakGuidance = { [weak voiceCommandViewModel] text in
                 if let voiceVM = voiceCommandViewModel {
                     await voiceVM.speakUtterance(text)
@@ -321,7 +322,7 @@ public struct VoCoMainAppView: View {
             }
 
         case .dsaEpisodes(let topic):
-            DSAEpisodesView(topic: topic) { episode in
+            DSAEpisodesView(topic: topic, container: container) { episode in
                 navigationStateMachine.push(.episodeDetail(episode))
                 navigationPath.append(Destination.episodeDetail(episode))
             }
@@ -368,7 +369,7 @@ public struct VoCoMainAppView: View {
             )
 
         case .quiz:
-            InteractiveQuizView(viewModel: quizViewModel) {
+            InteractiveQuizView(viewModel: quizViewModel, container: container) {
                 navigationStateMachine.popToRoot()
                 navigationPath = NavigationPath()
             }
@@ -424,6 +425,10 @@ public struct VoCoMainAppView: View {
 
         case .actionExecuted(let actionName, let spokenFeedback):
             switch actionName {
+            case "AcknowledgeOK":
+                Task { await voiceCommandViewModel.speakUtterance("OK.") }
+            case "Continue":
+                Task { await voiceCommandViewModel.speakUtterance("Continuing.") }
             case "PauseListening":
                 Task { await voiceCommandViewModel.pauseListening() }
             case "ResumeListening":

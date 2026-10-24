@@ -1,15 +1,22 @@
 import SwiftUI
 
-/// True/False Interactive Quiz screen preserving StartQuiz.dart logic and score alerts
+/// True/False Interactive Quiz screen preserving StartQuiz.dart logic and score alerts,
+/// with full voice-first automated question narration, option reading, and validation feedback.
 public struct InteractiveQuizView: View {
     @ObservedObject public var viewModel: QuizViewModel
+    @ObservedObject public var container: ServiceContainer
     public let onExitToHome: () -> Void
+
+    @State private var hasAnnouncedInitialQuestion = false
+    @State private var isNarrating = false
 
     public init(
         viewModel: QuizViewModel,
+        container: ServiceContainer,
         onExitToHome: @escaping () -> Void
     ) {
         self.viewModel = viewModel
+        self.container = container
         self.onExitToHome = onExitToHome
     }
 
@@ -54,6 +61,24 @@ public struct InteractiveQuizView: View {
                         .multilineTextAlignment(.center)
                         .lineSpacing(6)
                         .padding(.horizontal, 8)
+
+                    // Repeat audio button for voice accessibility
+                    Button {
+                        readCurrentQuestionWithOptions()
+                    } label: {
+                        HStack(spacing: 6) {
+                            Image(systemName: "speaker.wave.2.fill")
+                            Text("Repeat Question")
+                                .font(.caption)
+                                .fontWeight(.medium)
+                        }
+                        .foregroundColor(.blue)
+                        .padding(.vertical, 4)
+                        .padding(.horizontal, 10)
+                        .background(Color.blue.opacity(0.1))
+                        .clipShape(Capsule())
+                    }
+                    .accessibilityLabel("Repeat question and answer options")
                 }
                 .padding(28)
                 .frame(maxWidth: .infinity)
@@ -169,12 +194,23 @@ public struct InteractiveQuizView: View {
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
+        .onAppear {
+            if !hasAnnouncedInitialQuestion {
+                hasAnnouncedInitialQuestion = true
+                announceQuizStartAndFirstQuestion()
+            }
+        }
+        .onDisappear {
+            container.speechService.stopSpeaking()
+        }
         .alert("Quiz Completed!", isPresented: Binding(
             get: { viewModel.isQuizCompleted },
             set: { _ in }
         )) {
             Button("Play Again") {
                 viewModel.resetQuiz()
+                hasAnnouncedInitialQuestion = true
+                announceQuizStartAndFirstQuestion()
             }
             Button("Return to Home", role: .cancel) {
                 onExitToHome()
@@ -184,21 +220,82 @@ public struct InteractiveQuizView: View {
         }
     }
 
+    private func announceQuizStartAndFirstQuestion() {
+        Task {
+            guard let q = viewModel.currentQuestion else { return }
+            let langId = LanguageManager.shared.currentLanguage.id
+            let text: String
+            if langId.contains("mr") {
+                text = "व्होको क्विझ सुरू होत आहे. प्रश्न 1 / \(viewModel.questions.count): \(q.prompt). पर्याय 1: बरोबर. पर्याय 2: चूक. मी ऐकत आहे. तुम्ही आता बरोबर किंवा चूक म्हणू शकता."
+            } else if langId.contains("hi") {
+                text = "वोको क्विज़ शुरू हो रहा है। प्रश्न 1 / \(viewModel.questions.count): \(q.prompt)। विकल्प 1: सही। विकल्प 2: गलत। मैं सुन रहा हूँ। आप सही या गलत बोल सकते हैं।"
+            } else {
+                text = "Starting VoCo Quiz. Question 1 of \(viewModel.questions.count): \(q.prompt). Option 1: True. Option 2: False. I'm listening. You can say True or False now."
+            }
+            await container.speechService.speak(text: text)
+            AccessibilityHelper.announce(text)
+        }
+    }
+
+    private func readCurrentQuestionWithOptions() {
+        guard let q = viewModel.currentQuestion else { return }
+        Task {
+            let langId = LanguageManager.shared.currentLanguage.id
+            let text: String
+            if langId.contains("mr") {
+                text = "प्रश्न \(viewModel.currentIndex + 1) / \(viewModel.questions.count): \(q.prompt). पर्याय 1: बरोबर. पर्याय 2: चूक. बरोबर किंवा चूक म्हणा."
+            } else if langId.contains("hi") {
+                text = "प्रश्न \(viewModel.currentIndex + 1) / \(viewModel.questions.count): \(q.prompt)। विकल्प 1: सही। विकल्प 2: गलत। सही या गलत बोलें।"
+            } else {
+                text = "Question \(viewModel.currentIndex + 1) of \(viewModel.questions.count): \(q.prompt). Option 1: True. Option 2: False. Say True or False."
+            }
+            await container.speechService.speak(text: text)
+        }
+    }
+
     private func submitAnswer(_ answer: Bool) {
         guard let question = viewModel.currentQuestion else { return }
         viewModel.answerCurrentQuestion(with: answer)
         let isCorrect = answer == question.correctAnswer
-        let message = "\(isCorrect ? "Correct!" : "Incorrect.") \(question.explanation ?? "")"
-        AccessibilityHelper.announce(message)
+        let langId = LanguageManager.shared.currentLanguage.id
+        let prefix: String
+        if langId.contains("mr") {
+            prefix = isCorrect ? "बरोबर!" : "चूक."
+        } else if langId.contains("hi") {
+            prefix = isCorrect ? "सही!" : "गलत।"
+        } else {
+            prefix = isCorrect ? "Correct!" : "Incorrect."
+        }
+        let feedback = "\(prefix) \(question.explanation ?? "")"
+
+        Task {
+            await container.speechService.speak(text: feedback)
+            AccessibilityHelper.announce(feedback)
+
+            // Auto-advance after feedback is spoken if quiz is not completed
+            try? await Task.sleep(nanoseconds: 600_000_000)
+            await MainActor.run {
+                if !viewModel.isQuizCompleted && viewModel.isAnswerSubmitted {
+                    advanceQuestion()
+                }
+            }
+        }
     }
 
     private func advanceQuestion() {
         viewModel.nextQuestion()
         if let nextQ = viewModel.currentQuestion {
-            let msg = "Question \(viewModel.currentIndex + 1) of \(viewModel.questions.count): \(nextQ.prompt)"
-            AccessibilityHelper.announce(msg)
+            Task {
+                let text = "Question \(viewModel.currentIndex + 1) of \(viewModel.questions.count): \(nextQ.prompt). Option 1: True. Option 2: False. Say True or False."
+                await container.speechService.speak(text: text)
+                AccessibilityHelper.announce(text)
+            }
         } else if viewModel.isQuizCompleted {
-            AccessibilityHelper.announce("Quiz completed. Your score is \(viewModel.score) out of \(viewModel.questions.count).")
+            Task {
+                let finishMsg = "Quiz completed! You scored \(viewModel.score) out of \(viewModel.questions.count), which is \(viewModel.percentageScore) percent. Say play again, or return to home."
+                await container.speechService.speak(text: finishMsg)
+                AccessibilityHelper.announce(finishMsg)
+            }
         }
     }
 }

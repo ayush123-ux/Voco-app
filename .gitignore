@@ -1,0 +1,10 @@
+.env
+.env.*
+*.env
+.DS_Store
+.build/
+*.xcuserstate
+xcuserdata/
+DerivedData/
+__pycache__/
+*.pyc

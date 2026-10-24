@@ -159,7 +159,10 @@ public struct VoiceCommandBarView: View {
         case .listening: return .red
         case .processing: return .purple
         case .speaking: return .green
+        case .awaitingAnswer: return .blue
+        case .clarificationRequired: return .orange
         case .paused: return .orange
+        case .permissionRequired: return .red
         case .idle: return viewModel.isHandsFreeModeEnabled ? .blue : .secondary
         case .error: return .red
         }
@@ -170,7 +173,10 @@ public struct VoiceCommandBarView: View {
         case .listening: return "stop.fill"
         case .processing: return "ellipsis"
         case .speaking: return "speaker.wave.2.fill"
+        case .awaitingAnswer: return "mic.badge.plus"
+        case .clarificationRequired: return "questionmark.bubble"
         case .paused: return "pause.fill"
+        case .permissionRequired: return "lock.fill"
         case .idle: return "mic.fill"
         case .error: return "exclamationmark.triangle.fill"
         }
@@ -181,7 +187,10 @@ public struct VoiceCommandBarView: View {
         case .listening: return Color.red.opacity(0.2)
         case .processing: return Color.purple.opacity(0.2)
         case .speaking: return Color.green.opacity(0.2)
+        case .awaitingAnswer: return Color.blue.opacity(0.2)
+        case .clarificationRequired: return Color.orange.opacity(0.2)
         case .paused: return Color.orange.opacity(0.2)
+        case .permissionRequired: return Color.red.opacity(0.2)
         case .idle: return Color.gray.opacity(0.2)
         case .error: return Color.red.opacity(0.2)
         }
@@ -192,7 +201,10 @@ public struct VoiceCommandBarView: View {
         case .listening: return .red
         case .processing: return .purple
         case .speaking: return .green
+        case .awaitingAnswer: return .blue
+        case .clarificationRequired: return .orange
         case .paused: return .orange
+        case .permissionRequired: return .red
         case .idle: return .secondary
         case .error: return .red
         }

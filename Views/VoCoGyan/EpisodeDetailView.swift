@@ -1,12 +1,14 @@
 import SwiftUI
 
-/// Episode reading and narration screen preserving quizDsa.dart logic
+/// Episode reading and narration screen preserving quizDsa.dart logic,
+/// with automatic spoken playback upon opening, hands-free pause/resume/stop, and full accessibility.
 public struct EpisodeDetailView: View {
     public let episode: CourseEpisode
     @ObservedObject public var container: ServiceContainer
     public let onTakeQuiz: () -> Void
 
     @State private var isSpeaking = false
+    @State private var hasStartedAutoPlay = false
 
     public init(
         episode: CourseEpisode,
@@ -55,10 +57,13 @@ public struct EpisodeDetailView: View {
                         .padding(.vertical, 6)
                     }
                     .accessibilityLabel(isSpeaking ? "Stop Narration" : "Listen to VoCo read this passage")
+                    .accessibilityHint("Toggles text-to-speech reading of this lesson")
                 }
                 .padding(20)
                 .background(Color.gray.opacity(0.08))
                 .cornerRadius(18)
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Lesson narrative for \(episode.title): \(episode.narrativeText)")
 
                 Spacer(minLength: 20)
 
@@ -90,7 +95,8 @@ public struct EpisodeDetailView: View {
                                 .cornerRadius(14)
                                 .shadow(color: .green.opacity(0.3), radius: 6, y: 3)
                         }
-                        .accessibilityLabel("Take Quiz")
+                        .accessibilityLabel("Yes, Take Quiz")
+                        .accessibilityHint("Starts a quiz testing your comprehension of this lesson")
                     }
                 }
                 .padding(20)
@@ -106,8 +112,27 @@ public struct EpisodeDetailView: View {
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
+        .onAppear {
+            if !hasStartedAutoPlay {
+                hasStartedAutoPlay = true
+                startAutoNarration()
+            }
+        }
         .onDisappear {
             container.speechService.stopSpeaking()
+            isSpeaking = false
+        }
+    }
+
+    private func startAutoNarration() {
+        isSpeaking = true
+        Task {
+            let introText = "Playing lesson: \(episode.title). \(episode.narrativeText)"
+            AccessibilityHelper.announce("Lesson started: \(episode.title)")
+            await container.speechService.speak(text: introText)
+            await MainActor.run {
+                self.isSpeaking = false
+            }
         }
     }
 

@@ -16,61 +16,64 @@
 		000000030000000000000007 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000007 /* Story.swift */; };
 		000000030000000000000008 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000008 /* UserProfile.swift */; };
 		000000030000000000000009 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000009 /* ServiceContainer.swift */; };
-		00000003000000000000000A /* NativeAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000A /* NativeAudioPlayer.swift */; };
-		00000003000000000000000B /* NativeAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000B /* NativeAudioRecorder.swift */; };
-		00000003000000000000000C /* NativeSpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000C /* NativeSpeechRecognitionService.swift */; };
-		00000003000000000000000D /* NativeSpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000D /* NativeSpeechService.swift */; };
-		00000003000000000000000E /* VoiceCommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000E /* VoiceCommandParser.swift */; };
-		00000003000000000000000F /* VoiceEmailSpellingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000F /* VoiceEmailSpellingParser.swift */; };
-		000000030000000000000010 /* VoiceGuidanceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000010 /* VoiceGuidanceCoordinator.swift */; };
-		000000030000000000000011 /* KeychainTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000011 /* KeychainTokenStore.swift */; };
-		000000030000000000000012 /* NativeBiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000012 /* NativeBiometricAuthService.swift */; };
-		000000030000000000000013 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000013 /* FirebaseAuthService.swift */; };
-		000000030000000000000014 /* FirestoreSentenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000014 /* FirestoreSentenceService.swift */; };
-		000000030000000000000015 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000015 /* LanguageManager.swift */; };
-		000000030000000000000016 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000016 /* MockAuthService.swift */; };
-		000000030000000000000017 /* MockBiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000017 /* MockBiometricAuthService.swift */; };
-		000000030000000000000018 /* MockSentenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000018 /* MockSentenceService.swift */; };
-		000000030000000000000019 /* MockSpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000019 /* MockSpeechRecognitionService.swift */; };
-		00000003000000000000001A /* MockSpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001A /* MockSpeechService.swift */; };
-		00000003000000000000001B /* MockTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001B /* MockTokenStore.swift */; };
-		00000003000000000000001C /* AppNavigationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001C /* AppNavigationStateMachine.swift */; };
-		00000003000000000000001D /* AudioPlaybackServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001D /* AudioPlaybackServiceProtocol.swift */; };
-		00000003000000000000001E /* AudioRecordingServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001E /* AudioRecordingServiceProtocol.swift */; };
-		00000003000000000000001F /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001F /* AuthServiceProtocol.swift */; };
-		000000030000000000000020 /* BiometricAuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000020 /* BiometricAuthServiceProtocol.swift */; };
-		000000030000000000000021 /* SecureTokenStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000021 /* SecureTokenStoreProtocol.swift */; };
-		000000030000000000000022 /* SentenceServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000022 /* SentenceServiceProtocol.swift */; };
-		000000030000000000000023 /* SpeechRecognitionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000023 /* SpeechRecognitionServiceProtocol.swift */; };
-		000000030000000000000024 /* SpeechServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000024 /* SpeechServiceProtocol.swift */; };
-		000000030000000000000025 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000025 /* AuthViewModel.swift */; };
-		000000030000000000000026 /* PronunciationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000026 /* PronunciationViewModel.swift */; };
-		000000030000000000000027 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000027 /* QuizViewModel.swift */; };
-		000000030000000000000028 /* VoiceCommandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000028 /* VoiceCommandViewModel.swift */; };
-		000000030000000000000029 /* VoCoMainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000029 /* VoCoMainAppView.swift */; };
-		00000003000000000000002A /* LoginHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002A /* LoginHomeView.swift */; };
-		00000003000000000000002B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002B /* SignInView.swift */; };
-		00000003000000000000002C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002C /* SignUpView.swift */; };
-		00000003000000000000002D /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002D /* SplashScreenView.swift */; };
-		00000003000000000000002E /* UserProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002E /* UserProfileFormView.swift */; };
-		00000003000000000000002F /* AccessibilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002F /* AccessibilityHelper.swift */; };
-		000000030000000000000030 /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000030 /* ComingSoonView.swift */; };
-		000000030000000000000031 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000031 /* LanguageSelectionView.swift */; };
-		000000030000000000000032 /* QuadrantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000032 /* QuadrantCardView.swift */; };
-		000000030000000000000033 /* VoiceCommandBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000033 /* VoiceCommandBarView.swift */; };
-		000000030000000000000034 /* GamesHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000034 /* GamesHubView.swift */; };
-		000000030000000000000035 /* InteractiveQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000035 /* InteractiveQuizView.swift */; };
-		000000030000000000000036 /* StoryCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000036 /* StoryCatalogView.swift */; };
-		000000030000000000000037 /* StoryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000037 /* StoryReaderView.swift */; };
-		000000030000000000000038 /* HomeDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000038 /* HomeDashboardView.swift */; };
-		000000030000000000000039 /* PronunciationRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000039 /* PronunciationRecordView.swift */; };
-		00000003000000000000003A /* PronunciationReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003A /* PronunciationReviewView.swift */; };
-		00000003000000000000003B /* TalkWithVoCoHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003B /* TalkWithVoCoHubView.swift */; };
-		00000003000000000000003C /* VoCoBotConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003C /* VoCoBotConversationView.swift */; };
-		00000003000000000000003D /* DSAEpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003D /* DSAEpisodesView.swift */; };
-		00000003000000000000003E /* EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003E /* EpisodeDetailView.swift */; };
-		00000003000000000000003F /* TechnicalCoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003F /* TechnicalCoursesView.swift */; };
-		000000030000000000000040 /* VoCoGyanHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000040 /* VoCoGyanHubView.swift */; };
+		00000003000000000000000A /* GeminiAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000A /* GeminiAIService.swift */; };
+		00000003000000000000000B /* NativeAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000B /* NativeAudioPlayer.swift */; };
+		00000003000000000000000C /* NativeAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000C /* NativeAudioRecorder.swift */; };
+		00000003000000000000000D /* NativeSpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000D /* NativeSpeechRecognitionService.swift */; };
+		00000003000000000000000E /* NativeSpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000E /* NativeSpeechService.swift */; };
+		00000003000000000000000F /* VoiceCommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000000F /* VoiceCommandParser.swift */; };
+		000000030000000000000010 /* VoiceEmailSpellingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000010 /* VoiceEmailSpellingParser.swift */; };
+		000000030000000000000011 /* VoiceGuidanceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000011 /* VoiceGuidanceCoordinator.swift */; };
+		000000030000000000000012 /* KeychainTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000012 /* KeychainTokenStore.swift */; };
+		000000030000000000000013 /* NativeBiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000013 /* NativeBiometricAuthService.swift */; };
+		000000030000000000000014 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000014 /* FirebaseAuthService.swift */; };
+		000000030000000000000015 /* FirestoreSentenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000015 /* FirestoreSentenceService.swift */; };
+		000000030000000000000016 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000016 /* LanguageManager.swift */; };
+		000000030000000000000017 /* MockAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000017 /* MockAIService.swift */; };
+		000000030000000000000018 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000018 /* MockAuthService.swift */; };
+		000000030000000000000019 /* MockBiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000019 /* MockBiometricAuthService.swift */; };
+		00000003000000000000001A /* MockSentenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001A /* MockSentenceService.swift */; };
+		00000003000000000000001B /* MockSpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001B /* MockSpeechRecognitionService.swift */; };
+		00000003000000000000001C /* MockSpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001C /* MockSpeechService.swift */; };
+		00000003000000000000001D /* MockTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001D /* MockTokenStore.swift */; };
+		00000003000000000000001E /* AppNavigationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001E /* AppNavigationStateMachine.swift */; };
+		00000003000000000000001F /* AIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000001F /* AIServiceProtocol.swift */; };
+		000000030000000000000020 /* AudioPlaybackServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000020 /* AudioPlaybackServiceProtocol.swift */; };
+		000000030000000000000021 /* AudioRecordingServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000021 /* AudioRecordingServiceProtocol.swift */; };
+		000000030000000000000022 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000022 /* AuthServiceProtocol.swift */; };
+		000000030000000000000023 /* BiometricAuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000023 /* BiometricAuthServiceProtocol.swift */; };
+		000000030000000000000024 /* SecureTokenStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000024 /* SecureTokenStoreProtocol.swift */; };
+		000000030000000000000025 /* SentenceServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000025 /* SentenceServiceProtocol.swift */; };
+		000000030000000000000026 /* SpeechRecognitionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000026 /* SpeechRecognitionServiceProtocol.swift */; };
+		000000030000000000000027 /* SpeechServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000027 /* SpeechServiceProtocol.swift */; };
+		000000030000000000000028 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000028 /* AuthViewModel.swift */; };
+		000000030000000000000029 /* PronunciationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000029 /* PronunciationViewModel.swift */; };
+		00000003000000000000002A /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002A /* QuizViewModel.swift */; };
+		00000003000000000000002B /* VoiceCommandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002B /* VoiceCommandViewModel.swift */; };
+		00000003000000000000002C /* VoCoMainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002C /* VoCoMainAppView.swift */; };
+		00000003000000000000002D /* LoginHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002D /* LoginHomeView.swift */; };
+		00000003000000000000002E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002E /* SignInView.swift */; };
+		00000003000000000000002F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000002F /* SignUpView.swift */; };
+		000000030000000000000030 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000030 /* SplashScreenView.swift */; };
+		000000030000000000000031 /* UserProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000031 /* UserProfileFormView.swift */; };
+		000000030000000000000032 /* AccessibilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000032 /* AccessibilityHelper.swift */; };
+		000000030000000000000033 /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000033 /* ComingSoonView.swift */; };
+		000000030000000000000034 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000034 /* LanguageSelectionView.swift */; };
+		000000030000000000000035 /* QuadrantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000035 /* QuadrantCardView.swift */; };
+		000000030000000000000036 /* VoiceCommandBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000036 /* VoiceCommandBarView.swift */; };
+		000000030000000000000037 /* GamesHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000037 /* GamesHubView.swift */; };
+		000000030000000000000038 /* InteractiveQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000038 /* InteractiveQuizView.swift */; };
+		000000030000000000000039 /* StoryCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000039 /* StoryCatalogView.swift */; };
+		00000003000000000000003A /* StoryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003A /* StoryReaderView.swift */; };
+		00000003000000000000003B /* HomeDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003B /* HomeDashboardView.swift */; };
+		00000003000000000000003C /* PronunciationRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003C /* PronunciationRecordView.swift */; };
+		00000003000000000000003D /* PronunciationReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003D /* PronunciationReviewView.swift */; };
+		00000003000000000000003E /* TalkWithVoCoHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003E /* TalkWithVoCoHubView.swift */; };
+		00000003000000000000003F /* VoCoBotConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000002000000000000003F /* VoCoBotConversationView.swift */; };
+		000000030000000000000040 /* DSAEpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000040 /* DSAEpisodesView.swift */; };
+		000000030000000000000041 /* EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000041 /* EpisodeDetailView.swift */; };
+		000000030000000000000042 /* TechnicalCoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000042 /* TechnicalCoursesView.swift */; };
+		000000030000000000000043 /* VoCoGyanHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000020000000000000043 /* VoCoGyanHubView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,61 +88,64 @@
 		000000020000000000000007 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models/Story.swift"; sourceTree = "<group>"; };
 		000000020000000000000008 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models/UserProfile.swift"; sourceTree = "<group>"; };
 		000000020000000000000009 /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/ServiceContainer.swift"; sourceTree = "<group>"; };
-		00000002000000000000000A /* NativeAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/NativeAudioPlayer.swift"; sourceTree = "<group>"; };
-		00000002000000000000000B /* NativeAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/NativeAudioRecorder.swift"; sourceTree = "<group>"; };
-		00000002000000000000000C /* NativeSpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/NativeSpeechRecognitionService.swift"; sourceTree = "<group>"; };
-		00000002000000000000000D /* NativeSpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/NativeSpeechService.swift"; sourceTree = "<group>"; };
-		00000002000000000000000E /* VoiceCommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/VoiceCommandParser.swift"; sourceTree = "<group>"; };
-		00000002000000000000000F /* VoiceEmailSpellingParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/VoiceEmailSpellingParser.swift"; sourceTree = "<group>"; };
-		000000020000000000000010 /* VoiceGuidanceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/VoiceGuidanceCoordinator.swift"; sourceTree = "<group>"; };
-		000000020000000000000011 /* KeychainTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Auth/KeychainTokenStore.swift"; sourceTree = "<group>"; };
-		000000020000000000000012 /* NativeBiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Auth/NativeBiometricAuthService.swift"; sourceTree = "<group>"; };
-		000000020000000000000013 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Firebase/FirebaseAuthService.swift"; sourceTree = "<group>"; };
-		000000020000000000000014 /* FirestoreSentenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Firebase/FirestoreSentenceService.swift"; sourceTree = "<group>"; };
-		000000020000000000000015 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Language/LanguageManager.swift"; sourceTree = "<group>"; };
-		000000020000000000000016 /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockAuthService.swift"; sourceTree = "<group>"; };
-		000000020000000000000017 /* MockBiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockBiometricAuthService.swift"; sourceTree = "<group>"; };
-		000000020000000000000018 /* MockSentenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockSentenceService.swift"; sourceTree = "<group>"; };
-		000000020000000000000019 /* MockSpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockSpeechRecognitionService.swift"; sourceTree = "<group>"; };
-		00000002000000000000001A /* MockSpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockSpeechService.swift"; sourceTree = "<group>"; };
-		00000002000000000000001B /* MockTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockTokenStore.swift"; sourceTree = "<group>"; };
-		00000002000000000000001C /* AppNavigationStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Navigation/AppNavigationStateMachine.swift"; sourceTree = "<group>"; };
-		00000002000000000000001D /* AudioPlaybackServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/AudioPlaybackServiceProtocol.swift"; sourceTree = "<group>"; };
-		00000002000000000000001E /* AudioRecordingServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/AudioRecordingServiceProtocol.swift"; sourceTree = "<group>"; };
-		00000002000000000000001F /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/AuthServiceProtocol.swift"; sourceTree = "<group>"; };
-		000000020000000000000020 /* BiometricAuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/BiometricAuthServiceProtocol.swift"; sourceTree = "<group>"; };
-		000000020000000000000021 /* SecureTokenStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/SecureTokenStoreProtocol.swift"; sourceTree = "<group>"; };
-		000000020000000000000022 /* SentenceServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/SentenceServiceProtocol.swift"; sourceTree = "<group>"; };
-		000000020000000000000023 /* SpeechRecognitionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/SpeechRecognitionServiceProtocol.swift"; sourceTree = "<group>"; };
-		000000020000000000000024 /* SpeechServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/SpeechServiceProtocol.swift"; sourceTree = "<group>"; };
-		000000020000000000000025 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels/AuthViewModel.swift"; sourceTree = "<group>"; };
-		000000020000000000000026 /* PronunciationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels/PronunciationViewModel.swift"; sourceTree = "<group>"; };
-		000000020000000000000027 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels/QuizViewModel.swift"; sourceTree = "<group>"; };
-		000000020000000000000028 /* VoiceCommandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels/VoiceCommandViewModel.swift"; sourceTree = "<group>"; };
-		000000020000000000000029 /* VoCoMainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/VoCoMainAppView.swift"; sourceTree = "<group>"; };
-		00000002000000000000002A /* LoginHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Auth/LoginHomeView.swift"; sourceTree = "<group>"; };
-		00000002000000000000002B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Auth/SignInView.swift"; sourceTree = "<group>"; };
-		00000002000000000000002C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Auth/SignUpView.swift"; sourceTree = "<group>"; };
-		00000002000000000000002D /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Auth/SplashScreenView.swift"; sourceTree = "<group>"; };
-		00000002000000000000002E /* UserProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Auth/UserProfileFormView.swift"; sourceTree = "<group>"; };
-		00000002000000000000002F /* AccessibilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Common/AccessibilityHelper.swift"; sourceTree = "<group>"; };
-		000000020000000000000030 /* ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Common/ComingSoonView.swift"; sourceTree = "<group>"; };
-		000000020000000000000031 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Common/LanguageSelectionView.swift"; sourceTree = "<group>"; };
-		000000020000000000000032 /* QuadrantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Common/QuadrantCardView.swift"; sourceTree = "<group>"; };
-		000000020000000000000033 /* VoiceCommandBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Common/VoiceCommandBarView.swift"; sourceTree = "<group>"; };
-		000000020000000000000034 /* GamesHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Games/GamesHubView.swift"; sourceTree = "<group>"; };
-		000000020000000000000035 /* InteractiveQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Games/InteractiveQuizView.swift"; sourceTree = "<group>"; };
-		000000020000000000000036 /* StoryCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Games/StoryCatalogView.swift"; sourceTree = "<group>"; };
-		000000020000000000000037 /* StoryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Games/StoryReaderView.swift"; sourceTree = "<group>"; };
-		000000020000000000000038 /* HomeDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Home/HomeDashboardView.swift"; sourceTree = "<group>"; };
-		000000020000000000000039 /* PronunciationRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Pronunciation/PronunciationRecordView.swift"; sourceTree = "<group>"; };
-		00000002000000000000003A /* PronunciationReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Pronunciation/PronunciationReviewView.swift"; sourceTree = "<group>"; };
-		00000002000000000000003B /* TalkWithVoCoHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Talk/TalkWithVoCoHubView.swift"; sourceTree = "<group>"; };
-		00000002000000000000003C /* VoCoBotConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Talk/VoCoBotConversationView.swift"; sourceTree = "<group>"; };
-		00000002000000000000003D /* DSAEpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/VoCoGyan/DSAEpisodesView.swift"; sourceTree = "<group>"; };
-		00000002000000000000003E /* EpisodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/VoCoGyan/EpisodeDetailView.swift"; sourceTree = "<group>"; };
-		00000002000000000000003F /* TechnicalCoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/VoCoGyan/TechnicalCoursesView.swift"; sourceTree = "<group>"; };
-		000000020000000000000040 /* VoCoGyanHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/VoCoGyan/VoCoGyanHubView.swift"; sourceTree = "<group>"; };
+		00000002000000000000000A /* GeminiAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/AI/GeminiAIService.swift"; sourceTree = "<group>"; };
+		00000002000000000000000B /* NativeAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/NativeAudioPlayer.swift"; sourceTree = "<group>"; };
+		00000002000000000000000C /* NativeAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/NativeAudioRecorder.swift"; sourceTree = "<group>"; };
+		00000002000000000000000D /* NativeSpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/NativeSpeechRecognitionService.swift"; sourceTree = "<group>"; };
+		00000002000000000000000E /* NativeSpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/NativeSpeechService.swift"; sourceTree = "<group>"; };
+		00000002000000000000000F /* VoiceCommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/VoiceCommandParser.swift"; sourceTree = "<group>"; };
+		000000020000000000000010 /* VoiceEmailSpellingParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/VoiceEmailSpellingParser.swift"; sourceTree = "<group>"; };
+		000000020000000000000011 /* VoiceGuidanceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Audio/VoiceGuidanceCoordinator.swift"; sourceTree = "<group>"; };
+		000000020000000000000012 /* KeychainTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Auth/KeychainTokenStore.swift"; sourceTree = "<group>"; };
+		000000020000000000000013 /* NativeBiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Auth/NativeBiometricAuthService.swift"; sourceTree = "<group>"; };
+		000000020000000000000014 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Firebase/FirebaseAuthService.swift"; sourceTree = "<group>"; };
+		000000020000000000000015 /* FirestoreSentenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Firebase/FirestoreSentenceService.swift"; sourceTree = "<group>"; };
+		000000020000000000000016 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Language/LanguageManager.swift"; sourceTree = "<group>"; };
+		000000020000000000000017 /* MockAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockAIService.swift"; sourceTree = "<group>"; };
+		000000020000000000000018 /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockAuthService.swift"; sourceTree = "<group>"; };
+		000000020000000000000019 /* MockBiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockBiometricAuthService.swift"; sourceTree = "<group>"; };
+		00000002000000000000001A /* MockSentenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockSentenceService.swift"; sourceTree = "<group>"; };
+		00000002000000000000001B /* MockSpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockSpeechRecognitionService.swift"; sourceTree = "<group>"; };
+		00000002000000000000001C /* MockSpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockSpeechService.swift"; sourceTree = "<group>"; };
+		00000002000000000000001D /* MockTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Mock/MockTokenStore.swift"; sourceTree = "<group>"; };
+		00000002000000000000001E /* AppNavigationStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Navigation/AppNavigationStateMachine.swift"; sourceTree = "<group>"; };
+		00000002000000000000001F /* AIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/AIServiceProtocol.swift"; sourceTree = "<group>"; };
+		000000020000000000000020 /* AudioPlaybackServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/AudioPlaybackServiceProtocol.swift"; sourceTree = "<group>"; };
+		000000020000000000000021 /* AudioRecordingServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/AudioRecordingServiceProtocol.swift"; sourceTree = "<group>"; };
+		000000020000000000000022 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/AuthServiceProtocol.swift"; sourceTree = "<group>"; };
+		000000020000000000000023 /* BiometricAuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/BiometricAuthServiceProtocol.swift"; sourceTree = "<group>"; };
+		000000020000000000000024 /* SecureTokenStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/SecureTokenStoreProtocol.swift"; sourceTree = "<group>"; };
+		000000020000000000000025 /* SentenceServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/SentenceServiceProtocol.swift"; sourceTree = "<group>"; };
+		000000020000000000000026 /* SpeechRecognitionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/SpeechRecognitionServiceProtocol.swift"; sourceTree = "<group>"; };
+		000000020000000000000027 /* SpeechServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/Protocols/SpeechServiceProtocol.swift"; sourceTree = "<group>"; };
+		000000020000000000000028 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels/AuthViewModel.swift"; sourceTree = "<group>"; };
+		000000020000000000000029 /* PronunciationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels/PronunciationViewModel.swift"; sourceTree = "<group>"; };
+		00000002000000000000002A /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels/QuizViewModel.swift"; sourceTree = "<group>"; };
+		00000002000000000000002B /* VoiceCommandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels/VoiceCommandViewModel.swift"; sourceTree = "<group>"; };
+		00000002000000000000002C /* VoCoMainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/VoCoMainAppView.swift"; sourceTree = "<group>"; };
+		00000002000000000000002D /* LoginHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Auth/LoginHomeView.swift"; sourceTree = "<group>"; };
+		00000002000000000000002E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Auth/SignInView.swift"; sourceTree = "<group>"; };
+		00000002000000000000002F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Auth/SignUpView.swift"; sourceTree = "<group>"; };
+		000000020000000000000030 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Auth/SplashScreenView.swift"; sourceTree = "<group>"; };
+		000000020000000000000031 /* UserProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Auth/UserProfileFormView.swift"; sourceTree = "<group>"; };
+		000000020000000000000032 /* AccessibilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Common/AccessibilityHelper.swift"; sourceTree = "<group>"; };
+		000000020000000000000033 /* ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Common/ComingSoonView.swift"; sourceTree = "<group>"; };
+		000000020000000000000034 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Common/LanguageSelectionView.swift"; sourceTree = "<group>"; };
+		000000020000000000000035 /* QuadrantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Common/QuadrantCardView.swift"; sourceTree = "<group>"; };
+		000000020000000000000036 /* VoiceCommandBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Common/VoiceCommandBarView.swift"; sourceTree = "<group>"; };
+		000000020000000000000037 /* GamesHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Games/GamesHubView.swift"; sourceTree = "<group>"; };
+		000000020000000000000038 /* InteractiveQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Games/InteractiveQuizView.swift"; sourceTree = "<group>"; };
+		000000020000000000000039 /* StoryCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Games/StoryCatalogView.swift"; sourceTree = "<group>"; };
+		00000002000000000000003A /* StoryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Games/StoryReaderView.swift"; sourceTree = "<group>"; };
+		00000002000000000000003B /* HomeDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Home/HomeDashboardView.swift"; sourceTree = "<group>"; };
+		00000002000000000000003C /* PronunciationRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Pronunciation/PronunciationRecordView.swift"; sourceTree = "<group>"; };
+		00000002000000000000003D /* PronunciationReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Pronunciation/PronunciationReviewView.swift"; sourceTree = "<group>"; };
+		00000002000000000000003E /* TalkWithVoCoHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Talk/TalkWithVoCoHubView.swift"; sourceTree = "<group>"; };
+		00000002000000000000003F /* VoCoBotConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Talk/VoCoBotConversationView.swift"; sourceTree = "<group>"; };
+		000000020000000000000040 /* DSAEpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/VoCoGyan/DSAEpisodesView.swift"; sourceTree = "<group>"; };
+		000000020000000000000041 /* EpisodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/VoCoGyan/EpisodeDetailView.swift"; sourceTree = "<group>"; };
+		000000020000000000000042 /* TechnicalCoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/VoCoGyan/TechnicalCoursesView.swift"; sourceTree = "<group>"; };
+		000000020000000000000043 /* VoCoGyanHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/VoCoGyan/VoCoGyanHubView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,61 +172,64 @@
 				000000020000000000000007 /* Story.swift */,
 				000000020000000000000008 /* UserProfile.swift */,
 				000000020000000000000009 /* ServiceContainer.swift */,
-				00000002000000000000000A /* NativeAudioPlayer.swift */,
-				00000002000000000000000B /* NativeAudioRecorder.swift */,
-				00000002000000000000000C /* NativeSpeechRecognitionService.swift */,
-				00000002000000000000000D /* NativeSpeechService.swift */,
-				00000002000000000000000E /* VoiceCommandParser.swift */,
-				00000002000000000000000F /* VoiceEmailSpellingParser.swift */,
-				000000020000000000000010 /* VoiceGuidanceCoordinator.swift */,
-				000000020000000000000011 /* KeychainTokenStore.swift */,
-				000000020000000000000012 /* NativeBiometricAuthService.swift */,
-				000000020000000000000013 /* FirebaseAuthService.swift */,
-				000000020000000000000014 /* FirestoreSentenceService.swift */,
-				000000020000000000000015 /* LanguageManager.swift */,
-				000000020000000000000016 /* MockAuthService.swift */,
-				000000020000000000000017 /* MockBiometricAuthService.swift */,
-				000000020000000000000018 /* MockSentenceService.swift */,
-				000000020000000000000019 /* MockSpeechRecognitionService.swift */,
-				00000002000000000000001A /* MockSpeechService.swift */,
-				00000002000000000000001B /* MockTokenStore.swift */,
-				00000002000000000000001C /* AppNavigationStateMachine.swift */,
-				00000002000000000000001D /* AudioPlaybackServiceProtocol.swift */,
-				00000002000000000000001E /* AudioRecordingServiceProtocol.swift */,
-				00000002000000000000001F /* AuthServiceProtocol.swift */,
-				000000020000000000000020 /* BiometricAuthServiceProtocol.swift */,
-				000000020000000000000021 /* SecureTokenStoreProtocol.swift */,
-				000000020000000000000022 /* SentenceServiceProtocol.swift */,
-				000000020000000000000023 /* SpeechRecognitionServiceProtocol.swift */,
-				000000020000000000000024 /* SpeechServiceProtocol.swift */,
-				000000020000000000000025 /* AuthViewModel.swift */,
-				000000020000000000000026 /* PronunciationViewModel.swift */,
-				000000020000000000000027 /* QuizViewModel.swift */,
-				000000020000000000000028 /* VoiceCommandViewModel.swift */,
-				000000020000000000000029 /* VoCoMainAppView.swift */,
-				00000002000000000000002A /* LoginHomeView.swift */,
-				00000002000000000000002B /* SignInView.swift */,
-				00000002000000000000002C /* SignUpView.swift */,
-				00000002000000000000002D /* SplashScreenView.swift */,
-				00000002000000000000002E /* UserProfileFormView.swift */,
-				00000002000000000000002F /* AccessibilityHelper.swift */,
-				000000020000000000000030 /* ComingSoonView.swift */,
-				000000020000000000000031 /* LanguageSelectionView.swift */,
-				000000020000000000000032 /* QuadrantCardView.swift */,
-				000000020000000000000033 /* VoiceCommandBarView.swift */,
-				000000020000000000000034 /* GamesHubView.swift */,
-				000000020000000000000035 /* InteractiveQuizView.swift */,
-				000000020000000000000036 /* StoryCatalogView.swift */,
-				000000020000000000000037 /* StoryReaderView.swift */,
-				000000020000000000000038 /* HomeDashboardView.swift */,
-				000000020000000000000039 /* PronunciationRecordView.swift */,
-				00000002000000000000003A /* PronunciationReviewView.swift */,
-				00000002000000000000003B /* TalkWithVoCoHubView.swift */,
-				00000002000000000000003C /* VoCoBotConversationView.swift */,
-				00000002000000000000003D /* DSAEpisodesView.swift */,
-				00000002000000000000003E /* EpisodeDetailView.swift */,
-				00000002000000000000003F /* TechnicalCoursesView.swift */,
-				000000020000000000000040 /* VoCoGyanHubView.swift */,
+				00000002000000000000000A /* GeminiAIService.swift */,
+				00000002000000000000000B /* NativeAudioPlayer.swift */,
+				00000002000000000000000C /* NativeAudioRecorder.swift */,
+				00000002000000000000000D /* NativeSpeechRecognitionService.swift */,
+				00000002000000000000000E /* NativeSpeechService.swift */,
+				00000002000000000000000F /* VoiceCommandParser.swift */,
+				000000020000000000000010 /* VoiceEmailSpellingParser.swift */,
+				000000020000000000000011 /* VoiceGuidanceCoordinator.swift */,
+				000000020000000000000012 /* KeychainTokenStore.swift */,
+				000000020000000000000013 /* NativeBiometricAuthService.swift */,
+				000000020000000000000014 /* FirebaseAuthService.swift */,
+				000000020000000000000015 /* FirestoreSentenceService.swift */,
+				000000020000000000000016 /* LanguageManager.swift */,
+				000000020000000000000017 /* MockAIService.swift */,
+				000000020000000000000018 /* MockAuthService.swift */,
+				000000020000000000000019 /* MockBiometricAuthService.swift */,
+				00000002000000000000001A /* MockSentenceService.swift */,
+				00000002000000000000001B /* MockSpeechRecognitionService.swift */,
+				00000002000000000000001C /* MockSpeechService.swift */,
+				00000002000000000000001D /* MockTokenStore.swift */,
+				00000002000000000000001E /* AppNavigationStateMachine.swift */,
+				00000002000000000000001F /* AIServiceProtocol.swift */,
+				000000020000000000000020 /* AudioPlaybackServiceProtocol.swift */,
+				000000020000000000000021 /* AudioRecordingServiceProtocol.swift */,
+				000000020000000000000022 /* AuthServiceProtocol.swift */,
+				000000020000000000000023 /* BiometricAuthServiceProtocol.swift */,
+				000000020000000000000024 /* SecureTokenStoreProtocol.swift */,
+				000000020000000000000025 /* SentenceServiceProtocol.swift */,
+				000000020000000000000026 /* SpeechRecognitionServiceProtocol.swift */,
+				000000020000000000000027 /* SpeechServiceProtocol.swift */,
+				000000020000000000000028 /* AuthViewModel.swift */,
+				000000020000000000000029 /* PronunciationViewModel.swift */,
+				00000002000000000000002A /* QuizViewModel.swift */,
+				00000002000000000000002B /* VoiceCommandViewModel.swift */,
+				00000002000000000000002C /* VoCoMainAppView.swift */,
+				00000002000000000000002D /* LoginHomeView.swift */,
+				00000002000000000000002E /* SignInView.swift */,
+				00000002000000000000002F /* SignUpView.swift */,
+				000000020000000000000030 /* SplashScreenView.swift */,
+				000000020000000000000031 /* UserProfileFormView.swift */,
+				000000020000000000000032 /* AccessibilityHelper.swift */,
+				000000020000000000000033 /* ComingSoonView.swift */,
+				000000020000000000000034 /* LanguageSelectionView.swift */,
+				000000020000000000000035 /* QuadrantCardView.swift */,
+				000000020000000000000036 /* VoiceCommandBarView.swift */,
+				000000020000000000000037 /* GamesHubView.swift */,
+				000000020000000000000038 /* InteractiveQuizView.swift */,
+				000000020000000000000039 /* StoryCatalogView.swift */,
+				00000002000000000000003A /* StoryReaderView.swift */,
+				00000002000000000000003B /* HomeDashboardView.swift */,
+				00000002000000000000003C /* PronunciationRecordView.swift */,
+				00000002000000000000003D /* PronunciationReviewView.swift */,
+				00000002000000000000003E /* TalkWithVoCoHubView.swift */,
+				00000002000000000000003F /* VoCoBotConversationView.swift */,
+				000000020000000000000040 /* DSAEpisodesView.swift */,
+				000000020000000000000041 /* EpisodeDetailView.swift */,
+				000000020000000000000042 /* TechnicalCoursesView.swift */,
+				000000020000000000000043 /* VoCoGyanHubView.swift */,
 				0000000A0000000000000001 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -312,61 +321,64 @@
 				000000030000000000000007 /* Story.swift in Sources */,
 				000000030000000000000008 /* UserProfile.swift in Sources */,
 				000000030000000000000009 /* ServiceContainer.swift in Sources */,
-				00000003000000000000000A /* NativeAudioPlayer.swift in Sources */,
-				00000003000000000000000B /* NativeAudioRecorder.swift in Sources */,
-				00000003000000000000000C /* NativeSpeechRecognitionService.swift in Sources */,
-				00000003000000000000000D /* NativeSpeechService.swift in Sources */,
-				00000003000000000000000E /* VoiceCommandParser.swift in Sources */,
-				00000003000000000000000F /* VoiceEmailSpellingParser.swift in Sources */,
-				000000030000000000000010 /* VoiceGuidanceCoordinator.swift in Sources */,
-				000000030000000000000011 /* KeychainTokenStore.swift in Sources */,
-				000000030000000000000012 /* NativeBiometricAuthService.swift in Sources */,
-				000000030000000000000013 /* FirebaseAuthService.swift in Sources */,
-				000000030000000000000014 /* FirestoreSentenceService.swift in Sources */,
-				000000030000000000000015 /* LanguageManager.swift in Sources */,
-				000000030000000000000016 /* MockAuthService.swift in Sources */,
-				000000030000000000000017 /* MockBiometricAuthService.swift in Sources */,
-				000000030000000000000018 /* MockSentenceService.swift in Sources */,
-				000000030000000000000019 /* MockSpeechRecognitionService.swift in Sources */,
-				00000003000000000000001A /* MockSpeechService.swift in Sources */,
-				00000003000000000000001B /* MockTokenStore.swift in Sources */,
-				00000003000000000000001C /* AppNavigationStateMachine.swift in Sources */,
-				00000003000000000000001D /* AudioPlaybackServiceProtocol.swift in Sources */,
-				00000003000000000000001E /* AudioRecordingServiceProtocol.swift in Sources */,
-				00000003000000000000001F /* AuthServiceProtocol.swift in Sources */,
-				000000030000000000000020 /* BiometricAuthServiceProtocol.swift in Sources */,
-				000000030000000000000021 /* SecureTokenStoreProtocol.swift in Sources */,
-				000000030000000000000022 /* SentenceServiceProtocol.swift in Sources */,
-				000000030000000000000023 /* SpeechRecognitionServiceProtocol.swift in Sources */,
-				000000030000000000000024 /* SpeechServiceProtocol.swift in Sources */,
-				000000030000000000000025 /* AuthViewModel.swift in Sources */,
-				000000030000000000000026 /* PronunciationViewModel.swift in Sources */,
-				000000030000000000000027 /* QuizViewModel.swift in Sources */,
-				000000030000000000000028 /* VoiceCommandViewModel.swift in Sources */,
-				000000030000000000000029 /* VoCoMainAppView.swift in Sources */,
-				00000003000000000000002A /* LoginHomeView.swift in Sources */,
-				00000003000000000000002B /* SignInView.swift in Sources */,
-				00000003000000000000002C /* SignUpView.swift in Sources */,
-				00000003000000000000002D /* SplashScreenView.swift in Sources */,
-				00000003000000000000002E /* UserProfileFormView.swift in Sources */,
-				00000003000000000000002F /* AccessibilityHelper.swift in Sources */,
-				000000030000000000000030 /* ComingSoonView.swift in Sources */,
-				000000030000000000000031 /* LanguageSelectionView.swift in Sources */,
-				000000030000000000000032 /* QuadrantCardView.swift in Sources */,
-				000000030000000000000033 /* VoiceCommandBarView.swift in Sources */,
-				000000030000000000000034 /* GamesHubView.swift in Sources */,
-				000000030000000000000035 /* InteractiveQuizView.swift in Sources */,
-				000000030000000000000036 /* StoryCatalogView.swift in Sources */,
-				000000030000000000000037 /* StoryReaderView.swift in Sources */,
-				000000030000000000000038 /* HomeDashboardView.swift in Sources */,
-				000000030000000000000039 /* PronunciationRecordView.swift in Sources */,
-				00000003000000000000003A /* PronunciationReviewView.swift in Sources */,
-				00000003000000000000003B /* TalkWithVoCoHubView.swift in Sources */,
-				00000003000000000000003C /* VoCoBotConversationView.swift in Sources */,
-				00000003000000000000003D /* DSAEpisodesView.swift in Sources */,
-				00000003000000000000003E /* EpisodeDetailView.swift in Sources */,
-				00000003000000000000003F /* TechnicalCoursesView.swift in Sources */,
-				000000030000000000000040 /* VoCoGyanHubView.swift in Sources */,
+				00000003000000000000000A /* GeminiAIService.swift in Sources */,
+				00000003000000000000000B /* NativeAudioPlayer.swift in Sources */,
+				00000003000000000000000C /* NativeAudioRecorder.swift in Sources */,
+				00000003000000000000000D /* NativeSpeechRecognitionService.swift in Sources */,
+				00000003000000000000000E /* NativeSpeechService.swift in Sources */,
+				00000003000000000000000F /* VoiceCommandParser.swift in Sources */,
+				000000030000000000000010 /* VoiceEmailSpellingParser.swift in Sources */,
+				000000030000000000000011 /* VoiceGuidanceCoordinator.swift in Sources */,
+				000000030000000000000012 /* KeychainTokenStore.swift in Sources */,
+				000000030000000000000013 /* NativeBiometricAuthService.swift in Sources */,
+				000000030000000000000014 /* FirebaseAuthService.swift in Sources */,
+				000000030000000000000015 /* FirestoreSentenceService.swift in Sources */,
+				000000030000000000000016 /* LanguageManager.swift in Sources */,
+				000000030000000000000017 /* MockAIService.swift in Sources */,
+				000000030000000000000018 /* MockAuthService.swift in Sources */,
+				000000030000000000000019 /* MockBiometricAuthService.swift in Sources */,
+				00000003000000000000001A /* MockSentenceService.swift in Sources */,
+				00000003000000000000001B /* MockSpeechRecognitionService.swift in Sources */,
+				00000003000000000000001C /* MockSpeechService.swift in Sources */,
+				00000003000000000000001D /* MockTokenStore.swift in Sources */,
+				00000003000000000000001E /* AppNavigationStateMachine.swift in Sources */,
+				00000003000000000000001F /* AIServiceProtocol.swift in Sources */,
+				000000030000000000000020 /* AudioPlaybackServiceProtocol.swift in Sources */,
+				000000030000000000000021 /* AudioRecordingServiceProtocol.swift in Sources */,
+				000000030000000000000022 /* AuthServiceProtocol.swift in Sources */,
+				000000030000000000000023 /* BiometricAuthServiceProtocol.swift in Sources */,
+				000000030000000000000024 /* SecureTokenStoreProtocol.swift in Sources */,
+				000000030000000000000025 /* SentenceServiceProtocol.swift in Sources */,
+				000000030000000000000026 /* SpeechRecognitionServiceProtocol.swift in Sources */,
+				000000030000000000000027 /* SpeechServiceProtocol.swift in Sources */,
+				000000030000000000000028 /* AuthViewModel.swift in Sources */,
+				000000030000000000000029 /* PronunciationViewModel.swift in Sources */,
+				00000003000000000000002A /* QuizViewModel.swift in Sources */,
+				00000003000000000000002B /* VoiceCommandViewModel.swift in Sources */,
+				00000003000000000000002C /* VoCoMainAppView.swift in Sources */,
+				00000003000000000000002D /* LoginHomeView.swift in Sources */,
+				00000003000000000000002E /* SignInView.swift in Sources */,
+				00000003000000000000002F /* SignUpView.swift in Sources */,
+				000000030000000000000030 /* SplashScreenView.swift in Sources */,
+				000000030000000000000031 /* UserProfileFormView.swift in Sources */,
+				000000030000000000000032 /* AccessibilityHelper.swift in Sources */,
+				000000030000000000000033 /* ComingSoonView.swift in Sources */,
+				000000030000000000000034 /* LanguageSelectionView.swift in Sources */,
+				000000030000000000000035 /* QuadrantCardView.swift in Sources */,
+				000000030000000000000036 /* VoiceCommandBarView.swift in Sources */,
+				000000030000000000000037 /* GamesHubView.swift in Sources */,
+				000000030000000000000038 /* InteractiveQuizView.swift in Sources */,
+				000000030000000000000039 /* StoryCatalogView.swift in Sources */,
+				00000003000000000000003A /* StoryReaderView.swift in Sources */,
+				00000003000000000000003B /* HomeDashboardView.swift in Sources */,
+				00000003000000000000003C /* PronunciationRecordView.swift in Sources */,
+				00000003000000000000003D /* PronunciationReviewView.swift in Sources */,
+				00000003000000000000003E /* TalkWithVoCoHubView.swift in Sources */,
+				00000003000000000000003F /* VoCoBotConversationView.swift in Sources */,
+				000000030000000000000040 /* DSAEpisodesView.swift in Sources */,
+				000000030000000000000041 /* EpisodeDetailView.swift in Sources */,
+				000000030000000000000042 /* TechnicalCoursesView.swift in Sources */,
+				000000030000000000000043 /* VoCoGyanHubView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

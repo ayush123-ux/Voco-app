@@ -300,10 +300,100 @@ final class VoCoNativeTests: XCTestCase {
         XCTAssertEqual(parser.parse(phrase: "random blablabla"), .unknown("random blablabla"))
     }
 
+    func testTechnicalAndEpisodeVoiceCommands() {
+        let parser = VoiceCommandParser()
+
+        // 1. Technical courses
+        XCTAssertEqual(parser.parse(phrase: "open technical courses"), .openTechnicalCourses)
+        XCTAssertEqual(parser.parse(phrase: "technical courses"), .openTechnicalCourses)
+        XCTAssertEqual(parser.parse(phrase: "tech courses"), .openTechnicalCourses)
+
+        // 2. Non-technical courses discrimination
+        XCTAssertEqual(parser.parse(phrase: "non-technical courses"), .openNonTechnicalCourses)
+        XCTAssertEqual(parser.parse(phrase: "non technical courses"), .openNonTechnicalCourses)
+
+        // 3. Direct episode and session commands
+        XCTAssertEqual(parser.parse(phrase: "open the first episode"), .openEpisode(episodeNumber: 1))
+        XCTAssertEqual(parser.parse(phrase: "play episode 1"), .openEpisode(episodeNumber: 1))
+        XCTAssertEqual(parser.parse(phrase: "first episode"), .openEpisode(episodeNumber: 1))
+        XCTAssertEqual(parser.parse(phrase: "play the linkedlist session"), .openEpisodeByTitle(title: "Linked List"))
+        XCTAssertEqual(parser.parse(phrase: "linked list"), .openEpisodeByTitle(title: "Linked List"))
+
+        // 4. Conversational acknowledgements and helpers
+        XCTAssertEqual(parser.parse(phrase: "ok"), .acknowledgeOK)
+        XCTAssertEqual(parser.parse(phrase: "okay"), .acknowledgeOK)
+        XCTAssertEqual(parser.parse(phrase: "continue"), .continueAction)
+        XCTAssertEqual(parser.parse(phrase: "take me to the quiz"), .openQuiz)
+        XCTAssertEqual(parser.parse(phrase: "help me log in"), .openLogin)
+    }
+
+    @MainActor
+    func testNavigationStateMachineForTechnicalCoursesAndEpisodes() {
+        let sm = AppNavigationStateMachine(initialRoot: .dashboard, isAuthenticated: true)
+
+        // Test Technical Courses navigation
+        let techResult = sm.process(intent: .openTechnicalCourses)
+        XCTAssertEqual(techResult, .navigated(destination: .technicalCourses(.technical), spokenFeedback: "Opening Technical Courses."))
+        XCTAssertEqual(sm.navigationStack.last, .technicalCourses(.technical))
+
+        // Test Episode navigation
+        let epResult = sm.process(intent: .openEpisode(episodeNumber: 1))
+        if case .navigated(let dest, _) = epResult, case .episodeDetail(let ep) = dest {
+            XCTAssertEqual(ep.episodeNumber, 1)
+        } else {
+            XCTFail("Expected .navigated to episodeDetail")
+        }
+
+        // Pop back to test title-based navigation cleanly
+        _ = sm.process(intent: .goBack)
+
+        // Test LinkedList by title
+        let llResult = sm.process(intent: .openEpisodeByTitle(title: "Linked List"))
+        if case .navigated(let dest, _) = llResult, case .episodeDetail(let ep) = dest {
+            XCTAssertTrue(ep.title.contains("Linked List"))
+        } else {
+            XCTFail("Expected .navigated to episodeDetail for Linked List")
+        }
+
+        // Test OK and Continue
+        let okResult = sm.process(intent: .acknowledgeOK)
+        XCTAssertEqual(okResult, .actionExecuted(actionName: "AcknowledgeOK", spokenFeedback: "OK."))
+
+        let contResult = sm.process(intent: .continueAction)
+        XCTAssertEqual(contResult, .actionExecuted(actionName: "Continue", spokenFeedback: "Continuing."))
+    }
+
+    func testAIServiceIntegration() async {
+        let mockAI = MockAIService()
+
+        // 1. Health check
+        let isHealthy = await mockAI.checkHealth()
+        XCTAssertTrue(isHealthy)
+
+        // 2. Chat with VoCo
+        let response = await mockAI.sendMessage(
+            "What is a Linked List?",
+            history: [],
+            language: "en-IN"
+        )
+        XCTAssertFalse(response.reply.isEmpty)
+        XCTAssertEqual(response.status, "mock_success")
+
+        // 3. Interpret ambiguous voice command
+        let interpretation = await mockAI.interpretCommand(
+            phrase: "Can you teach me linked list?",
+            currentScreen: "dashboard",
+            language: "en-IN"
+        )
+        XCTAssertEqual(interpretation?.confidence, 0.95)
+    }
+
     func testVoiceCommandIntentSpokenConfirmationsArePopulated() {
         let intents: [VoiceCommandIntent] = [
             .openPronunciation, .openTalkWithVoCo, .openVoCoGyan, .openGames,
             .openStories, .readStory(identifier: nil), .readStory(identifier: "1"),
+            .openTechnicalCourses, .openNonTechnicalCourses, .openEpisode(episodeNumber: 1),
+            .openEpisodeByTitle(title: "Linked List"), .acknowledgeOK, .continueAction,
             .openQuiz, .openLogin, .openSignUp, .openUserProfile, .goHome, .goBack,
             .signOut, .startRecording, .stopRecording, .nextSentence, .reRecord,
             .listenToVoCo, .answerTrue, .answerFalse, .selectQuizOption(index: 1),
@@ -1563,5 +1653,124 @@ final class VoCoNativeTests: XCTestCase {
         } else {
             XCTFail("Expected navigated result")
         }
+    }
+
+    // MARK: - Global Voice-Controlled Language Switching Acceptance Tests
+
+    @MainActor
+    func testGlobalVoiceControlledLanguageSwitchingWorkflow() async {
+        let parser = VoiceCommandParser()
+        let manager = LanguageManager.shared
+        let container = ServiceContainer.mock()
+
+        // 1. User says: "Change language to Marathi."
+        let switchMarathiIntent = parser.parse(phrase: "Change language to Marathi.")
+        XCTAssertEqual(switchMarathiIntent, .switchLanguage(localeCode: "mr-IN"))
+
+        // Apply switch
+        guard let marathi = AppLanguage.standardLanguages.first(where: { $0.id == "mr-IN" }) else {
+            XCTFail("Marathi language not found")
+            return
+        }
+        manager.setLanguage(marathi, container: container)
+        XCTAssertEqual(manager.currentLanguage.id, "mr-IN")
+        XCTAssertEqual(container.speechService.defaultLanguage, "mr-IN")
+        XCTAssertEqual(container.speechRecognizer.currentLocaleIdentifier, "mr-IN")
+
+        // 2. VoCo confirms in Marathi: 'भाषा मराठीमध्ये बदलली आहे. आता तुम्ही मराठीत बोलू शकता.'
+        let marathiConfirmation = manager.localizedAnnouncementForSwitch(to: marathi)
+        XCTAssertEqual(marathiConfirmation, "भाषा मराठीमध्ये बदलली आहे. आता तुम्ही मराठीत बोलू शकता.")
+
+        // 3. Subsequent voice commands in Marathi understood
+        // "तांत्रिक कोर्सेस उघडा" -> openTechnicalCourses
+        let techCommand = parser.parse(phrase: "तांत्रिक कोर्सेस उघडा")
+        XCTAssertEqual(techCommand, .openTechnicalCourses)
+        XCTAssertEqual(techCommand.localizedSpokenConfirmation(for: marathi), "तांत्रिक कोर्सेस उघडत आहे.")
+
+        // "अतांत्रिक कोर्सेस उघडा" -> openNonTechnicalCourses
+        let nonTechCommand = parser.parse(phrase: "अतांत्रिक कोर्सेस उघडा")
+        XCTAssertEqual(nonTechCommand, .openNonTechnicalCourses)
+        XCTAssertEqual(nonTechCommand.localizedSpokenConfirmation(for: marathi), "अतांत्रिक कोर्सेस उघडत आहे.")
+
+        // "क्विझ सुरू करा" -> openQuiz
+        let quizCommand = parser.parse(phrase: "क्विझ सुरू करा")
+        XCTAssertEqual(quizCommand, .openQuiz)
+        XCTAssertEqual(quizCommand.localizedSpokenConfirmation(for: marathi), "व्होको क्विझ सुरू करत आहे.")
+
+        // Quiz answers in Marathi
+        XCTAssertEqual(parser.parse(phrase: "बरोबर"), .answerTrue)
+        XCTAssertEqual(parser.parse(phrase: "चूक"), .answerFalse)
+        XCTAssertEqual(parser.parse(phrase: "पुढचा प्रश्न"), .nextQuestion)
+
+        // Navigation in Marathi
+        XCTAssertEqual(parser.parse(phrase: "मुख्यपृष्ठ"), .goHome)
+        XCTAssertEqual(parser.parse(phrase: "मागे जा"), .goBack)
+        XCTAssertEqual(parser.parse(phrase: "मदत"), .help)
+
+        // 4. Romanized / English phrases for switching
+        XCTAssertEqual(parser.parse(phrase: "Change language to Hindi"), .switchLanguage(localeCode: "hi-IN"))
+        XCTAssertEqual(parser.parse(phrase: "Switch to English"), .switchLanguage(localeCode: "en-IN"))
+        XCTAssertEqual(parser.parse(phrase: "Mujhse Hinglish mein baat karo"), .switchLanguage(localeCode: "hi-IN"))
+        XCTAssertEqual(parser.parse(phrase: "Change language to Tamil"), .switchLanguage(localeCode: "ta-IN"))
+        XCTAssertEqual(parser.parse(phrase: "Change language to Telugu"), .switchLanguage(localeCode: "te-IN"))
+
+        // 5. Native script language switching
+        XCTAssertEqual(parser.parse(phrase: "मराठी"), .switchLanguage(localeCode: "mr-IN"))
+        XCTAssertEqual(parser.parse(phrase: "हिन्दी"), .switchLanguage(localeCode: "hi-IN"))
+
+        // 6. Unsupported language rejection and feedback
+        let unsupported = parser.parse(phrase: "Change language to Klingon")
+        XCTAssertEqual(unsupported, .unsupportedLanguage(requested: "klingon"))
+        let feedback = manager.localizedUnsupportedFeedback(for: "klingon")
+        XCTAssertTrue(feedback.contains("klingon"))
+
+        // Reset back to English
+        guard let english = AppLanguage.standardLanguages.first(where: { $0.id == "en-IN" }) else { return }
+        manager.setLanguage(english, container: container)
+    }
+
+    @MainActor
+    func testVoiceCommandViewModelExecutesMarathiSwitchAndCommands() async throws {
+        let mockRecognizer = MockSpeechRecognitionService(isAuthorized: true)
+        let mockTTS = MockSpeechService()
+        let vm = VoiceCommandViewModel(
+            speechRecognizer: mockRecognizer,
+            speechService: mockTTS,
+            enableHandsFreeByDefault: false
+        )
+        vm.silenceThreshold = 0.05
+
+        var capturedIntent: VoiceCommandIntent?
+        await vm.startListening { intent in
+            capturedIntent = intent
+        }
+
+        // Simulate voice input: "Change language to Marathi."
+        mockRecognizer.simulateSpeech("Change language to Marathi.")
+        try await Task.sleep(nanoseconds: 150_000_000)
+
+        // Verify status message and TTS spoke exact Marathi confirmation
+        XCTAssertEqual(capturedIntent, .switchLanguage(localeCode: "mr-IN"))
+        XCTAssertEqual(vm.statusMessage, "भाषा मराठीमध्ये बदलली आहे. आता तुम्ही मराठीत बोलू शकता.")
+        XCTAssertEqual(mockTTS.lastSpokenText, "भाषा मराठीमध्ये बदलली आहे. आता तुम्ही मराठीत बोलू शकता.")
+        XCTAssertEqual(mockRecognizer.currentLocaleIdentifier, "mr-IN")
+        XCTAssertEqual(mockTTS.defaultLanguage, "mr-IN")
+
+        // Start listening again for subsequent Marathi command
+        await vm.startListening { intent in
+            capturedIntent = intent
+        }
+
+        // Simulate voice command in Marathi: "तांत्रिक कोर्सेस उघडा"
+        mockRecognizer.simulateSpeech("तांत्रिक कोर्सेस उघडा")
+        try await Task.sleep(nanoseconds: 150_000_000)
+
+        XCTAssertEqual(capturedIntent, .openTechnicalCourses)
+        XCTAssertEqual(vm.lastExecutedIntent, .openTechnicalCourses)
+        XCTAssertEqual(vm.statusMessage, "तांत्रिक कोर्सेस उघडत आहे.")
+        XCTAssertEqual(mockTTS.lastSpokenText, "तांत्रिक कोर्सेस उघडत आहे.")
+
+        // Reset language to English
+        LanguageManager.shared.setLanguage(AppLanguage.defaultLanguage)
     }
 }

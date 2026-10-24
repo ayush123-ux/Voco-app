@@ -3,22 +3,28 @@ import SwiftUI
 import Combine
 import AVFoundation
 
-/// State representing the voice listening lifecycle and privacy status
+/// State representing the coordinated voice listening lifecycle, accessibility, and privacy status
 public enum VoiceListeningState: Equatable {
     case idle
+    case speaking
     case listening
     case processing
-    case speaking
+    case awaitingAnswer
+    case clarificationRequired(prompt: String)
     case paused
+    case permissionRequired
     case error(String)
 
     public var statusDescription: String {
         switch self {
         case .idle: return "Idle"
+        case .speaking: return "Speaking"
         case .listening: return "Listening"
         case .processing: return "Processing"
-        case .speaking: return "Speaking"
+        case .awaitingAnswer: return "Awaiting Answer"
+        case .clarificationRequired: return "Clarification Required"
         case .paused: return "Paused"
+        case .permissionRequired: return "Permission Required"
         case .error(let msg): return "Error: \(msg)"
         }
     }
@@ -26,10 +32,13 @@ public enum VoiceListeningState: Equatable {
     public var accessibilityLabel: String {
         switch self {
         case .idle: return "Voice assistant idle. Tap microphone to speak."
+        case .speaking: return "VoCo is speaking. Microphone paused."
         case .listening: return "Voice listening active. Speak your command now."
         case .processing: return "Evaluating recognized command."
-        case .speaking: return "VoCo is speaking. Microphone paused."
+        case .awaitingAnswer: return "Waiting for your answer. Speak now."
+        case .clarificationRequired(let prompt): return "Clarification needed: \(prompt)"
         case .paused: return "Voice listening paused. Tap resume to continue."
+        case .permissionRequired: return "Microphone or speech permission required. Enable in iOS Settings."
         case .error(let msg): return "Voice assistant error: \(msg)."
         }
     }
@@ -78,7 +87,6 @@ public final class VoiceCommandViewModel: ObservableObject {
 
     // MARK: - Hands-Free Mode & Privacy Controls
 
-    /// Explicitly enables or disables hands-free continuous listening
     public func setHandsFreeMode(enabled: Bool, onIntentRecognized: ((VoiceCommandIntent) -> Void)? = nil) async {
         if let onIntent = onIntentRecognized {
             self.onIntentCallback = onIntent
@@ -100,7 +108,6 @@ public final class VoiceCommandViewModel: ObservableObject {
         await setHandsFreeMode(enabled: !isHandsFreeModeEnabled, onIntentRecognized: onIntentRecognized)
     }
 
-    /// User pauses microphone capture (e.g. for privacy in public spaces)
     public func pauseListening() async {
         isPaused = true
         cancelSilenceTask()
@@ -111,7 +118,6 @@ public final class VoiceCommandViewModel: ObservableObject {
         AccessibilityHelper.announce("Voice listening paused for privacy.")
     }
 
-    /// User resumes microphone capture after a pause
     public func resumeListening(onIntentRecognized: ((VoiceCommandIntent) -> Void)? = nil) async {
         if let onIntent = onIntentRecognized {
             self.onIntentCallback = onIntent
@@ -135,7 +141,6 @@ public final class VoiceCommandViewModel: ObservableObject {
 
     // MARK: - Speech Recognition Lifecycle
 
-    /// Starts streaming microphone audio with overlap guard
     public func startListening(onIntentRecognized: @escaping (VoiceCommandIntent) -> Void) async {
         self.onIntentCallback = onIntentRecognized
         self.isPaused = false
@@ -144,7 +149,6 @@ public final class VoiceCommandViewModel: ObservableObject {
     }
 
     private func startListeningLoop() async {
-        // Prevent duplicate calls or listening during pause/speech/transition
         guard !isTransitioningAudio else { return }
         guard !isListening else { return }
         guard !isPaused else {
@@ -159,7 +163,7 @@ public final class VoiceCommandViewModel: ObservableObject {
         errorMessage = nil
         liveTranscription = ""
 
-        // Ensure TTS is stopped before opening microphone
+        // Ensure TTS is stopped before opening microphone to prevent audio feedback
         speechService.stopSpeaking()
 
         let authorized = await speechRecognizer.requestAuthorization()
@@ -176,6 +180,7 @@ public final class VoiceCommandViewModel: ObservableObject {
             updateListeningState(.listening)
             self.statusMessage = isHandsFreeModeEnabled ? "Listening (Hands-Free)..." : "Listening... speak now"
             AccessibilityHelper.playListeningStartCue()
+            AccessibilityHelper.announce("I'm listening. You can speak now.")
 
             try await speechRecognizer.startListening { [weak self] transcription in
                 Task { @MainActor [weak self] in
@@ -194,8 +199,7 @@ public final class VoiceCommandViewModel: ObservableObject {
     }
 
     private func handleIncomingTranscription(_ transcription: String) {
-        // Echo prevention: ignore input if currently in speaking state
-        guard listeningState == .listening else { return }
+        guard listeningState == .listening || listeningState == .awaitingAnswer else { return }
 
         let cleanText = transcription.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !cleanText.isEmpty else { return }
@@ -203,7 +207,6 @@ public final class VoiceCommandViewModel: ObservableObject {
         self.liveTranscription = cleanText
         self.statusMessage = "\"\(cleanText)\""
 
-        // Reset silence detection debounce for automatic command finalization
         cancelSilenceTask()
 
         silenceTask = Task { [weak self, threshold = silenceThreshold] in
@@ -214,7 +217,7 @@ public final class VoiceCommandViewModel: ObservableObject {
     }
 
     private func autoFinalizeUtterance() async {
-        guard listeningState == .listening, !liveTranscription.isEmpty else { return }
+        guard (listeningState == .listening || listeningState == .awaitingAnswer), !liveTranscription.isEmpty else { return }
         await stopListeningAndProcess(onIntentRecognized: onIntentCallback ?? { _ in })
     }
 
@@ -227,24 +230,23 @@ public final class VoiceCommandViewModel: ObservableObject {
         self.statusMessage = "Recognition Error"
         updateListeningState(.error(error.localizedDescription))
 
-        // Backoff and safety check to avoid infinite rapid battery drain loops
         if consecutiveErrors >= maxConsecutiveErrors {
             isPaused = true
             statusMessage = "Voice paused after errors. Tap mic to retry."
-            AccessibilityHelper.announce("Voice recognition encountered repeated errors. Listening has been paused.")
+            updateListeningState(.paused)
+            let recoveryPrompt = "I didn't catch that. Say 'help' for available commands, or tap the microphone to try again."
+            AccessibilityHelper.announce(recoveryPrompt)
             return
         }
 
-        // Safe retry after delay in hands-free mode if still active
         if isHandsFreeModeEnabled && !isPaused {
             scheduleSafeReArm(delayNanoseconds: UInt64(Double(consecutiveErrors) * 1_500_000_000))
         }
     }
 
-    /// Stops listening and processes the utterance into structured intent
     public func stopListeningAndProcess(onIntentRecognized: @escaping (VoiceCommandIntent) -> Void) async {
         cancelSilenceTask()
-        guard listeningState == .listening || isListening else { return }
+        guard listeningState == .listening || listeningState == .awaitingAnswer || isListening else { return }
 
         AccessibilityHelper.playListeningStopCue()
         speechRecognizer.stopListening()
@@ -264,19 +266,20 @@ public final class VoiceCommandViewModel: ObservableObject {
         consecutiveErrors = 0
         let intent = parser.parse(phrase: phrase)
         self.lastExecutedIntent = intent
-        self.statusMessage = intent.spokenConfirmation
+        let currentLang = LanguageManager.shared.currentLanguage
+        let feedback = intent.localizedSpokenConfirmation(for: currentLang)
+        self.statusMessage = feedback
 
-        // Handle internal privacy/hands-free commands directly
         switch intent {
         case .pauseListening:
             await pauseListening()
-            await speakUtterance(intent.spokenConfirmation)
+            await speakUtterance(feedback)
             onIntentRecognized(intent)
             return
 
         case .resumeListening:
             isPaused = false
-            await speakUtterance(intent.spokenConfirmation)
+            await speakUtterance(feedback)
             onIntentRecognized(intent)
             if isHandsFreeModeEnabled {
                 scheduleSafeReArm(delayNanoseconds: 400_000_000)
@@ -285,10 +288,45 @@ public final class VoiceCommandViewModel: ObservableObject {
 
         case .toggleHandsFree:
             isHandsFreeModeEnabled.toggle()
-            let feedback = isHandsFreeModeEnabled ? "Hands-free voice mode enabled." : "Hands-free voice mode disabled."
-            statusMessage = feedback
-            await speakUtterance(feedback)
+            let status = isHandsFreeModeEnabled ? "Hands-free voice mode enabled." : "Hands-free voice mode disabled."
+            statusMessage = status
+            await speakUtterance(status)
             onIntentRecognized(intent)
+            if isHandsFreeModeEnabled && !isPaused {
+                scheduleSafeReArm(delayNanoseconds: 400_000_000)
+            }
+            return
+
+        case .switchLanguage(let localeCode):
+            guard let targetLang = AppLanguage.standardLanguages.first(where: { $0.id == localeCode || $0.id.hasPrefix(localeCode) }) else {
+                let err = LanguageManager.shared.localizedUnsupportedFeedback(for: localeCode)
+                statusMessage = err
+                await speakUtterance(err)
+                if isHandsFreeModeEnabled && !isPaused {
+                    scheduleSafeReArm(delayNanoseconds: 400_000_000)
+                }
+                return
+            }
+
+            // Apply new language to manager, speech recognizer, and speech synthesizer
+            LanguageManager.shared.setLanguage(targetLang)
+            speechRecognizer.setLocale(targetLang.verifiedSpeechLocaleIdentifier)
+            speechService.defaultLanguage = targetLang.id
+
+            let confirmation = LanguageManager.shared.localizedAnnouncementForSwitch(to: targetLang)
+            statusMessage = confirmation
+            await speakUtterance(confirmation)
+            onIntentRecognized(intent)
+
+            if isHandsFreeModeEnabled && !isPaused {
+                scheduleSafeReArm(delayNanoseconds: 400_000_000)
+            }
+            return
+
+        case .unsupportedLanguage(let requested):
+            let err = LanguageManager.shared.localizedUnsupportedFeedback(for: requested)
+            statusMessage = err
+            await speakUtterance(err)
             if isHandsFreeModeEnabled && !isPaused {
                 scheduleSafeReArm(delayNanoseconds: 400_000_000)
             }
@@ -298,13 +336,9 @@ public final class VoiceCommandViewModel: ObservableObject {
             break
         }
 
-        // Speak confirmation with echo avoidance
-        await speakUtterance(intent.spokenConfirmation)
-
-        // Dispatch action to coordinator
+        await speakUtterance(feedback)
         onIntentRecognized(intent)
 
-        // Re-arm hands-free loop safely after speech finishes, or return to idle for single-turn
         if isHandsFreeModeEnabled && !isPaused {
             scheduleSafeReArm(delayNanoseconds: 400_000_000)
         } else {
@@ -312,13 +346,10 @@ public final class VoiceCommandViewModel: ObservableObject {
         }
     }
 
-    /// Plays spoken feedback while keeping the microphone off to prevent hearing itself
     public func speakUtterance(_ text: String) async {
-        // Guarantee recognizer is stopped before audio output starts
         speechRecognizer.stopListening()
         updateListeningState(.speaking)
         AccessibilityHelper.announce(text)
-
         await speechService.speak(text: text)
 
         // Settle buffer to allow speaker audio to dissipate before re-arming
@@ -331,30 +362,31 @@ public final class VoiceCommandViewModel: ObservableObject {
         }
     }
 
+    public func dispatchDirectIntent(_ intent: VoiceCommandIntent, onExecute: (VoiceCommandIntent) -> Void) async {
+        self.lastExecutedIntent = intent
+        let currentLang = LanguageManager.shared.currentLanguage
+        let feedback = intent.localizedSpokenConfirmation(for: currentLang)
+        self.statusMessage = feedback
+        await speakUtterance(feedback)
+        onExecute(intent)
+    }
+
     public func stopListening() async {
         cancelSilenceTask()
         cancelReArmTask()
         speechRecognizer.stopListening()
+        isListening = false
         updateListeningState(.idle)
-        self.statusMessage = isHandsFreeModeEnabled ? "Hands-Free Paused" : "Tap to Speak"
     }
 
-    /// Schedules an automatic re-arm after delay, ensuring no active speech or background state
     private func scheduleSafeReArm(delayNanoseconds: UInt64) {
         cancelReArmTask()
-        guard isHandsFreeModeEnabled, !isPaused else { return }
-
-        reArmTask = Task { @MainActor [weak self] in
+        reArmTask = Task { [weak self] in
             try? await Task.sleep(nanoseconds: delayNanoseconds)
             guard !Task.isCancelled else { return }
-            guard let self = self, self.isHandsFreeModeEnabled, !self.isPaused else { return }
+            guard let self = self, self.isHandsFreeModeEnabled, !self.isPaused, !self.speechService.isSpeaking else { return }
             await self.startListeningLoop()
         }
-    }
-
-    private func updateListeningState(_ state: VoiceListeningState) {
-        self.listeningState = state
-        self.isListening = (state == .listening)
     }
 
     private func cancelSilenceTask() {
@@ -367,16 +399,20 @@ public final class VoiceCommandViewModel: ObservableObject {
         reArmTask = nil
     }
 
-    // MARK: - App Lifecycle & Audio Interruption Coordination
+    private func updateListeningState(_ newState: VoiceListeningState) {
+        self.listeningState = newState
+        self.isListening = (newState == .listening || newState == .awaitingAnswer)
+    }
+
+    // MARK: - Lifecycle & Audio Interruptions
 
     public func handleAppDidEnterBackground() {
+        wasListeningBeforeBackground = isListening || isHandsFreeModeEnabled
         cancelSilenceTask()
         cancelReArmTask()
-        wasListeningBeforeBackground = isListening || (isHandsFreeModeEnabled && !isPaused)
         speechRecognizer.stopListening()
         speechService.stopSpeaking()
         updateListeningState(.paused)
-        statusMessage = "Suspended in background"
     }
 
     public func handleAppWillEnterForeground() {
@@ -397,17 +433,8 @@ public final class VoiceCommandViewModel: ObservableObject {
             speechRecognizer.stopListening()
             speechService.stopSpeaking()
             updateListeningState(.paused)
-            statusMessage = "Audio Interrupted"
         } else if shouldResume && isHandsFreeModeEnabled && !isPaused {
             scheduleSafeReArm(delayNanoseconds: 800_000_000)
         }
-    }
-
-    /// Directly dispatches an intent (e.g. for testing or accessibility shortcuts)
-    public func dispatchDirectIntent(_ intent: VoiceCommandIntent, onExecute: (VoiceCommandIntent) -> Void) async {
-        self.lastExecutedIntent = intent
-        self.statusMessage = intent.spokenConfirmation
-        await speakUtterance(intent.spokenConfirmation)
-        onExecute(intent)
     }
 }
